@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hololive Production 藝人介紹簡報 (Talents Showcase)</title>
+  <style>
+    :root {
+      --bg-dark: #0b0f19;
+      --card-bg: rgba(18, 26, 45, 0.92);
+      --card-border: rgba(39, 199, 254, 0.3);
+      --accent-cyan: #27c7fe;
+      --accent-pink: #ff66ab;
+      --accent-purple: #9d4edd;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      background-color: var(--bg-dark);
+      color: var(--text-main);
+      font-family: var(--font-family);
+      user-select: none;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      background-image: 
+        radial-gradient(circle at 10% 20%, rgba(39, 199, 254, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 90% 80%, rgba(255, 102, 171, 0.12) 0%, transparent 45%),
+        radial-gradient(circle at 50% 50%, rgba(157, 78, 221, 0.08) 0%, transparent 60%);
+    }
+
+    /* Top Navigation Header */
+    header {
+      height: 56px;
+      flex-shrink: 0;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(11, 15, 25, 0.95);
+      backdrop-filter: blur(12px);
+      z-index: 50;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      font-size: 1.1rem;
+      letter-spacing: 0.5px;
+    }
+
+    .brand .logo-holo {
+      color: var(--accent-cyan);
+      text-shadow: 0 0 12px rgba(39, 199, 254, 0.6);
+    }
+
+    .brand .logo-tag {
+      font-size: 0.75rem;
+      padding: 2px 8px;
+      border-radius: 9999px;
+      background: rgba(39, 199, 254, 0.15);
+      color: var(--accent-cyan);
+      border: 1px solid rgba(39, 199, 254, 0.3);
+    }
+
+    .nav-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    select, input {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 8px;
+      font-size: 0.88rem;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    select:focus, input:focus {
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 8px rgba(39, 199, 254, 0.3);
+    }
+
+    select option {
+      background: #111827;
+      color: #fff;
+    }
+
+    .btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: var(--text-main);
+      padding: 6px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.88rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+
+    .btn:hover {
+      background: rgba(39, 199, 254, 0.25);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    /* Main Presentation Container */
+    main {
+      flex: 1;
+      min-height: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .slide-viewport {
+      width: 100%;
+      max-width: 1320px;
+      height: 100%;
+      max-height: 100%;
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      min-height: 0;
+    }
+
+    /* Solid Slide Card - Responsive and auto scrollable */
+    .slide-card {
+      display: none;
+      width: 100%;
+      height: 100%;
+      max-height: 100%;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      backdrop-filter: blur(24px);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      grid-template-columns: 320px 1fr;
+      grid-template-rows: 100%;
+      overflow: hidden;
+      min-height: 0;
+    }
+
+    .slide-card.active {
+      display: grid;
+      animation: fadeInSlide 0.25s ease-out;
+    }
+
+    @keyframes fadeInSlide {
+      from {
+        opacity: 0;
+        transform: translateY(8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Left Column: Portrait & Identity */
+    .portrait-col {
+      background: linear-gradient(180deg, rgba(39, 199, 254, 0.1) 0%, rgba(15, 23, 42, 0.85) 100%);
+      border-right: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-y: auto;
+      gap: 12px;
+      min-height: 0;
+    }
+
+    .avatar-wrapper {
+      width: 200px;
+      height: 250px;
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      background: radial-gradient(circle, rgba(39, 199, 254, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+      border: 2px solid rgba(39, 199, 254, 0.4);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      flex-shrink: 0;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 3px 8px;
+      border-radius: 9999px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      z-index: 2;
+    }
+
+    .status-active {
+      background: rgba(16, 185, 129, 0.35);
+      color: #34d399;
+      border: 1px solid rgba(16, 185, 129, 0.6);
+      box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
+    }
+
+    .status-graduate {
+      background: rgba(168, 85, 247, 0.35);
+      color: #c084fc;
+      border: 1px solid rgba(168, 85, 247, 0.6);
+      box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
+    }
+
+    .status-breakoff {
+      background: rgba(245, 158, 11, 0.35);
+      color: #fbbf24;
+      border: 1px solid rgba(245, 158, 11, 0.6);
+      box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);
+    }
+
+    .status-resign {
+      background: rgba(14, 165, 233, 0.35);
+      color: #38bdf8;
+      border: 1px solid rgba(14, 165, 233, 0.6);
+      box-shadow: 0 0 10px rgba(14, 165, 233, 0.4);
+    }
+
+    .oshi-mark-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      z-index: 2;
+    }
+
+    .meta-list {
+      width: 100%;
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .meta-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 6px 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .meta-label {
+      color: var(--text-muted);
+    }
+
+    .meta-value {
+      font-weight: 600;
+      color: var(--text-main);
+      text-align: right;
+    }
+
+    /* Right Column: Detailed Presentation Content */
+    .content-col {
+      padding: 24px 32px;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      gap: 16px;
+      min-height: 0;
+      height: 100%;
+    }
+
+    .talent-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      padding-bottom: 12px;
+      gap: 16px;
+    }
+
+    .name-title-group h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #fff;
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .name-en-sub {
+      font-size: 1.15rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+    }
+
+    .name-jp-sub {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .gen-badge-group {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .branch-pill {
+      background: linear-gradient(135deg, var(--accent-cyan), #0077b6);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(39, 199, 254, 0.3);
+    }
+
+    .gen-pill {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #e2e8f0;
+      font-size: 0.8rem;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    /* Greetings Box */
+    .greetings-box {
+      background: rgba(39, 199, 254, 0.06);
+      border-left: 4px solid var(--accent-cyan);
+      padding: 10px 16px;
+      border-radius: 0 10px 10px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.9rem;
+    }
+
+    .greeting-line {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .greeting-tag {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: rgba(39, 199, 254, 0.25);
+      color: var(--accent-cyan);
+      flex-shrink: 0;
+    }
+
+    /* Section Boxes */
+    .section-box {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--accent-pink);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 13px;
+      background: var(--accent-pink);
+      border-radius: 2px;
+    }
+
+    .section-body {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      color: #cbd5e1;
+    }
+
+    /* Song Tags */
+    .songs-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .song-pill {
+      background: rgba(255, 102, 171, 0.12);
+      border: 1px solid rgba(255, 102, 171, 0.35);
+      color: #ffd1dc;
+      padding: 3px 10px;
+      border-radius: 9999px;
+      font-size: 0.82rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .song-pill::before {
+      content: "🎵";
+      font-size: 0.72rem;
+    }
+
+    /* Meme Box */
+    .meme-highlight {
+      background: rgba(157, 78, 221, 0.1);
+      border: 1px solid rgba(157, 78, 221, 0.3);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      color: #e9d5ff;
+    }
+
+    /* Footer Navigation */
+    footer {
+      height: 60px;
+      flex-shrink: 0;
+      background: rgba(11, 15, 25, 0.95);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      position: relative;
+      z-index: 50;
+    }
+
+    .progress-bar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-pink));
+      box-shadow: 0 0 10px rgba(39, 199, 254, 0.8);
+      transition: width 0.25s ease;
+    }
+
+    .slide-info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .current-slide-num {
+      color: var(--accent-cyan);
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .nav-buttons {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .arrow-btn {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.15rem;
+      transition: all 0.2s;
+    }
+
+    .arrow-btn:hover:not(:disabled) {
+      background: var(--accent-cyan);
+      color: #000;
+      box-shadow: 0 0 15px rgba(39, 199, 254, 0.5);
+      border-color: var(--accent-cyan);
+    }
+
+    .arrow-btn:disabled {
+      opacity: 0.25;
+      cursor: not-allowed;
+    }
+
+    .hint-keys {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      display: flex;
+      gap: 6px;
+      align-items: center;
+    }
+
+    .key-badge {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-family: monospace;
+    }
+
+    /* Drawer Modal */
+    .drawer {
+      position: fixed;
+      top: 56px;
+      bottom: 60px;
+      left: 0;
+      width: 320px;
+      background: rgba(15, 23, 42, 0.98);
+      backdrop-filter: blur(16px);
+      border-right: 1px solid rgba(255, 255, 255, 0.12);
+      transform: translateX(-100%);
+      transition: transform 0.25s ease;
+      z-index: 100;
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+    }
+
+    .drawer.open {
+      transform: translateX(0);
+      box-shadow: 20px 0 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+      font-weight: 700;
+      color: var(--accent-cyan);
+    }
+
+    .drawer-list {
+      flex: 1;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .drawer-item {
+      padding: 8px 12px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.88rem;
+      transition: all 0.15s;
+    }
+
+    .drawer-item:hover, .drawer-item.active {
+      background: rgba(39, 199, 254, 0.2);
+      color: var(--accent-cyan);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: rgba(0, 0, 0, 0.2);
+    }
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(39, 199, 254, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header>
+    <div class="brand">
+      <span class="logo-holo">HOLOLIVE PRODUCTION</span>
+      <span>藝人介紹簡報</span>
+      <span class="logo-tag">Official Wiki Showcase</span>
+    </div>
+
+    <div class="nav-controls">
+      <button class="btn" id="btnToggleDrawer">📋 成員目錄</button>
+      <select id="genSelect" title="跳至期別">
+        <option value="">-- 跳至指定期別 --</option>
+      </select>
+      <button class="btn" id="btnFullscreen" title="切換全螢幕">⛶ 全螢幕</button>
+    </div>
+  </header>
+
+  <!-- Sidebar Directory Drawer -->
+  <div class="drawer" id="talentDrawer">
+    <div class="drawer-header">
+      <span>全成員跳轉目錄 (106)</span>
+      <button class="btn" id="btnCloseDrawer" style="padding: 2px 8px;">✕</button>
+    </div>
+    <input type="text" id="drawerSearch" placeholder="搜尋姓名 / 羅馬拼音..." style="margin-bottom: 12px; width: 100%;">
+    <div class="drawer-list" id="drawerList"></div>
+  </div>
+
+  <!-- Main Slide Display Area -->
+  <main>
+    <div class="slide-viewport" id="viewport"></div>
+  </main>
+
+  <!-- Footer Navigation Controls -->
+  <footer>
+    <div class="progress-bar" id="progressBar" style="width: 1%;"></div>
+
+    <div class="slide-info">
+      <div>
+        <span class="current-slide-num" id="slideNum">1</span>
+        <span style="color: var(--text-muted); font-size: 0.88rem;"> / 106</span>
+      </div>
+      <div style="color: var(--text-muted); font-size: 0.88rem;" id="slideGenLabel">Hololive JP | 0th Generation</div>
+    </div>
+
+    <div class="hint-keys">
+      <span>切換頁面：</span>
+      <span class="key-badge">←</span>
+      <span class="key-badge">→</span>
+      <span>或</span>
+      <span class="key-badge">Space</span>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="arrow-btn" id="btnPrev" title="上一頁 (Left Arrow)">◀</button>
+      <button class="arrow-btn" id="btnNext" title="下一頁 (Right Arrow)">▶</button>
+    </div>
+  </footer>
+
+  <script>
+    const SLIDES = [{"index": 1, "id": "tokino-sora", "name_zh": "時乃空", "name_jp": "ときのそら", "name_en": "Tokino Sora", "branch": "Hololive JP", "generation": "0th Generation", "gen_id": "jp-0th", "status": "active", "debut_date": "2017-09-07", "graduation_date": null, "fan_name": "そらとも (Soratomo)", "oshi_mark": "🐻", "illustrator": "おるだん", "image": "../asset/picture/hololive/Tokino-Sora_list_thumb.png", "opening_greeting": "そらとものみんなー！元気ー？ときのそらです！", "closing_greeting": "ではでは、ときのそらでした！ばいばーい！", "songs": ["Dreaming Days", "Step and Go!!", "ピッとして！マーマレード", "Beyond"], "tags": ["music", "idol", "seiso", "horror-game", "jp-0th"], "desc": "Hololive 的最初創始成員兼虛擬偶像，被公認為事務所的原點與大前輩。", "features": "王道清楚偶像、對恐怖遊戲與 Jump Scare 擁有無敵抗性、以橫濱競技場單獨 LIVE 為目標。", "relations": "與 [[azki|AZKi]] 組成 [[soraz|SorAZ]]，與 [[roboco|蘿蔔子]]、[[sakura-miko|櫻巫女]]、[[hoshimachi-suisei|星街彗星]]、[[azki|AZKi]] 同為 [[jp-0th|0期生]]。", "memes": "「[[jaa-teki-dane|じゃあ、敵だね？]]」（那麼，就是敵人囉？）與傳奇的 54 人初配信。"}, {"index": 2, "id": "roboco", "name_zh": "蘿蔔子", "name_jp": "ロボ子さん", "name_en": "Robocosan", "branch": "Hololive JP", "generation": "0th Generation", "gen_id": "jp-0th", "status": "active", "debut_date": "2018-03-04", "graduation_date": null, "fan_name": "ろぼっ子 (Robokko)", "oshi_mark": "🤖", "illustrator": "ぽよよんろっく", "image": "../asset/picture/hololive/Robocosan_list_thumb.png", "opening_greeting": "ハローぼこー！ロボ子さんだよー！", "closing_greeting": "おつぼこでしたー！", "songs": ["アザミ", "Kira meki Rider☆", "リルビ"], "tags": ["robot", "ponkotsu", "fps", "healing", "jp-0th"], "desc": "Hololive 0期生，來自荒廢世界的高性能廢柴機器人少女。", "features": "聲線慵懶治癒、熱愛射擊競技遊戲（Apex Legends 等），雖然自稱高性能但經常展現呆萌（笨拙）特質。", "relations": "與 [[tokino-sora|時乃空]] 共同度過 Hololive 最早期草創時期，同屬 [[jp-0th|0期生]]。", "memes": "自稱「高性能」卻屢屢做出呆萌事蹟、換上厚底長筒靴後的「機械美腿」設定。"}, {"index": 3, "id": "sakura-miko", "name_zh": "櫻巫女", "name_jp": "さくらみこ", "name_en": "Sakura Miko", "branch": "Hololive JP", "generation": "0th Generation", "gen_id": "jp-0th", "status": "active", "debut_date": "2018-08-01", "graduation_date": null, "fan_name": "35P (Mikopi)", "oshi_mark": "🌸", "illustrator": "田中雄一 / おるだん", "image": "../asset/picture/hololive/Sakura-Miko_talent_list_thumb.png", "opening_greeting": "にゃっはろー！ホロライブ0期生のさくらみこです！", "closing_greeting": "おつみこー！ばいばーい！", "songs": ["サクラカゼ", "花月ノ夢", "僕らと君のうた", "DAI DA DAI FANTASY"], "tags": ["elite", "comedy", "gta", "minecraft", "jp-0th"], "desc": "Hololive 0期生，自稱「菁英巫女（Elite Miko）」，Hololive 頂尖綜藝與社內大企劃發起人。", "features": "獨特的嬰兒音口音與綜藝體質、深受遊戲之神眷顧的戲劇性意外（熔岩事故）、對美少女與工口遊戲情有獨鍾。", "relations": "與 [[hoshimachi-suisei|星街彗星]] 組成超人氣商業夥伴組合 [[micomet|MiComet]]；與 [[shirakami-fubuki|白上吹雪]] 等組成遊戲王決鬥夥伴。", "memes": "「Stay Home!」（GTA 經典台詞）、熔岩桶自焚傳奇、經典嬰兒咬舌日語。"}, {"index": 4, "id": "hoshimachi-suisei", "name_zh": "星街彗星", "name_jp": "星街すいせい", "name_en": "Hoshimachi Suisei", "branch": "Hololive JP", "generation": "0th Generation", "gen_id": "jp-0th", "status": "active", "debut_date": "2018-03-22", "graduation_date": null, "fan_name": "星詠者 (Hoshayomi)", "oshi_mark": "☄️", "illustrator": "手島nari", "image": "../asset/picture/hololive/Hoshimachi-Suisei_list_thumb.png", "opening_greeting": "こんすいー！ホロライブ0期生の星街すいせいです！", "closing_greeting": "それでは、おやすみー！", "songs": ["Stellar Stellar", "GHOST", "NEXT COLOR PLANET", "ビビデバ (Bibbidiba)"], "tags": ["vocal", "tetris", "psychopath", "music", "jp-0th"], "desc": "Hololive 0期生，從個人勢一路拼搏進入 Hololive，首位登上 THE FIRST TAKE 的全能虛擬歌姬。", "features": "壓倒性的爆發力歌喉、俄羅斯方塊（Tetris 99）神級實力、在狼人殺與生存遊戲中展現的冷酷斧頭狂人特質。", "relations": "與 [[sakura-miko|櫻巫女]] 組成 [[micomet|MiComet]]；與 [[inui-toko|戌亥床]] 組成 Anemone 等。", "memes": "「彗星斧頭狂人 (Sui-chan wa kyou mo kowai)」、「今天也很可愛 (今日もかわいい！)」、「俄羅斯方塊速通殺手」。"}, {"index": 5, "id": "azki", "name_zh": "AZKi", "name_jp": "AZKi", "name_en": "AZKi", "branch": "Hololive JP", "generation": "0th Generation", "gen_id": "jp-0th", "status": "active", "debut_date": "2018-11-15", "graduation_date": null, "fan_name": "開拓者 (Pioneer)", "oshi_mark": "⚒️", "illustrator": "焦茶 / 加隈亜衣 / ぽよよんろっく", "image": "../asset/picture/hololive/AZKi_list_thumb.png", "opening_greeting": "こんあずきー！AZKiです！", "closing_greeting": "おつあずきでしたー！", "songs": ["いのち", "青い夢", "Without U", "Creating world"], "tags": ["vocal", "geoguessr", "music", "jp-0th"], "desc": "原為音樂特化廠牌 INNK Music 專屬虛擬歌手，2022 年完全移籍 Hololive 本家。", "features": "極具穿透力與靈魂的感性歌聲、在 GeoGuessr（地理猜謎）中展現的像素級地圖辨識神技（地圖神）。", "relations": "與 [[tokino-sora|時乃空]] 組成雙人歌唱組合 [[soraz|SorAZ]]，兩人攜手 Victor 主流出道。", "memes": "「GeoGuessr 秒殺女王」、「行走的 Google 街景神靈」。"}, {"index": 6, "id": "shirakami-fubuki", "name_zh": "白上吹雪", "name_jp": "白上フブキ", "name_en": "Shirakami Fubuki", "branch": "Hololive JP", "generation": "1st Generation / Gamers", "gen_id": "jp-1st", "status": "active", "debut_date": "2018-06-01", "graduation_date": null, "fan_name": "すこん部 (Sukonbu)", "oshi_mark": "🌽", "illustrator": "凪白みと", "image": "../asset/picture/hololive/Shirakami-Fubuki_list_thumb.png", "opening_greeting": "こんこんきーつね！白上フブキです！", "closing_greeting": "おつこーん！またね！", "songs": ["Say!ファンファーレ!", "KINGWORLD", "KONKON Beats"], "tags": ["leader", "otaku", "gaming", "fox", "jp-1st", "gamers"], "desc": "Hololive 1期生兼 Gamers 隊長，白髮獸耳狐狸少女，社內的靈魂精神領袖與頂級御宅族。", "features": "極高情商與照料後輩的領導力、狂熱熱愛動漫二次元與轉蛋手遊、經典「朋友宣言（No Wife, Friend!）」。", "relations": "與 [[ookami-mio|大神澪]]、[[nekomata-okayu|貓又小粥]]、[[inugami-korone|戌神沁音]] 組成 [[gamers|Hololive Gamers]]；與 [[shiranui-flare|不知火芙蕾雅]] 等關係極佳。", "memes": "「Imari Fox / Scatman」、「金色鯉魚王長達數十天的釣魚耐久」、「不是妻子，是朋友！」。"}, {"index": 7, "id": "natsuiro-matsuri", "name_zh": "夏色祭", "name_jp": "夏色まつり", "name_en": "Natsuiro Matsuri", "branch": "Hololive JP", "generation": "1st Generation", "gen_id": "jp-1st", "status": "active", "debut_date": "2018-06-01", "graduation_date": null, "fan_name": "まつりす (Matsurisu)", "oshi_mark": "🏮", "illustrator": "皆村春樹", "image": "../asset/picture/hololive/Natsuiro-Matsuri_list_thumb.png", "opening_greeting": "こんにちわっしょーい！夏色まつりです！", "closing_greeting": "おつまつりー！ばいばーい！", "songs": ["君と眺める夏の花", "HiHiハイテンション！", "ネバギバ夏色ストーリー"], "tags": ["cheerleader", "energetic", "apex", "jp-1st"], "desc": "Hololive 1期生，充滿元氣的啦啦隊少女，率真奔放、情感豐富的社內活寶。", "features": "直率豪爽的談話風格、對美少女與可愛後輩毫無抵抗力、高超的 Apex 槍法與歌唱爆發力。", "relations": "與 1期生全體羈絆深厚；經常跨社與彩虹社等外部 VTuber 展開聯動。", "memes": "「呼吸一樣自然的清楚自稱」、「下半身呼吸名言」、「呼吸鑑賞大師」。"}, {"index": 8, "id": "akai-haato", "name_zh": "赤井心 / 哈洽馬", "name_jp": "赤井はあと", "name_en": "Akai Haato", "branch": "Hololive JP", "generation": "1st Generation", "gen_id": "jp-1st", "status": "active", "debut_date": "2018-06-02", "graduation_date": null, "fan_name": "はあとん (Haaton)", "oshi_mark": "❤️", "illustrator": "はる雪", "image": "../asset/picture/hololive/Akai-Haato_list_thumb.png", "opening_greeting": "はあちゃまっちゃま〜！赤井はあとです！", "closing_greeting": "おつるーじゅ！ばいばーい！", "songs": ["REDHEART", "Infinity", "豚骨インキュベーター"], "tags": ["haachama", "cooking", "chaos", "tsundere", "jp-1st"], "desc": "Hololive 1期生，從早期的金髮傲嬌留學大小姐，進化為全社最狂傲的獵奇藝術家「Haachama (哈洽馬)」。", "features": "極限暗黑料理直播（吃蜘蛛、袋鼠肉）、精巧前衛的恐怖雙重人格剪輯影片、英文流利。", "relations": "與 [[jp-1st|1期生]] 成員共同經歷多年起伏；曾與桐生可可展開多番英語雜談交流。", "memes": "「Haachama Cooking (哈洽馬料理)」、「哈洽馬與赤井心的獵頭雙重人格對決」。"}, {"index": 9, "id": "aki-rosenthal", "name_zh": "亞綺·羅森塔爾", "name_jp": "アキ・ローゼンタール", "name_en": "Aki Rosenthal", "branch": "Hololive JP", "generation": "1st Generation", "gen_id": "jp-1st", "status": "active", "debut_date": "2018-06-01", "graduation_date": null, "fan_name": "ロゼ隊 (Rosetai)", "oshi_mark": "🍎", "illustrator": "安曇アキタケ", "image": "../asset/picture/hololive/Aki-Rosenthal_list_thumb.png", "opening_greeting": "アローナ！アキ・ローゼンタールだよ！", "closing_greeting": "おつローナ！まったねー！", "songs": ["シャルイース (Shallys)", "ヒロインオーディション", "Rose of the Lamp"], "tags": ["elf", "bellydance", "ark", "healing", "jp-1st"], "desc": "Hololive 1期生，來自異世界的半精靈美少女，擁有治癒溫柔氣質與奇幻民族風唱腔。", "features": "專屬架空語言打造的民族神曲《シャルイース》、高難度肚皮舞演出、在《ARK》與生存遊戲中的硬核拓荒精神。", "relations": "與 1期生成員關係親密；在 ARK 與各項伺服器活動中常扮演可靠溫柔的精靈大姊姊。", "memes": "「雙馬尾浮空飛行傳說」、「狂喝威士忌的酒豪阿恰瑪（Aki）」、「ARK 異色龍狂人」。"}, {"index": 10, "id": "minato-aqua", "name_zh": "湊阿庫婭", "name_jp": "湊あくあ", "name_en": "Minato Aqua", "branch": "Hololive JP", "generation": "2nd Generation", "gen_id": "jp-2nd", "status": "graduate", "debut_date": "2018-08-08", "graduation_date": "2024-08-28", "fan_name": "あくああくるー (Aqua Crew)", "oshi_mark": "⚓", "illustrator": "がおう", "image": "../asset/picture/hololive/Minato-Aqua_talent_list_thumb.png", "opening_greeting": "こんあくあー！ホロライブ2期生の湊あくあです！", "closing_greeting": "おつあくあー！", "songs": ["あくあ色ぱれっと", "#あくあ色パレット", "Uni-glory", "きらきら"], "tags": ["gaming-god", "maid", "onion", "apex", "graduate", "jp-2nd"], "desc": "Hololive 2期生，穿著女僕裝的笨蛋宅女，電競實力極強頂點偶像，2024年8月圓滿畢業。", "features": "社恐孤僻的反差、頂級 Apex 獵殺者實力與《任天堂明星大亂鬥》超強技術、代表曲《あくあ色ぱれっと》紅遍全界。", "relations": "與 [[usada-pekora|兔田佩克拉]] 形成亦敵亦友的佩克阿庫競爭羈絆；與 [[hoshimachi-suisei|星街彗星]]、[[tokoyami-towa|常闇永遠]] 組成 Startend。", "memes": "「洋蔥 (Onion) 頭」、「社恐發作躲避聯動」、「阿庫婭建設 (Akukin) 總裁」。"}, {"index": 11, "id": "murasaki-shion", "name_zh": "紫咲詩音", "name_jp": "紫咲シオン", "name_en": "Murasaki Shion", "branch": "Hololive JP", "generation": "2nd Generation", "gen_id": "jp-2nd", "status": "graduate", "debut_date": "2018-08-17", "graduation_date": "2025-04-26", "fan_name": "塩っ子 (Shiokko)", "oshi_mark": "🌙", "illustrator": "Tam-U", "image": "../asset/picture/hololive/Murasaki-Shion_list_thumb.png", "opening_greeting": "こんしお〜！紫咲シオンだよ！", "closing_greeting": "おつしお〜！ばいばーい！", "songs": ["メイジ・オブ・ヴァイオレット", "シャンデリア", "ディソナンス"], "tags": ["witch", "kusogaki", "tsundere", "singing", "jp-2nd"], "desc": "Hololive 2期生，自稱出身名門的大魔法使黑魔導幼女，極具代表性的傲嬌臭小鬼（Kusogaki）。", "features": "招牌的嘲諷笑聲與毒舌傲嬌反應、歌唱時卻展現出難以置信的清澈成熟美聲。", "relations": "與 [[kiryu-coco|桐生可可]] 曾有過睡過頭大事件；與 2期生成員相愛相殺感情深厚。", "memes": "「大蒜 (Garlic) 髮型」、「睡過頭連動事件傳奇」、「臭小鬼教祖」。"}, {"index": 12, "id": "nakiri-ayame", "name_zh": "百鬼綾目", "name_jp": "百鬼あやめ", "name_en": "Nakiri Ayame", "branch": "Hololive JP", "generation": "2nd Generation", "gen_id": "jp-2nd", "status": "active", "debut_date": "2018-09-03", "graduation_date": null, "fan_name": "百鬼組 (Nakirigumi)", "oshi_mark": "😈", "illustrator": "ななかぐら", "image": "../asset/picture/hololive/Nakiri-Ayame_list_thumb.png", "opening_greeting": "こんなきりー！百鬼あやめだぞ！", "closing_greeting": "おつなきりー！またね！", "songs": ["かわ世", "夢花火", "宵の余、良い！"], "tags": ["oni", "nakirium", "healing", "laughter", "jp-2nd"], "desc": "Hololive 2期生，來自魔界學校的鬼神少女，社內公認的治癒與笑點極低擔當。", "features": "極具感染力的可愛笑聲（被稱為可提煉出正能量的百鬼元素 Nakirium）、自稱「余 (Yo)」。", "relations": "深受 Hololive 全員與粉絲寵愛，與 2期生成員情同姊妹。", "memes": "「Nakirium（百鬼能量元素，治癒一切）」、「余 (Yo) 是個可愛的鬼」、「笑點超低的呵呵笑」。"}, {"index": 13, "id": "yuzuki-choco", "name_zh": "癒月巧可", "name_jp": "癒月ちょこ", "name_en": "Yuzuki Choco", "branch": "Hololive JP", "generation": "2nd Generation", "gen_id": "jp-2nd", "status": "active", "debut_date": "2018-09-04", "graduation_date": null, "fan_name": "ちょこ民 (Chocomin)", "oshi_mark": "💋", "illustrator": "Masami Chie", "image": "../asset/picture/hololive/Yuzuki-Choco_list_thumb.png", "opening_greeting": "Good morning, my sweet students! 癒月ちょこです！", "closing_greeting": "お疲れ様でした、またねー！", "songs": ["NoDistance", "Sick Hack", "ChocoLove"], "tags": ["nurse", "succubus", "cooking", "asmr", "jp-2nd"], "desc": "Hololive 2期生，魔界學校的保健室惡魔護士，擅長料理與性感 ASMR。", "features": "極度性感沙啞的慵懶嗓音、高超的現實烹飪廚藝、早期舉辦過無數「巧可老師身體檢查」名聯動。", "relations": "與 [[oozora-subaru|大空昴]] 等關係親近；與 [[shiranui-flare|不知火芙蕾雅]]、[[sakura-miko|櫻巫女]] 等組成烹飪美食團體。", "memes": "「巧可老師身體檢查（學力與常識測驗）」、「ASMR 帳號封禁常客」、「現實頂級大廚」。"}, {"index": 14, "id": "oozora-subaru", "name_zh": "大空昴", "name_jp": "大空スバル", "name_en": "Oozora Subaru", "branch": "Hololive JP", "generation": "2nd Generation", "gen_id": "jp-2nd", "status": "active", "debut_date": "2018-09-16", "graduation_date": null, "fan_name": "スバ友 (Subatomo)", "oshi_mark": "🚑", "illustrator": "しぐれうい", "image": "../asset/picture/hololive/Oozora-Subaru_list_thumb.png", "opening_greeting": "ちわーす！ホロライブ2期生の大空スバルっス！", "closing_greeting": "おつばるー！ばいばーい！", "songs": ["太陽少女", "ぷ・れ・あ・で・す！", "スターライト"], "tags": ["duck", "manager", "straight-man", "energy", "jp-2nd"], "desc": "Hololive 2期生，綜合格鬥技部與格鬥部經理，全社最強吐嘈吐槽役（Tsukkomi）與陽光小太陽。", "features": "陽光開朗的爽朗性格、沙啞生動的招牌鴨子叫聲、與繪師媽媽しぐれうい（時雨羽衣）相聲般的互動。", "relations": "與 [[ookami-mio|大神澪]]、[[nekomata-okayu|貓又小粥]]、[[shirakami-fubuki|白上吹雪]] 組成著名非正式組合 [[smok|SMOK]]。", "memes": "「唐老鴨嗓音」、「Shuba Shuba Shuba 舞蹈小黃鴨（在歐美迷因界爆紅）」、「家裡被燒掉的傳奇身世」。"}, {"index": 15, "id": "ookami-mio", "name_zh": "大神澪", "name_jp": "大神ミオ", "name_en": "Ookami Mio", "branch": "Hololive JP", "generation": "Gamers", "gen_id": "jp-gamers", "status": "active", "debut_date": "2018-12-07", "graduation_date": null, "fan_name": "ミオリファ (Miofa)", "oshi_mark": "🌲", "illustrator": "泉彩", "image": "../asset/picture/hololive/Ookami-Mio_thumb.png", "opening_greeting": "こんばんみぉーん！大神ミオだよー！", "closing_greeting": "おつみぉーん！またね！", "songs": ["Howling", "夜光通信", "わんわん日和"], "tags": ["wolf", "mother", "tarot", "singing", "gamers"], "desc": "Hololive Gamers 成員，黑髮獸耳黑狼少女，社內公認最溫暖可靠的「澪媽媽」。", "features": "包容一切的母性光輝、極高準確率的塔羅牌占卜直播、帥氣深沉的搖滾唱功與乾嘔笑聲反差。", "relations": "Gamers 核心樞紐；與 [[oozora-subaru|大空昴]] 情同母女；主導 [[smok|SMOK]] 團體。", "memes": "「澪媽媽 (Mio-mama)」、「神準塔羅牌算命師」、「笑到乾嘔 (Wretching Laughter)」。"}, {"index": 16, "id": "nekomata-okayu", "name_zh": "貓又小粥", "name_jp": "猫又おかゆ", "name_en": "Nekomata Okayu", "branch": "Hololive JP", "generation": "Gamers", "gen_id": "jp-gamers", "status": "active", "debut_date": "2019-04-06", "graduation_date": null, "fan_name": "おにぎりゃー (Onigirya)", "oshi_mark": "🍙", "illustrator": "神岡ちろる", "image": "../asset/picture/hololive/Nekomata-Okayu_list_thumb.png", "opening_greeting": "もぐもぐ〜おかゆ〜！猫又おかゆです！", "closing_greeting": "おつかれさま〜！ばいばい！", "songs": ["もぐもぐYUMMY！", "パボ", "毒の王子さま", "デタラメな残像"], "tags": ["cat", "flirt", "mellow", "retro-game", "gamers"], "desc": "Hololive Gamers 成員，經營飯糰店的紫髮貓咪少女，聲線慵懶迷人的社內「撩妹牛郎」。", "features": "從容不迫的從容遊戲風格、擅長經典懷舊復古遊戲、自然撩撥社內各女孩子的無形海王魅力。", "relations": "與 [[inugami-korone|戌神沁音]] 組成 VTuber 界最著名百合羈絆 [[okakoro|OkaKoro (粥沁)]]。", "memes": "「Hololive 第一罪孽深重的女海王」、「法庭常客裁判所企劃」、「飯糰小偷」。"}, {"index": 17, "id": "inugami-korone", "name_zh": "戌神沁音", "name_jp": "戌神ころね", "name_en": "Inugami Korone", "branch": "Hololive JP", "generation": "Gamers", "gen_id": "jp-gamers", "status": "active", "debut_date": "2019-04-13", "graduation_date": null, "fan_name": "ころねすきー (Koronesuki)", "oshi_mark": "🥐", "illustrator": "フカヒレ", "image": "../asset/picture/hololive/Inugami-Korone_talent_list_thumb.png", "opening_greeting": "おほ〜！ゆびゆび〜！戌神ころねだよ！", "closing_greeting": "おつころーん！ばいばーい！", "songs": ["ころねの最凶天災☆わんだふぉー❤", "Wonky Monkey", "Doggy god's street"], "tags": ["dog", "endurance", "retro-game", "yubiyubi", "gamers"], "desc": "Hololive Gamers 成員，在都市某麵包店打工的棕髮犬娘，以超人體能與耐久直播聞名的傳奇犬。", "features": "動輒 12~24 小時以上的復古老遊戲馬拉松耐久、奇妙獨特的方言發音口癖、獲海外極高人氣（DOOM 官方致敬）。", "relations": "與 [[nekomata-okayu|貓又小粥]] 擁有十餘年的青梅竹馬羈絆 [[okakoro|OkaKoro]]。", "memes": "「手指手指！(Yubi Yubi - 收割觀眾手指)」、「超硬核超長耐久惡魔」、「哇哈(Eekum Bokum) 歐美迷因霸主」。"}, {"index": 18, "id": "usada-pekora", "name_zh": "兔田佩克拉", "name_jp": "兎田ぺこら", "name_en": "Usada Pekora", "branch": "Hololive JP", "generation": "3rd Generation (HoloFantasy)", "gen_id": "jp-3rd", "status": "active", "debut_date": "2019-07-17", "graduation_date": null, "fan_name": "野兔 (Nousagi)", "oshi_mark": "👯‍♀️", "illustrator": "憂姫はぐれ", "image": "../asset/picture/hololive/Usada-Pekora_list_thumb.png", "opening_greeting": "こんぺこ！こんぺこ！こんぺこ！兎田ぺこらぺこ！", "closing_greeting": "おつぺこでしたー！", "songs": ["ぺこらんだむぶれいん！", "全人類　兎化計画！", "ラッキー☆オーケストラ"], "tags": ["rabbit", "comedy", "minecraft", "world-top", "jp-3rd"], "desc": "Hololive 3期生，寂寞便會死去的兔耳少女，全球女性實況界收視時長第一的頂級狂笑喜劇人。", "features": "每句話結尾帶「Peko」口癖、招牌魔性笑聲（AH↓HA↑HA↑HA↑）、卓越的企劃力與遊戲整活搞笑天賦。", "relations": "創立社內最強 Minecraft 企業 [[usada-kensetsu|兔田建設]]；與 [[moona-hoshinova|慕娜]] 組成 PekoMoona 跨國搭檔。", "memes": "「Peko 語錄」、「兔田重工 TNT 炸服」、「買了一隻真的猴子（Jill-kun）」。"}, {"index": 19, "id": "shiranui-flare", "name_zh": "不知火芙蕾雅", "name_jp": "不知火フレア", "name_en": "Shiranui Flare", "branch": "Hololive JP", "generation": "3rd Generation (HoloFantasy)", "gen_id": "jp-3rd", "status": "active", "debut_date": "2019-08-07", "graduation_date": null, "fan_name": "エルフレンド (Elfriend)", "oshi_mark": "🔥", "illustrator": "Lack", "image": "../asset/picture/hololive/Shiranui-Flare_list_thumb.png", "opening_greeting": "こんふぁいやー！不知火フレアだよ！", "closing_greeting": "おつふぁいやー！またね！", "songs": ["Smile & Go!!", "SKYSONG", "ユグドラシル"], "tags": ["half-elf", "singing", "handsome", "shiraken", "jp-3rd"], "desc": "Hololive 3期生，褐色皮膚半精靈少女，聲音沉穩溫柔、具備極高男友力與細膩唱腔的帥氣歌姬。", "features": "社內知名建設公司 [[shiraken|不知火建設 (Shiraken)]] 社長、對建築與造景有極高美學堅持、歌聲深情具感染力。", "relations": "與 [[shirogane-noel|白銀諾艾爾]] 曾為經典銀火搭檔；創立不知火建設並網羅星街彗星、櫻巫女、尾丸波爾卡等核心社員。", "memes": "「不知火建設社長」、「男友力破表的帥氣妖精」、「細節魔魔人」。"}, {"index": 20, "id": "shirogane-noel", "name_zh": "白銀諾艾爾", "name_jp": "白銀ノエル", "name_en": "Shirogane Noel", "branch": "Hololive JP", "generation": "3rd Generation (HoloFantasy)", "gen_id": "jp-3rd", "status": "active", "debut_date": "2019-08-08", "graduation_date": null, "fan_name": "白銀聖騎士團 (Shirogane Seikishidan)", "oshi_mark": "⚔️", "illustrator": "わたお", "image": "../asset/picture/hololive/Shirogane-Noel_list_thumb.png", "opening_greeting": "こんばんまっする！白銀ノエルです！", "closing_greeting": "おつまっする〜！", "songs": ["ほめのび", "OUR TREE", "リリカルMonster"], "tags": ["knight", "muscle", "asmr", "beef-bowl", "jp-3rd"], "desc": "Hololive 3期生，沉穩溫柔但力量驚人的實習白銀女騎士，社內 ASMR 之神與牛丼愛好者。", "features": "極致治癒的療癒系 ASMR 音聲、暴飲暴食大份量牛丼的怪力反差、溫柔體貼但常展現無辜呆萌。", "relations": "與 3期生成員關係融洽，與不知火芙蕾雅有深厚羈絆。", "memes": "「牛丼一筋女騎士」、「K罩杯胸圍傳說」、「音痴反差歌回（成長感人）」。"}, {"index": 21, "id": "houshou-marine", "name_zh": "寶鐘瑪琳", "name_jp": "宝鐘マリン", "name_en": "Houshou Marine", "branch": "Hololive JP", "generation": "3rd Generation (HoloFantasy)", "gen_id": "jp-3rd", "status": "active", "debut_date": "2019-08-11", "graduation_date": null, "fan_name": "寶鐘一味 (Houshou Ichimi)", "oshi_mark": "🏴‍☠️", "illustrator": "あかさあい", "image": "../asset/picture/hololive/Houshou-Marine_list_thumb.png", "opening_greeting": "Ahoy! 宝鐘海賊団船長、宝鐘マリンですぅ〜！", "closing_greeting": "それではみなさん、出航〜！", "songs": ["Ahoy!! 我ら宝鐘海賊団☆", "美少女無罪♡パイレーツ", "I’m Your Treasure Box", "マリ箱"], "tags": ["pirate", "senchou", "vocal-mv", "drawing", "jp-3rd"], "desc": "Hololive 3期生，自稱寶鐘海賊團船長（但其實還沒買船），擁有百萬破億 MV 點閱的頂級全能創作者。", "features": "堪比專業聲優與插畫師的神級口才與畫技、自帶昭和老歌庫、MV《美少女無罪》《マリ箱》掀起全網翻跳浪潮。", "relations": "與 3期生全體羈絆極深；與 Hololive 各成員互動大膽，社內無人不知的魅惑船長。", "memes": "「17歲（第N季）」、「阿嘿Ahoy (色氣發作)」、「體力極差的老人走步」。"}, {"index": 22, "id": "amane-kanata", "name_zh": "天音彼方", "name_jp": "天音かなた", "name_en": "Amane Kanata", "branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "gen_id": "jp-4th", "status": "graduate", "debut_date": "2019-12-27", "graduation_date": "2025-12-27", "fan_name": "へい民 (Heimin)", "oshi_mark": "💫", "illustrator": "おしおしお", "image": "../asset/picture/hololive/Amane-Kanata_talent_list_thumb.png", "opening_greeting": "こんかなたー！天音かなたです！", "closing_greeting": "おつかなたー！ばいばーい！", "songs": ["特者生存ワンダラダー!!", "別世界", "Knock it out!"], "tags": ["angel", "gorilla", "grip-50kg", "vocal", "jp-4th"], "desc": "Hololive 4期生，來自天界的見習天使，擁有驚人握力（50-54kg）與極致穿透力爆發歌喉的「握力天使」。", "features": "震撼的 50kg+ 握力徒手捏碎蘋果、極度刻苦堅毅的直播態度、為同伴與粉絲竭盡全力的熱血天使。", "relations": "與已卒業的 [[kiryu-coco|桐生可可]] 曾為合租同居摯友（KanaCoco 傳奇同盟）。", "memes": "「PPTenshi（PowerPoint 天使，初配信簡報梗）」、「握力 50kg 大猩猩」、「把可可拉回現實的好朋友」。"}, {"index": 23, "id": "tsunomaki-watame", "name_zh": "角卷綿芽", "name_jp": "角巻わため", "name_en": "Tsunomaki Watame", "branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "gen_id": "jp-4th", "status": "active", "debut_date": "2019-12-29", "graduation_date": null, "fan_name": "わためいと (Watamate)", "oshi_mark": "🐏", "illustrator": "ふーみ", "image": "../asset/picture/hololive/Tsunomaki-Watame_talent_list_thumb.png", "opening_greeting": "こんばんわため〜！角巻わためです！", "closing_greeting": "おつわため〜！ばいばーい！", "songs": ["My song", "愛昧ショコラーテ", "曇天羊", "RAINBOW"], "tags": ["sheep", "vocal", "music", "budokan", "jp-4th"], "desc": "Hololive 4期生，吟遊詩人綿羊少女，以登上日本「日本武道館」為堅定目標的超級歌姬。", "features": "長壽晨間企劃《わためのうた (綿芽之歌)》、高密度原創曲發布、溫暖治癒的毛茸茸羊肉形象。", "relations": "與 4期生成員同甘共苦；常被獅白牡丹視為儲備糧食追逐聯動。", "memes": "「Watame wa warukunai yo ne (綿芽沒有錯對吧？)」、「轉身復活只要 8 秒的羊肉」、「武道館追夢綿羊」。"}, {"index": 24, "id": "tokoyami-towa", "name_zh": "常闇永遠", "name_jp": "常闇トワ", "name_en": "Tokoyami Towa", "branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "gen_id": "jp-4th", "status": "active", "debut_date": "2020-01-03", "graduation_date": null, "fan_name": "眷屬 (Kenzoku)", "oshi_mark": "👾", "illustrator": "rurudo", "image": "../asset/picture/hololive/Tokoyami-Towa_list_thumb.png", "opening_greeting": "こんやっぴー！常闇トワ様です！", "closing_greeting": "おつやっぴー！またね！", "songs": ["Palette", "FACT", "サンビタリア", "ライメイ"], "tags": ["devil", "angel-tmt", "apex", "low-tone-vocal", "jp-4th"], "desc": "Hololive 4期生，為了歷練而來到人間的小惡魔，但因心地善良行事端正而被全員尊為「TMT (天使)」。", "features": "罕見深沉渾厚的磁性低音歌喉、頂級 FPS 實力與各項大型比賽主辦者、對後輩極度照顧講義氣。", "relations": "與 [[minato-aqua|湊阿庫婭]]、[[hoshimachi-suisei|星街彗星]] 組成 Apex 戰隊 Startend；與 [[usada-pekora|兔田佩克拉]] 等交情極好。", "memes": "「TMT (Towa Maji Tenshi，托娃真是天使)」、「自稱惡魔卻做了無數善舉」、「厚實深沉低音炮」。"}, {"index": 25, "id": "himemori-luna", "name_zh": "姬森璐娜", "name_jp": "姫森ルーナ", "name_en": "Himemori Luna", "branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "gen_id": "jp-4th", "status": "active", "debut_date": "2020-01-04", "graduation_date": null, "fan_name": "ルーナイト (LuKnight)", "oshi_mark": "🍬", "illustrator": "かんざきひろ", "image": "../asset/picture/hololive/Himemori-Luna_list_thumb.png", "opening_greeting": "みんな〜！お菓子の国のお姫様、姫森ルーナなのら！", "closing_greeting": "おつのら〜！ばいばいなのら！", "songs": ["ぐるぐるめぐる〜ふ", "Luna say maybe", "まんなかぼたん"], "tags": ["princess", "electone", "baby-speech", "monster-hunter", "jp-4th"], "desc": "Hololive 4期生，糖果王國的嬌生慣養小公主，口癖為「Nanora (なのら)」。", "features": "高難度的雙排電子琴（Electone）實況演奏、硬核《魔物獵人》老練獵人技術與極度黏人的嬰兒語氣反差。", "relations": "與夏色祭、大空昴關係密切；受到社內前輩滿滿寵溺。", "memes": "「0 歲嬰兒公主」、「超絕電子琴演奏神技」、「魔物獵人狂暴太刀俠」。"}, {"index": 26, "id": "kiryu-coco", "name_zh": "桐生可可", "name_jp": "桐生ココ", "name_en": "Kiryu Coco", "branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "gen_id": "jp-4th", "status": "graduate", "debut_date": "2019-12-28", "graduation_date": "2021-07-01", "fan_name": "たつまき (桐生會)", "oshi_mark": "🐉", "illustrator": "yaman**", "image": "../asset/picture/hololive/Kiryu-Coco_list_thumb.png", "opening_greeting": "Good Morning Motherfuckers!! 桐生ココです！", "closing_greeting": "おつココ！ばいばーい！", "songs": ["Weather Hackers", "ファンサ"], "tags": ["dragon", "asamade-coco", "legend", "bilingual", "graduate", "jp-4th"], "desc": "Hololive 4期生，來自異世界的龍之少女，徹底改變 Hololive 走向世界與社內文化格局的傳奇會長。", "features": "招牌晨間新聞節目《早安可可 (AsaCoco)》、雙語橋樑將歐美迷因帶入 Hololive、2021年創下歷史最高畢業直播紀錄。", "relations": "與 [[amane-kanata|天音彼方]] 摯友同居；推動 Hololive EN 成立的先驅精神領袖。", "memes": "「早安可可 (AsaCoco) 毒電波」、「Reddit 迷因審查大會」、「傳說中的 490 年後再會」。"}, {"index": 27, "id": "yukihana-lamy", "name_zh": "雪花菈米", "name_jp": "雪花ラミィ", "name_en": "Yukihana Lamy", "branch": "Hololive JP", "generation": "5th Generation (NePoLaBo)", "gen_id": "jp-5th", "status": "active", "debut_date": "2020-08-12", "graduation_date": null, "fan_name": "雪民 (Yukimin)", "oshi_mark": "☃️", "illustrator": "リン☆ユウ", "image": "../asset/picture/hololive/Yukihana-Lamy_list_thumb.png", "opening_greeting": "こんらみ〜！雪花ラミィです！", "closing_greeting": "おつらみ〜！ばいばーい！", "songs": ["明日への境界線", "Fleur", "FLOWER of the MOON"], "tags": ["snow-elf", "sake", "alcohol", "healing", "jp-5th"], "desc": "Hololive 5期生，深山銀裝素裹世界中長大的雪精靈少女，社內知名日本酒品鑑大師與溫柔媽媽。", "features": "對日本酒的極度熱愛與專屬酒莊合作推出獲獎名酒「雪夜月」、受驚嚇時的魔性尖叫與日常雜談的極致治癒感。", "relations": "與桃鈴音音、獅白牡丹、尾丸波爾卡組成情同家人的 5期生組合 [[nepolabo|NePoLaBo]]；與獅白牡丹組成知名搭檔獅雪（Shishilamy）。", "memes": "「酒豪雪精靈（日本酒大魔王）」、「雪夜月清酒世界獲獎」、「驚嚇海豚音」。"}, {"index": 28, "id": "momosuzu-nene", "name_zh": "桃鈴音音", "name_jp": "桃鈴ねね", "name_en": "Momosuzu Nene", "branch": "Hololive JP", "generation": "5th Generation (NePoLaBo)", "gen_id": "jp-5th", "status": "active", "debut_date": "2020-08-13", "graduation_date": null, "fan_name": "ねっ子 (Nekko)", "oshi_mark": "🥟", "illustrator": "西沢5㍉", "image": "../asset/picture/hololive/Momosuzu-Nene_talent_list_thumb.png", "opening_greeting": "こんにちぱお〜ん！桃鈴ねねです！", "closing_greeting": "おつねね〜！ばいばーい！", "songs": ["ねねねねねねねね!大爆走", "Lunch with me", "モモノネ"], "tags": ["seal", "beetle", "wife", "energy", "jp-5th"], "desc": "Hololive 5期生，充滿好奇心與朝氣的金髮包子頭少女，全網觀眾自封的「超絕可愛老婆」。", "features": "強行將數百萬觀眾納入「老公後宮」登記表、熱愛飼養甲蟲兜帽鍬形蟲、如小海豹般天真浪漫的搞笑行徑。", "relations": "5期生中的活寶么女；深得全社前輩憐愛。", "memes": "「海豹音音 (Seal Nene)」、「數百萬老公後宮名冊」、「兜蟲狂熱玩家」。"}, {"index": 29, "id": "shishiro-botan", "name_zh": "獅白牡丹", "name_jp": "獅白ぼたん", "name_en": "Shishiro Botan", "branch": "Hololive JP", "generation": "5th Generation (NePoLaBo)", "gen_id": "jp-5th", "status": "active", "debut_date": "2020-08-14", "graduation_date": null, "fan_name": "SSRB", "oshi_mark": "♌", "illustrator": "トマリン", "image": "../asset/picture/hololive/Shishiro-Botan_list_thumb.png", "opening_greeting": "ぐっもーにん！獅白ぼたんだよ！", "closing_greeting": "おつぼたんでしたー！", "songs": ["Lioness' Pride", "I overload", "Connect:Addict"], "tags": ["lion", "fps-god", "laughter", "ramen", "jp-5th"], "desc": "Hololive 5期生，看似帥氣慵懶的白獅少女，實則為社內最冷靜強悍的頂級 FPS 電競特種兵。", "features": "百步穿楊的射擊實力、遊玩恐怖遊戲時一邊大笑一邊擊殺怪物的爽朗笑聲、熱愛拉麵美食與科技組裝 PC。", "relations": "與雪花菈米組成「獅雪」搭檔；在各種跨社電競賽事中擔任最可靠的主力隊長。", "memes": "「FPS 俄羅斯特種大貓」、「恐怖遊戲全無感覺一路狂笑」、「波爾卡與羊肉的頂級掠食者」。"}, {"index": 30, "id": "omaru-polka", "name_zh": "尾丸波爾卡", "name_jp": "尾丸ポルカ", "name_en": "Omaru Polka", "branch": "Hololive JP", "generation": "5th Generation (NePoLaBo)", "gen_id": "jp-5th", "status": "active", "debut_date": "2020-08-16", "graduation_date": null, "fan_name": "座員 (Zain)", "oshi_mark": "🎪", "illustrator": "こうましろ", "image": "../asset/picture/hololive/Omaru-Polka_list_thumb.png", "opening_greeting": "ポルカおるかー？おるよー！尾丸ポルカだよ！", "closing_greeting": "おつぽるでしたー！", "songs": ["エヴァーグリーン", "サイキョウ神話", "HOLOGRAM CIRCUS", "屋根裏部屋のポルカ"], "tags": ["fennec", "circus", "talker", "shiraken", "jp-5th"], "desc": "Hololive 5期生，馬戲團座長耳廓狐少女，語速極快、機智風趣的社內廣播脫口秀女王。", "features": "長壽個人官方節目《波爾卡之傳說 (ポルカの伝説)》、極高情商與深沉感性的文藝心靈、神級雜談反應力。", "relations": "不知火建設副社長；NePoLaBo 氣氛製造機；深受各期成員信任。", "memes": "「波爾卡在嗎？在喔！(Polka oruka? Oruyo!)」、「雜技團大混亂」、「極限高語速脫口秀」。"}, {"index": 31, "id": "la-darknesss", "name_zh": "拉普拉斯·達克尼斯", "name_jp": "ラプラス・ダークネス", "name_en": "La+ Darknesss", "branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "gen_id": "jp-6th", "status": "active", "debut_date": "2021-11-26", "graduation_date": null, "fan_name": "ぷらすめいと (Plusmate)", "oshi_mark": "🛸💜", "illustrator": "三嶋くろね", "image": "../asset/picture/hololive/La-Darknesss_list_thumb.png", "opening_greeting": "貴様ら！跪け！holoX総帥、ラプラス・ダークネスだ！", "closing_greeting": "おつぷら！ひれ伏せ！", "songs": ["合縁事変", "Dark Breath", "Bung-Round"], "tags": ["holox", "leader", "kusogaki", "horns", "jp-6th"], "desc": "秘密結社 holoX 總帥，長著巨大黑角的幼女首領，志在征服世界但經常慘遭部下寵溺嘲弄。", "features": "霸氣威嚴只維持三秒的傲嬌臭小鬼本質、狂熱熱愛常闇永遠（社內頭號眷屬）、流暢的宅舞與 Rap 實力。", "relations": "holoX 統帥，與鷹嶺琉依、博衣小夜璃、沙花叉克蘿耶、風真伊呂波共同展開征服世界行動。", "memes": "「大角總帥（被烏鴉踩頭）」、「YMD (山田 / Yes My Dark)」、「常闇托娃狂熱腦殘粉」。"}, {"index": 32, "id": "takane-lui", "name_zh": "鷹嶺琉依", "name_jp": "鷹嶺ルイ", "name_en": "Takane Lui", "branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "gen_id": "jp-6th", "status": "active", "debut_date": "2021-11-27", "graduation_date": null, "fan_name": "ルイ友 (Luitomo)", "oshi_mark": "🥀", "illustrator": "かかげ", "image": "../asset/picture/hololive/Takane-Lui_list_thumb.png", "opening_greeting": "Good night, my ladies & gentlemen! 鷹嶺ルイです！", "closing_greeting": "それでは、おやすみなさい！", "songs": ["オーバード", "TSUBASA", "ばかばっか"], "tags": ["holox", "hawk", "executive", "communication-master", "jp-6th"], "desc": "秘密結社 holoX 幹部（幹事長），鷹之魔獸化身，高情商社交牛逼症的社內大總管兼知心大姊姊。", "features": "極強的商務企劃執行力、全社聯動的潤滑劑、擅長料理與情感諮商、多才多藝成熟知性。", "relations": "holoX 真正的實質掌舵人；與全社成員維持極佳聯動交情；6135 (與櫻巫女搭檔) 等。", "memes": "「holoX 唯一正常監護人」、「全能交際花 61 姐」、「受驚時發出的奇怪鳥叫」。"}, {"index": 33, "id": "hakui-koyori", "name_zh": "博衣小夜璃", "name_jp": "博衣こより", "name_en": "Hakui Koyori", "branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "gen_id": "jp-6th", "status": "active", "debut_date": "2021-11-28", "graduation_date": null, "fan_name": "こよりの助手くん (Joshukun)", "oshi_mark": "🧪", "illustrator": "ももこ", "image": "../asset/picture/hololive/Hakui-Koyori_list_thumb.png", "opening_greeting": "こんこよー！holoXの研究者、博衣こよりです！", "closing_greeting": "おつこよー！ばいばーい！", "songs": ["WAO!!", "史上最大のプレパラート", "アンバランス"], "tags": ["holox", "coyote", "scientist", "stream-monster", "morning-koyo", "jp-6th"], "desc": "秘密結社 holoX 大腦研究員，粉髮郊狼少女，全社公認的「直播怪物（每月直播時長全社第一）」。", "features": "每日晨間新聞《朝こよ (AsaKoyo)》堅持數年不輟、一週直播 50~80 小時的驚人體力、極度聰明熱情的理科天才。", "relations": "holoX 研究擔當；積極與社內每位前輩後輩展開合作， Hololive 活情報庫。", "memes": "「直播怪物郊狼（究竟什麼時候睡覺？）」、「助手君人體實驗」、「AsaKoyo 勞模」。"}, {"index": 34, "id": "sakamata-chloe", "name_zh": "沙花叉克蘿耶", "name_jp": "沙花叉クロヱ", "name_en": "Sakamata Chloe", "branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "gen_id": "jp-6th", "status": "graduate", "debut_date": "2021-11-29", "graduation_date": "2025-01-26", "fan_name": "飼育員 (Shiikuin)", "oshi_mark": "🎣", "illustrator": "パセリ", "image": "../asset/picture/hololive/Sakamata-Chloe_list_thumb.png", "opening_greeting": "ばっくばっくばく〜ん！沙花叉クロヱだよ！", "closing_greeting": "おつかれさま〜！またね！", "songs": ["人生リセットボタンぽちーw", "擬態ごっこ", "パラサイト"], "tags": ["holox", "orca", "cleaner", "no-bath", "genius-composer", "jp-6th"], "desc": "秘密結社 holoX 清理人兼實習殺手，戴面具的虎鯨少女，擁有天才級創作詞曲唱腔與極度不愛洗澡的反差。", "features": "出道極速突破百萬訂閱、親自作詞作曲且歌喉極度誘人、自爆經常數天不洗澡與字跡如古代象形文字。", "relations": "holoX 護衛；深得全社成員喜愛的黏人小虎鯨。", "memes": "「不洗澡虎鯨」、「象形文字字跡（本人都讀不懂）」、「Baku Baku Bakun 撒嬌暴擊」。"}, {"index": 35, "id": "kazama-iroha", "name_zh": "風真伊呂波", "name_jp": "風真いろは", "name_en": "Kazama Iroha", "branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "gen_id": "jp-6th", "status": "active", "debut_date": "2021-11-30", "graduation_date": null, "fan_name": "風真組 (かざま隊)", "oshi_mark": "🍃", "illustrator": "うみぼうず", "image": "../asset/picture/hololive/Kazama-Iroha_talent_list_thumb.png", "opening_greeting": "でござる！holoXの用心棒、風真いろはでござる！", "closing_greeting": "おつでござるー！ばいばーい！", "songs": ["いろはすてっぷ！", "言の葉日和", "風を仰ぎて"], "tags": ["holox", "samurai", "ninja-not", "gozaru", "seiso", "jp-6th"], "desc": "秘密結社 holoX 保鏢，深山修行的純樸天然武士少女，堅持自己是武士而非忍者的清楚担当。", "features": "「～でござる (De-gozaru)」經典句尾口癖、純潔無瑕的心靈經常被社內前輩捉弄、超凡劍術動作與靈活身手。", "relations": "holoX 專屬保鏢；深受白上吹雪、櫻巫女等前輩寵溺關照。", "memes": "「不是忍者是武士！（Ninja dewa gozaran!）」、「社內最後的清楚良心」、「天然被耍呆萌武士」。"}, {"index": 36, "id": "hiodoshi-ao", "name_zh": "火威青", "name_jp": "火威青", "name_en": "Hiodoshi Ao", "branch": "DEV_IS", "generation": "ReGLOSS", "gen_id": "dev-is-regloss", "status": "graduate", "debut_date": "2023-09-09", "graduation_date": "2025-10-03", "fan_name": "読者 (Reader)", "oshi_mark": "🖋️", "illustrator": "むっしゅ", "image": "../asset/picture/hololive/Hiodoshi-Ao_list_thumb.png", "opening_greeting": "やあ！ReGLOSSの火威青だよ！", "closing_greeting": "また会おうね、バイバイ！", "songs": ["瞬間ハートビート", "ステアウェイ・ダンス", "パントマイム"], "tags": ["regloss", "mangaka", "ikemen-fail", "comedy", "dev-is"], "desc": "DEV_IS 音樂團體 ReGLOSS 成員，孤高的純情帥氣少年漫畫家，但經常帥不過三秒展現搞笑笨拙本色。", "features": "精緻中性美男子外表、企圖帥氣撩妹卻秒被同伴吐槽反殺的極限反差萌、細膩動人的文藝嗓音。", "relations": "ReGLOSS 成員，與音乃瀨奏、一條莉莉華、儒烏風亭螺鈿、轟一共同追求新時代音樂偶像突破。", "memes": "「遺憾帥哥 (Zannen Ikemen)」、「被奏無情嘲弄的受氣包」、「純情害羞漫畫家」。"}, {"index": 37, "id": "otonose-kanade", "name_zh": "音乃瀨奏", "name_jp": "音乃瀬奏", "name_en": "Otonose Kanade", "branch": "DEV_IS", "generation": "ReGLOSS", "gen_id": "dev-is-regloss", "status": "active", "debut_date": "2023-09-09", "graduation_date": null, "fan_name": "音符 (Notes)", "oshi_mark": "🎹", "illustrator": "うごんば", "image": "../asset/picture/hololive/Otonose-Kanade_list_thumb.png", "opening_greeting": "ハロー！ReGLOSSの音乃瀬奏だよー！", "closing_greeting": "おつかなでー！ばいばーい！", "songs": ["瞬間ハートビート", "ソラトレイン", "ワンダー・ワンダー"], "tags": ["regloss", "kusogaki", "vocal-pro", "piano", "dev-is"], "desc": "DEV_IS 音樂團體 ReGLOSS 成員，音樂家的雛鳥，日常是淘氣搗蛋臭小鬼，唱歌時卻擁有震撼靈魂的天籟美聲。", "features": "天生極度敏銳的絕對音感與頂級演唱功底、日常吵鬧尖叫如喇叭般響亮、日韓雙語切換自如。", "relations": "ReGLOSS 音樂主力；經常狂踩火威青底線的頭號欺負者。", "memes": "「肉聲大喇叭奏」、「被自己歌聲反差震撼的觀眾」、「鋼琴絕對音感天才」。"}, {"index": 38, "id": "ichijou-ririka", "name_zh": "一條莉莉華", "name_jp": "一条莉々華", "name_en": "Ichijou Ririka", "branch": "DEV_IS", "generation": "ReGLOSS", "gen_id": "dev-is-regloss", "status": "active", "debut_date": "2023-09-09", "graduation_date": null, "fan_name": "社員 (Employees)", "oshi_mark": "🌃", "illustrator": "なかむら", "image": "../asset/picture/hololive/Ichijou-Ririka_list_thumb.png", "opening_greeting": "おはよー！一条莉々華社長です！", "closing_greeting": "おつりりかー！お仕事お疲れ様！", "songs": ["瞬間ハートビート", "ライアー・ガール", "Good Bye Days"], "tags": ["regloss", "ceo", "gyaru", "english", "dev-is"], "desc": "DEV_IS 音樂團體 ReGLOSS 成員，年輕幹練的熱血女高中生女社長兼陽光辣妹（Gyaru）。", "features": "卓越的商務策劃與英語溝通能力、陽光明媚極具感染力的辣妹談吐、真摯熱誠照顧團隊的社長氣度。", "relations": "ReGLOSS 堅實後盾與營運推進者；與前輩海外組聯動活躍。", "memes": "「陽光辣妹女社長」、「莉莉華社員招募」、「社內商務全能擔當」。"}, {"index": 39, "id": "juufuutei-raden", "name_zh": "儒烏風亭螺鈿", "name_jp": "儒烏風亭らでん", "name_en": "Juufuutei Raden", "branch": "DEV_IS", "generation": "ReGLOSS", "gen_id": "dev-is-regloss", "status": "active", "debut_date": "2023-09-10", "graduation_date": null, "fan_name": "贔屓 (Hiki)", "oshi_mark": "🐚", "illustrator": "カオミン", "image": "../asset/picture/hololive/Juufuutei-Raden_list_thumb.png", "opening_greeting": "毎度お馴染み、儒烏風亭らでんでございます！", "closing_greeting": "それではお後がよろしいようで、バイバイ！", "songs": ["瞬間ハートビート", "落語心心中", "あやかし横丁"], "tags": ["regloss", "rakugo", "art", "museum", "culture", "dev-is"], "desc": "DEV_IS 音樂團體 ReGLOSS 成員，熱愛落語、傳統日本文化與現代美術博物館的博學知性藝人。", "features": "淵博的日本傳統文化與世界藝術史知識、專業級落語相聲演出、推動多個國立博物館聯動與文化傳播。", "relations": "ReGLOSS 的文化涵養擔當，以別具一格的知性路線贏得學術界與全網高度評價。", "memes": "「落語大師螺鈿」、「博物館行走的導覽員」、「嗜酒與古典文藝反差」。"}, {"index": 40, "id": "todoroki-hajime", "name_zh": "轟一 (轟初美)", "name_jp": "轟はじめ", "name_en": "Todoroki Hajime", "branch": "DEV_IS", "generation": "ReGLOSS", "gen_id": "dev-is-regloss", "status": "active", "debut_date": "2023-09-10", "graduation_date": null, "fan_name": "番長組 (Banchogumi)", "oshi_mark": "🐧", "illustrator": "Aちき", "image": "../asset/picture/hololive/Todoroki-Hajime_list_thumb.png", "opening_greeting": "押忍！宇宙一の番長、轟はじめだ！", "closing_greeting": "押忍！おつはじめー！", "songs": ["瞬間ハートビート", "乱数調整", "Baddest"], "tags": ["regloss", "bancho", "dance-god", "baby-voice", "dev-is"], "desc": "DEV_IS 音樂團體 ReGLOSS 成員，自稱宇宙第一「番長（不良老大）」，實則為舞技逆天的可愛企鵝寶寶。", "features": "說話自帶含糊黏稠的超萌嬰兒咬舌音（常需字幕翻譯）、一旦站上舞台卻展現全社頂級的炸裂 Popping 街舞神技。", "relations": "ReGLOSS 舞力天花板；深受社內前輩爭相「翻譯與照顧」。", "memes": "「番長密碼（完全聽不懂的可愛呢喃）」、「番長跳舞帥炸全場」、「押忍！企鵝番長」。"}, {"index": 41, "id": "isaki-riona", "name_zh": "響咲莉音", "name_jp": "響咲リオナ", "name_en": "Isaki Riona", "branch": "DEV_IS", "generation": "FLOW GLOW", "gen_id": "dev-is-flow-glow", "status": "active", "debut_date": "2024-11-09", "graduation_date": null, "fan_name": "莉音組", "oshi_mark": "👑", "illustrator": "DSマイル", "image": "../asset/picture/hololive/Isaki-Riona_list_thumb.png", "opening_greeting": "こんリオナ！響咲リオナだよ！", "closing_greeting": "おつリオナでした！", "songs": ["FG ROAD", "FLOW GLOW Originals"], "tags": ["flow-glow", "leader", "vocal", "dev-is"], "desc": "DEV_IS 新銳團體 FLOW GLOW 隊長，具備出眾的領導氣度與富有爆發力的流行搖滾唱腔。", "features": "追求極致酷炫的潮流音樂風格，帶領成員開拓街頭流行音樂新領域。", "relations": "FLOW GLOW 領軍人物，與笑虎、樞、千速、薇薇共同活動。", "memes": "「新星潮流隊長」、「氣場全開的王道主唱」。"}, {"index": 42, "id": "koganei-niko", "name_zh": "虎金妃笑虎", "name_jp": "虎金妃笑虎", "name_en": "Koganei Niko", "branch": "DEV_IS", "generation": "FLOW GLOW", "gen_id": "dev-is-flow-glow", "status": "active", "debut_date": "2024-11-09", "graduation_date": null, "fan_name": "笑虎組", "oshi_mark": "🐯", "illustrator": "灸場メロ", "image": "../asset/picture/hololive/Koganei-Niko_list_thumb.png", "opening_greeting": "がおー！虎金妃笑虎だぞ！", "closing_greeting": "おつニコ！またな！", "songs": ["FG ROAD"], "tags": ["flow-glow", "tiger", "rap", "energy", "dev-is"], "desc": "FLOW GLOW 成員，活力四射的小老虎少女，節奏感極佳且擅長動感 Rap。", "features": "天真爛漫的元氣性格與極具侵略性的街頭說唱風格。", "relations": "FLOW GLOW 節奏與活力擔當。", "memes": "「笑虎小老虎」、「元氣說唱大師」。"}, {"index": 43, "id": "mizumiya-su", "name_zh": "水宮樞", "name_jp": "水宮枢", "name_en": "Mizumiya Su", "branch": "DEV_IS", "generation": "FLOW GLOW", "gen_id": "dev-is-flow-glow", "status": "active", "debut_date": "2024-11-09", "graduation_date": null, "fan_name": "樞民", "oshi_mark": "💧", "illustrator": "bob", "image": "../asset/picture/hololive/Mizumiya-Su_list_thumb.png", "opening_greeting": "こんすー！水宮枢だよ！", "closing_greeting": "おつすーでした！", "songs": ["FG ROAD"], "tags": ["flow-glow", "water", "cool", "dev-is"], "desc": "FLOW GLOW 成員，性格從容冷靜的藍色系少女，音色清澈如水。", "features": "透明感十足的聲線與沉穩洗鍊的舞台表現力。", "relations": "FLOW GLOW 冷靜協調者。", "memes": "「透明系歌姬」、「冷靜吐槽役」。"}, {"index": 44, "id": "rindo-chihaya", "name_zh": "輪堂千速", "name_jp": "輪堂千速", "name_en": "Rindo Chihaya", "branch": "DEV_IS", "generation": "FLOW GLOW", "gen_id": "dev-is-flow-glow", "status": "active", "debut_date": "2024-11-09", "graduation_date": null, "fan_name": "千速組", "oshi_mark": "🏎️", "illustrator": "めばち", "image": "../asset/picture/hololive/Rindo-Chihaya_list_thumb.png", "opening_greeting": "ぶっちぎり！輪堂千速だ！", "closing_greeting": "おつちはや！飛ばしていくぜ！", "songs": ["FG ROAD"], "tags": ["flow-glow", "speed", "racing", "dev-is"], "desc": "FLOW GLOW 成員，熱愛極速奔馳的重機賽車系少女，個性豪爽俐落。", "features": "極速疾馳般的快節奏舞台風格與帥氣硬朗的性格特質。", "relations": "FLOW GLOW 速度擔當。", "memes": "「重機賽車手」、「疾馳少女」。"}, {"index": 45, "id": "kikirara-vivi", "name_zh": "綺々羅々薇薇", "name_jp": "綺々羅々ヴィヴィ", "name_en": "Kikirara Vivi", "branch": "DEV_IS", "generation": "FLOW GLOW", "gen_id": "dev-is-flow-glow", "status": "active", "debut_date": "2024-11-09", "graduation_date": null, "fan_name": "薇薇組", "oshi_mark": "💄", "illustrator": "米室", "image": "../asset/picture/hololive/Kikirara-Vivi_list_thumb.png", "opening_greeting": "ごきげんよう！綺々羅々ヴィヴィですわ！", "closing_greeting": "それではごめんあそばせ！", "songs": ["FG ROAD"], "tags": ["flow-glow", "fashion", "glamour", "dev-is"], "desc": "FLOW GLOW 成員，華麗精緻的時尚系大小姐，擁有極高美學品味。", "features": "華麗舞台風範與時尚造型設計感，為團隊注入摩登色彩。", "relations": "FLOW GLOW 視覺與時尚擔當。", "memes": "「時尚女王薇薇」、「大小姐語調反差」。"}, {"index": 46, "id": "achichi-mela", "name_zh": "熱千梅拉", "name_jp": "熱千めら", "name_en": "Achichi Mela", "branch": "Hololive JP", "generation": "ASOBI☆MAWARI-TAI!", "gen_id": "asobi-mawari-tai", "status": "active", "debut_date": "2026-09-05", "graduation_date": null, "fan_name": "めら組", "oshi_mark": "🔥", "illustrator": "official", "image": "../asset/picture/hololive/Achichi-Mela_list_thumb.png", "opening_greeting": "あちち〜！熱千めらじゃ！", "closing_greeting": "火の用心じゃぞ！ばいばーい！", "songs": ["ASOBI☆MAWARI Anthem"], "tags": ["salamander", "firefighter", "asobi-mawari-tai"], "desc": "企劃團體 ASOBI☆MAWARI-TAI! 成員，充滿活力的蠑螈消防隊員少女。", "features": "以火災防範為己任，性格活潑熱情，句尾常帶「じゃ」方言風格。", "relations": "與空科索菲亞、鈴名綴同屬活動企劃陣容。", "memes": "「火之用心」、「元氣蠑螈少女」。"}, {"index": 47, "id": "sorashina-sopia", "name_zh": "空科索菲亞", "name_jp": "空科ソピア", "name_en": "Sorashina Sopia", "branch": "Hololive JP", "generation": "ASOBI☆MAWARI-TAI!", "gen_id": "asobi-mawari-tai", "status": "active", "debut_date": "2026-09-05", "graduation_date": null, "fan_name": "ソピア組", "oshi_mark": "🌌", "illustrator": "official", "image": "../asset/picture/hololive/Sorashina-Sopia_list_thumb.png", "opening_greeting": "ハロー！空科ソピアだよ！", "closing_greeting": "また星空の下で会おうね！", "songs": ["Starry Play"], "tags": ["space", "astronomy", "asobi-mawari-tai"], "desc": "企劃團體 ASOBI☆MAWARI-TAI! 成員，仰望星空的浪漫天文系少女。", "features": "對星空、宇宙科普與未知探索充滿好奇。", "relations": "與熱千梅拉、鈴名綴共同展開各類企劃挑戰。", "memes": "「星空導航員」。"}, {"index": 48, "id": "suzuna-tsuzuri", "name_zh": "鈴名綴", "name_jp": "鈴名つづり", "name_en": "Suzuna Tsuzuri", "branch": "Hololive JP", "generation": "ASOBI☆MAWARI-TAI!", "gen_id": "asobi-mawari-tai", "status": "active", "debut_date": "2026-09-05", "graduation_date": null, "fan_name": "つづり組", "oshi_mark": "🔔", "illustrator": "official", "image": "../asset/picture/hololive/Suzuna-Tsuzuri_list_thumb.png", "opening_greeting": "りんりん〜！鈴名つづりです！", "closing_greeting": "今日も一日お疲れ様でした！", "songs": ["Bell Chronicle"], "tags": ["bell", "healing", "asobi-mawari-tai"], "desc": "企劃團體 ASOBI☆MAWARI-TAI! 成員，宛如清脆鈴聲般治癒人心的元氣少女。", "features": "清純明亮的音色與細膩的文字記錄特質。", "relations": "ASOBI☆MAWARI-TAI! 成員。", "memes": "「治癒之鈴」。"}, {"index": 49, "id": "hanazono-sayaka", "name_zh": "花園彩香", "name_jp": "花園さやか", "name_en": "Hanazono Sayaka", "branch": "Staff / holoAN", "generation": "holoAN Announcer", "gen_id": "staff", "status": "active", "debut_date": "2025-11-01", "graduation_date": null, "fan_name": "さやか組", "oshi_mark": "🌸", "illustrator": "official", "image": "../asset/picture/hololive/Hanazono-Sayaka_list_thumb.png", "opening_greeting": "皆様こんにちは！holoANキャスターの花園さやかです！", "closing_greeting": "以上、holoANニュースでした！", "songs": [], "tags": ["staff", "announcer", "holoan"], "desc": "官方官方資訊情報頻道 holoAN 專屬播報主播（Announcer），為觀眾傳遞最新社內新聞與活動企劃。", "features": "專業端莊的新聞主播腔調與迅速準確的官方快訊傳遞。", "relations": "holoAN 播報團隊成員。", "memes": "「holoAN 當家主播」。"}, {"index": 50, "id": "izuki-michiru", "name_zh": "伊月滿", "name_jp": "伊月みちる", "name_en": "Izuki Michiru", "branch": "Staff / holoAN", "generation": "holoAN Announcer", "gen_id": "staff", "status": "active", "debut_date": "2025-11-01", "graduation_date": null, "fan_name": "みちる組", "oshi_mark": "🌙", "illustrator": "official", "image": "../asset/picture/hololive/Izuki-Michiru_list_thumb.png", "opening_greeting": "holoANの伊月みちるです！今週のトピックスをお届けします！", "closing_greeting": "次回もお楽しみに！", "songs": [], "tags": ["staff", "announcer", "holoan"], "desc": "官方官方資訊頻道 holoAN 播報團隊主播，風格清晰敏銳。", "features": "負責節目主持、活動專訪與特輯整理。", "relations": "holoAN 播報陣容。", "memes": "「官方情報快遞」。"}, {"index": 51, "id": "kazeshiro-yuki", "name_zh": "風白由希", "name_jp": "風白ゆき", "name_en": "Kazeshiro Yuki", "branch": "Staff / holoAN", "generation": "holoAN Announcer", "gen_id": "staff", "status": "active", "debut_date": "2025-12-30", "graduation_date": null, "fan_name": "ゆき組", "oshi_mark": "❄️", "illustrator": "official", "image": "../asset/picture/hololive/Kazeshiro Yuki_list_thumb-1.png", "opening_greeting": "みなさんこんにちは！holoANの風白ゆきです！", "closing_greeting": "それでは、次回の配信でお会いしましょう！", "songs": [], "tags": ["staff", "announcer", "holoan", "setsugekka"], "desc": "官方情報頻道 holoAN 專屬播報主播，雪月花主播三人組之「雪」。", "features": "扮演成熟沉著的大姊姊角色，負責社內重大賽事、官方演唱會 HoloFes 與新聞導讀。", "relations": "與 [[hanazono-sayaka|花園紗夜香]]、[[izuki-michiru|伊月滿]] 共同組成 holoAN 官方播報主播團隊。", "memes": "「努力裝出冷靜的大姊姊主播」、「雪月花之雪」。"}, {"index": 52, "id": "hyakuto-kyoko", "name_zh": "百燈恭子", "name_jp": "百灯キョーコ", "name_en": "Hyakuto Kyoko", "branch": "Hololive JP", "generation": "ASOBI☆MAWARI-TAI!", "gen_id": "asobi-mawari-tai", "status": "active", "debut_date": "2026-09-25", "graduation_date": null, "fan_name": "百灯一課", "oshi_mark": "📢", "illustrator": "official", "image": "../asset/picture/hololive/Hyakuto-Kyoko_list_thumb.png", "opening_greeting": "こんキョーコ！アソビ☆まわり隊の百灯キョーコだ！", "closing_greeting": "おつキョーコ！任務完了！", "songs": [], "tags": ["asobi-mawari-tai", "police", "power", "hero", "jp"], "desc": "Hololive JP 全新企劃團體「アソビ☆まわり隊！」（ASOBI☆MAWARI-TAI!）成員，熱血勇敢、手持擴音器的正義警察英雄。", "features": "力量型擔當、嗓門極大自帶熱血氣場、熱心助人的正義英雄，喜愛動作遊戲與獨立遊戲實況。", "relations": "與 [[achichi-mela|熱千めら]]、[[sorashina-sopia|空詩ソピア]]、[[suzuna-tsuzuri|奏縫すずな]] 共同組成 [[asobi-mawari-tai|ASOBI☆MAWARI-TAI!]]。", "memes": "「手持擴音器的熱血警察」、「大嗓門力量型擔當」。"}, {"index": 53, "id": "friend-a", "name_zh": "友人A (A醬)", "name_jp": "友人A (えーちゃん)", "name_en": "Friend A", "branch": "Staff", "generation": "Staff", "gen_id": "staff", "status": "resign", "debut_date": "2018-04-01", "graduation_date": "2024-06-30", "fan_name": "A-Staff", "oshi_mark": "👓", "illustrator": "official", "image": "../asset/picture/hololive/Friend-A_list_thumb.png", "opening_greeting": "みなさんこんにちは！友人Aです！", "closing_greeting": "お疲れ様でした！", "songs": [], "tags": ["staff", "producer", "legend", "graduate"], "desc": "Hololive 最具代表性的傳奇官方工作人員兼經紀總管，時乃空的摯友，陪伴事務所走過六年成長歲月。", "features": "眼鏡娘知性形象、專業的主持控場能力、深得全體藝人與粉絲敬重愛戴。", "relations": "時乃空早期專屬經紀人；春先和香的前輩導師。", "memes": "「最強 Staff A 醬」、「官方直播救火隊長」、「平胸吐槽梗」。"}, {"index": 54, "id": "harusaki-nodoka", "name_zh": "春先和香", "name_jp": "春先のどか", "name_en": "Harusaki Nodoka", "branch": "Staff", "generation": "Staff", "gen_id": "staff", "status": "resign", "debut_date": "2022-04-01", "graduation_date": "2025-09-30", "fan_name": "のどか組", "oshi_mark": "🌸", "illustrator": "official", "image": "../asset/picture/hololive/Harusaki-Nodoka_list_thumb.png", "opening_greeting": "皆様こんにちは！新人の春先のどかです！", "closing_greeting": "本日もありがとうございました！", "songs": [], "tags": ["staff", "announcer", "cute"], "desc": "接棒 A 醬的 Hololive 官方現役工作人員主播，溫柔認真、深受成員喜愛的可愛 Staff。", "features": "甜美親切的主持風格、負責主台大型企劃導覽與周邊商品發布宣傳。", "relations": "A 醬的後輩弟子；Hololive 官方主要代言人。", "memes": "「天然呆認真 Staff」、「被前輩們疼愛的和香醬」。"}, {"index": 55, "id": "mori-calliope", "name_zh": "森美聲", "name_jp": "森カリオペ", "name_en": "Mori Calliope", "branch": "Hololive EN", "generation": "Myth", "gen_id": "en-myth", "status": "active", "debut_date": "2020-09-12", "graduation_date": null, "fan_name": "Dead Beats", "oshi_mark": "💀", "illustrator": "ゆきさめ", "image": "../asset/picture/hololive/Mori-Calliope_list_thumb.png", "opening_greeting": "Yo, what's up Dead Beats? Mori Calliope here!", "closing_greeting": "Peace out, homies!", "songs": ["Excuse My Rudeness, But Could You Please RIP?", "Red", "End of a life", "Future Island"], "tags": ["reaper", "rap", "music", "universal-music", "en-myth"], "desc": "Hololive EN Myth 成員，死神的第一徒弟，簽約環球音樂 (Universal Music) 的世界級虛擬饒舌巨星。", "features": "神級快嘴 Rap 與感人肺腑的作詞作曲功底、看似冷酷粉髮死神實為純情害羞工作狂。", "relations": "與小鳥遊琪亞拉組成著名搭檔 Takamori；與星街彗星等展開多次跨國音樂合作。", "memes": "「爸爸 (Dad) 稱號」、「被琪亞拉狂撩臉紅」、「作詞作曲硬核勞模」。"}, {"index": 56, "id": "takanashi-kiara", "name_zh": "小鳥遊琪亞拉", "name_jp": "小鳥遊キアラ", "name_en": "Takanashi Kiara", "branch": "Hololive EN", "generation": "Myth", "gen_id": "en-myth", "status": "active", "debut_date": "2020-09-12", "graduation_date": null, "fan_name": "KFP (Kiara Fried Phoenix)", "oshi_mark": "🐔", "illustrator": "huke", "image": "../asset/picture/hololive/Takanashi-Kiara_list_thumb.png", "opening_greeting": "KIKKERIKIIII! It's your boss Takanashi Kiara!", "closing_greeting": "Vielen Dank and goodbye!", "songs": ["HINOTORI", "SPARKS", "DO U", "CHIMERA"], "tags": ["phoenix", "kfp", "dance", "polyglot", "en-myth"], "desc": "Hololive EN Myth 成員，渴望成為快餐連鎖店長的火鳳凰少女，精通英、德、日三語的頂級舞台舞姬。", "features": "長壽訪談節目《HoloTalk》專訪社內前輩、炸裂的舞台偶像舞蹈表現力、經營神秘快餐帝國 KFP。", "relations": "Takamori 搭檔；與兔田佩克拉等日語組成員交情極佳。", "memes": "「送去 Usual Room (神秘處刑小黑屋)」、「不是火雞是鳳凰！」、「KFP 連鎖店長」。"}, {"index": 57, "id": "ninomae-inanis", "name_zh": "一伊那爾棲", "name_jp": "一伊那尓栖", "name_en": "Ninomae Ina'nis", "branch": "Hololive EN", "generation": "Myth", "gen_id": "en-myth", "status": "active", "debut_date": "2020-09-13", "graduation_date": null, "fan_name": "Tentacult (Takodachi)", "oshi_mark": "🐙", "illustrator": "黒星紅白", "image": "../asset/picture/hololive/Ninomae-Inanis_list_thumb.png", "opening_greeting": "Wah! Hello everyone, Ninomae Ina'nis here!", "closing_greeting": "Otsukaresama, and WAH!", "songs": ["VIOLET", "Meconopsis"], "tags": ["priestess", "ancient-ones", "artist-god", "pun", "en-myth"], "desc": "Hololive EN Myth 成員，古神祭司章魚少女，全社公認的專業級神級插畫家與治癒舒適台主理人。", "features": "現場神速繪製高品質精緻插圖、溫柔沉穩的治癒低語、熱愛講冷笑話雙關語（Puns）。", "relations": "Myth 團寵暖心存在；與全社成員維持溫馨互動。", "memes": "「WAH (We Are Happy / 4th WAH)」、「冷笑話雙關大師」、「古神低語治癒台」。"}, {"index": 58, "id": "gawr-gura", "name_zh": "噶嗚·古拉", "name_jp": "がうる・ぐら", "name_en": "Gawr Gura", "branch": "Hololive EN", "generation": "Myth", "gen_id": "en-myth", "status": "graduate", "debut_date": "2020-09-13", "graduation_date": "2025-05-01", "fan_name": "Chumbuds", "oshi_mark": "🔱", "illustrator": "甘城なつき", "image": "../asset/picture/hololive/Gawr-Gura_list_thumb.png", "opening_greeting": "SHAAAAARK! Hi everyone, Gawr Gura here!", "closing_greeting": "Bye bye chumbuds!", "songs": ["REFLECT", "Tokyo Wabi-Sabi", "Ashikoshi"], "tags": ["shark", "world-record", "rhythm-game", "vocal", "en-myth"], "desc": "Hololive EN Myth 成員，來自亞特蘭提斯的頂級掠食者幼鯊，全球首位突破 400 萬訂閱的歷史第一 VTuber。", "features": "初推文僅發一個「a」字震撼全球、驚豔的爵士老歌天籟唱腔、音遊（太鼓達人、Muse Dash）神級節奏感。", "relations": "與華生·艾米莉亞組成 AmeSame 經典搭檔；與全社成員具備極高號召力。", "memes": "「a (全網最傳奇字母)」、「經典下尾鯊魚」、「亞特蘭提斯小魚乾」。"}, {"index": 59, "id": "watson-amelia", "name_zh": "華生·艾米莉亞", "name_jp": "ワトソン・アメリア", "name_en": "Watson Amelia", "branch": "Hololive EN", "generation": "Myth", "gen_id": "en-myth", "status": "graduate", "debut_date": "2020-09-13", "graduation_date": "2024-09-30", "fan_name": "Teammates", "oshi_mark": "🔎", "illustrator": "ナビ", "image": "../asset/picture/hololive/Watson-Amelia_list_thumb.png", "opening_greeting": "Hello Teammates! Detective Watson Amelia is here!", "closing_greeting": "See you later, Teammates!", "songs": ["ChikuTaku"], "tags": ["detective", "time-traveler", "tech-wizard", "ground-pound", "en-myth"], "desc": "Hololive EN Myth 成員，時間旅行偵探，社內傳奇技術革新者，推動 EN 3D 舞台與自製 VR 攝影棚的靈魂先驅。", "features": "自主研發動作捕捉與 3D 迷你模型、FPS 狂暴桌子重擊（Desk Slam）、2024年轉為聯盟附屬形式結束常規活動。", "relations": "Myth 的技術發動機與凝聚者；AmeSame 搭檔。", "memes": "「Ground Pound your mom (重擊你媽)」、「時間旅行懷錶」、「自製 3D 舞台奇蹟」。"}, {"index": 60, "id": "irys", "name_zh": "IRyS", "name_jp": "IRyS", "name_en": "IRyS", "branch": "Hololive EN", "generation": "Project: HOPE / Promise", "gen_id": "en-promise", "status": "active", "debut_date": "2021-07-11", "graduation_date": null, "fan_name": "GuyRyS", "oshi_mark": "💎", "illustrator": "redjuice", "image": "../asset/picture/hololive/IRyS_list_thumb.png", "opening_greeting": "HiRyS, it's IRyS!", "closing_greeting": "ByeRyS!", "songs": ["Caesura of Despair", "Sparks of Joy", "Gravity", "Till the End of Me"], "tags": ["vsinger", "nephilim", "bilingual", "singing", "en-promise"], "desc": "原 Project: HOPE 專屬虛擬歌手（半天使半惡魔 Nephilim），現整合於 Hololive English -Promise-。", "features": "深具爆發力與情感穿透力的頂級歌手唱功、日語流暢如母語、講話經常不經意陷入危險雙關的可愛反差。", "relations": "與哈珂斯·貝爾芙組成相愛相殺的「BaeRyS (離婚夫婦)」組合。", "memes": "「YabaIRyS (危險發言女王)」、「日語流利無障礙雙聲道」、「BaeRyS 假想結婚與反覆離婚」。"}, {"index": 61, "id": "ceres-fauna", "name_zh": "賽麗絲·芳娜", "name_jp": "セレス・ファウナ", "name_en": "Ceres Fauna", "branch": "Hololive EN", "generation": "Council / Promise", "gen_id": "en-promise", "status": "graduate", "debut_date": "2021-08-23", "graduation_date": "2025-01-03", "fan_name": "Saplings", "oshi_mark": "🌿", "illustrator": "朝凪", "image": "../asset/picture/hololive/Ceres-Fauna_list_thumb.png", "opening_greeting": "Konfauna~! Nature is here!", "closing_greeting": "Bye-bye Saplings!", "songs": ["Let Me Stay Here", "Sweet Appetite"], "tags": ["nature", "asmr", "kirin", "yandere", "en-promise"], "desc": "Hololive EN Promise 成員，大自然的化身（麒麟），聲線極度輕柔治癒，ASMR 與母性包容的象徵。", "features": "令人徹底沉醉的耳語 ASMR、遊玩遊戲時突然顯露的冰冷病嬌威壓、硬核通關耐力（Getting Over It 速通高手）。", "relations": "Council/Promise 溫柔之母；與 Mumei、Kronii、Bae 關係緊密。", "memes": "「Uuuuuu~（樹苗撒嬌哀號）」、「病嬌大自然母親」、「速通掘地求升」。"}, {"index": 62, "id": "ouro-kronii", "name_zh": "歐羅·克洛妮", "name_jp": "オーロ・クロニー", "name_en": "Ouro Kronii", "branch": "Hololive EN", "generation": "Council / Promise", "gen_id": "en-promise", "status": "active", "debut_date": "2021-08-23", "graduation_date": null, "fan_name": "Kronies", "oshi_mark": "⏳", "illustrator": "ワダアルコ", "image": "../asset/picture/hololive/Ouro-Kronii_list_thumb.png", "opening_greeting": "Konnichiwa, warden of time Ouro Kronii is here.", "closing_greeting": "Have the day you deserve. Goodbye.", "songs": ["Daydream"], "tags": ["time", "perfection", "subway", "helicopter", "en-promise"], "desc": "Hololive EN Promise 成員，時間的看守者，擁有無懈可擊的冷豔外表與低沉磁性嗓音，實為極致自戀與搞笑反差狂魔。", "features": "被全網讚譽的黃金比例好身材與名模低音、打果汁機喝過期潛艇堡的奇葩生活行徑、直率崩潰的搞笑尖叫。", "relations": "與 Mumei 形成經典 KronMei 搭檔；Council 顏面擔當。", "memes": "「Subway 潛艇堡打成汁喝」、「時間管理人直呼自戀滿分」、「直升機螺旋槳頭飾」。"}, {"index": 63, "id": "nanashi-mumei", "name_zh": "七詩無銘", "name_jp": "七詩ムメイ", "name_en": "Nanashi Mumei", "branch": "Hololive EN", "generation": "Council / Promise", "gen_id": "en-promise", "status": "graduate", "debut_date": "2021-08-23", "graduation_date": "2025-04-28", "fan_name": "Hoomans", "oshi_mark": "🪶", "illustrator": "あざー", "image": "../asset/picture/hololive/Nanashi-Mumei_list_thumb.png", "opening_greeting": "Oh, hi! It's me, Nanashi Mumei!", "closing_greeting": "Bye bye! Don't forget me!", "songs": ["A New Start", "mumei"], "tags": ["civilization", "owl", "cute-scary", "drawing", "en-promise"], "desc": "Hololive EN Promise 成員，人類文明的守護貓頭鷹，外表天真甜美，內心卻偶爾透露獵奇黑化的神秘少女。", "features": "極度天真無邪的笑靨、隨手畫出掉 SAN 值恐怖驚悚怪物的畫工、經常健忘失憶的可愛特質。", "relations": "與 Kronii 擁有愛恨交織的 KronMei 關係；Promise 靈魂成員。", "memes": "「Dan Dan Dontcha (倒數歌)」、「：D 恐怖畫像」、「忘記自己要幹嘛的小貓頭鷹」。"}, {"index": 64, "id": "hakos-baelz", "name_zh": "哈珂斯·貝爾芙", "name_jp": "ハコス・ベールズ", "name_en": "Hakos Baelz", "branch": "Hololive EN", "generation": "Council / Promise", "gen_id": "en-promise", "status": "active", "debut_date": "2021-08-23", "graduation_date": null, "fan_name": "Brats", "oshi_mark": "🎲", "illustrator": "Mika Pikazo", "image": "../asset/picture/hololive/Hakos-Baelz_list_thumb.png", "opening_greeting": "G'day mate! Hakos Baelz is in the house!", "closing_greeting": "See ya, ya little brats!", "songs": ["Play Dice!", "GEEK:P", "Boom"], "tags": ["chaos", "rat", "dance-god", "bilingual", "en-promise"], "desc": "Hololive EN Promise 成員兼議會代表（Council 學生會長），象徵混沌的澳洲紅髮鼠娘少女，舞技與節奏感超群。", "features": "澳洲口音、雖然代表混沌卻是全 Council 最常理認真可靠的主持人、全社公認的頂級舞者。", "relations": "BaeRyS 另一半；與全社 JP 成員日語交流無障礙。", "memes": "「混亂化身卻最常理 (Seiso Rat)」、「澳洲袋鼠口音」、「與 IRyS 的無休止婚姻協議」。"}, {"index": 65, "id": "tsukumo-sana", "name_zh": "九十九佐命", "name_jp": "九十九佐命", "name_en": "Tsukumo Sana", "branch": "Hololive EN", "generation": "Council", "gen_id": "en-promise", "status": "graduate", "debut_date": "2021-08-23", "graduation_date": "2022-07-31", "fan_name": "Sanallites", "oshi_mark": "🪐", "illustrator": "pako", "image": "../asset/picture/hololive/Tsukumo-Sana_list_thumb.png", "opening_greeting": "Sananana~! The speaker of space is here!", "closing_greeting": "Keep shining, Sanallites!", "songs": ["Astrogirl"], "tags": ["space", "astronomy", "beeg", "graduate", "en-promise"], "desc": "Hololive EN Council 原成員，空間的使者，無比巨大的星系少女，2022年7月圓滿畢業。", "features": "淵博的天文學科普知識、爽朗溫暖的笑聲、拿下頭飾即化為巨大宇宙天體的設定。", "relations": "與一伊那爾棲幼年相識；Council 最初的美好回憶。", "memes": "「BEEG Sana (巨大空間)」、「Astrogirl 永恆神曲」。"}, {"index": 66, "id": "shiori-novella", "name_zh": "席歐莉·諾維拉", "name_jp": "シオリ・ノヴェラ", "name_en": "Shiori Novella", "branch": "Hololive EN", "generation": "Advent", "gen_id": "en-advent", "status": "active", "debut_date": "2023-07-30", "graduation_date": null, "fan_name": "Novellites", "oshi_mark": "👁️‍🗨️", "illustrator": "かやはら", "image": "../asset/picture/hololive/Shiori-Novella_list_thumb.png", "opening_greeting": "Hello my bookmarks! Shiori Novella is here!", "closing_greeting": "Until the next chapter, bye!", "songs": ["Rebellion", "Overkill"], "tags": ["archivist", "yandere", "tangent", "advent"], "desc": "Hololive EN Advent 成員，狂熱收集故事與禁忌知識的檔案管理員，思路奇特跳躍的哥德風文學少女。", "features": "極度不可預測的話題跳躍、喜歡自製發酵黴菌食物與獵奇話題、文筆細膩的世界觀構建者。", "relations": "Advent 領袖級引領者，帶領全員逃離大監獄 The Cell。", "memes": "「思緒跳躍大師」、「哥德系 Yandere 聊天流」、「吃剪刀金屬異食發言」。"}, {"index": 67, "id": "koseki-bijou", "name_zh": "古石比啾", "name_jp": "古石ビジュー", "name_en": "Koseki Bijou", "branch": "Hololive EN", "generation": "Advent", "gen_id": "en-advent", "status": "active", "debut_date": "2023-07-30", "graduation_date": null, "fan_name": "Pebbles", "oshi_mark": "🗿", "illustrator": "北隈", "image": "../asset/picture/hololive/Koseki-Bijou_list_thumb.png", "opening_greeting": ":D Beep Beep! Koseki Bijou here!", "closing_greeting": "Bye bye Pebbles! :D", "songs": ["Rebellion", "Moai Song"], "tags": ["gemstone", "moai", "brainrot", "hardcore-gamer", "advent"], "desc": "Hololive EN Advent 成員，凝聚人類各色情感的遠古寶石少女（Biboo），硬核受苦遊戲通關怪物。", "features": "熟練運用當代歐美 Brainrot 迷因（Skibidi, Rizz）、硬核通關《艾爾登法環》《黑神話：悟空》超凡韌性、極致可愛的小石子形象。", "relations": "全社團寵小寶石；Kaela Kovalskia 的愛徒兼「被鐵鎚打磨的頑石」。", "memes": "「Biboo 腦殘流行語」、「🗿 摩艾石像歌曲」、「咬牙受苦通關大師」。"}, {"index": 68, "id": "nerissa-ravencroft", "name_zh": "奈莉莎·雷文克羅夫特", "name_jp": "ネリッサ・レイヴンクロフト", "name_en": "Nerissa Ravencroft", "branch": "Hololive EN", "generation": "Advent", "gen_id": "en-advent", "status": "active", "debut_date": "2023-07-31", "graduation_date": null, "fan_name": "Jailbirds", "oshi_mark": "🪶", "illustrator": "EB十", "image": "../asset/picture/hololive/Nerissa-Ravencroft_list_thumb.png", "opening_greeting": "Caw caw! Hello my Jailbirds, Nerissa is here!", "closing_greeting": "Goodnight, my sweet Jailbirds!", "songs": ["Rebellion", "Say My Name"], "tags": ["raven", "vocal-god", "soup", "fangirl", "advent"], "desc": "Hololive EN Advent 成員，以歌聲迷惑人心的黑羽魔音烏鴉惡魔，具備百老匯音樂劇水準的超絕歌姬。", "features": "極度澎湃震撼的厚實女高音與搖滾聲線、本質為 Hololive 全員狂熱迷妹（Fangirl）、熱愛與觀眾分享家族搞怪日常。", "relations": "Advent 歌唱支柱；與兔田佩克拉等偶像前輩狂熱互動。", "memes": "「熱愛喝熱湯 (Soup) 歌姬」、「全家人全員巨星 (Ravencroft 家族)」、「追星成功的超級粉絲」。"}, {"index": 69, "id": "fuwawa-abyssgard", "name_zh": "芙娃娃·阿比斯加德", "name_jp": "フワワ・アビスガード", "name_en": "Fuwawa Abyssgard", "branch": "Hololive EN", "generation": "Advent", "gen_id": "en-advent", "status": "active", "debut_date": "2023-07-31", "graduation_date": null, "fan_name": "Ruffians", "oshi_mark": "🐾💙", "illustrator": "イコモチ", "image": "../asset/picture/hololive/Fuwawa-Abyssgard_list_thumb.png", "opening_greeting": "BAU BAU! I'm Fuwawa, the fluffy older sister!", "closing_greeting": "BAU BAU! See you soon!", "songs": ["Rebellion", "Lifetime Showtime"], "tags": ["dog", "fuwamoco", "twin", "bau-bau", "advent"], "desc": "雙人雙胞胎搭檔 [[fuwamoco|FUWAMOCO]] 中的溫柔長女魔犬，蓬鬆淡藍色毛髮，聲音溫柔甜美卻帶隱藏腹黑氣質。", "features": "與妹妹 Mococo 永遠合體直播，招牌問候「BAU BAU」、晨間脫口秀《FWMC Morning》天天陪伴粉絲。", "relations": "與妹 Mococo 組成不可分割的 [[fuwamoco|FUWAMOCO]]；Advent 守門犬雙子。", "memes": "「BAU BAU (洗腦吠叫)」、「姐姐其實是腹黑掌控者」、「雙子同頻神同步」。"}, {"index": 70, "id": "mococo-abyssgard", "name_zh": "莫可可·阿比斯加德", "name_jp": "モココ・アビスガード", "name_en": "Mococo Abyssgard", "branch": "Hololive EN", "generation": "Advent", "gen_id": "en-advent", "status": "active", "debut_date": "2023-07-31", "graduation_date": null, "fan_name": "Ruffians", "oshi_mark": "🐾💖", "illustrator": "イコモチ", "image": "../asset/picture/hololive/Mococo-Abyssgard_list_thumb.png", "opening_greeting": "BAU BAU! I'm Mococo, the fuzzy younger sister!", "closing_greeting": "BAU BAU! Bye-bye!", "songs": ["Rebellion", "Lifetime Showtime"], "tags": ["dog", "fuwamoco", "twin", "bau-bau", "advent"], "desc": "雙人雙胞胎搭檔 [[fuwamoco|FUWAMOCO]] 中的傲嬌元氣妹妹魔犬，粉色毛髮，說話奶音帶有鼻音「Ho'eh?」呆萌口癖。", "features": "活潑好勝、常被姐姐捉弄、遊戲失誤時發出的可愛無辜叫聲深受全球 Ruffians 瘋狂喜愛。", "relations": "與姊 Fuwawa 形影不離，共用同一個 YouTube 頻道與大腦。", "memes": "「Ho'eh? (莫可可問號音)」、「被姐姐出賣的小狗」、「BAU BAU 守門神」。"}, {"index": 71, "id": "elizabeth-rose-bloodflame", "name_zh": "伊莉莎白·羅斯·血焰", "name_jp": "エリザベス・ローズ・ブラッドフレイム", "name_en": "Elizabeth Rose Bloodflame", "branch": "Hololive EN", "generation": "Justice", "gen_id": "en-justice", "status": "active", "debut_date": "2024-06-22", "graduation_date": null, "fan_name": "Bloodlines", "oshi_mark": "👑", "illustrator": "メカ", "image": "../asset/picture/hololive/Elizabeth-Rose-Bloodflame_list_thumb.png", "opening_greeting": "Hail and well met! The Scarlet Queen Elizabeth is here!", "closing_greeting": "Until justice is served, farewell!", "songs": ["Justice Anthem", "Queen of the Night"], "tags": ["justice", "queen", "british", "theater-vocal", "en-justice"], "desc": "Hololive EN Justice 領袖（猩紅女王），優雅尊貴的英式女皇，擁有劇院級天崩地裂歌喉的神級女高音。", "features": "高貴迷人的英倫腔調、極具感染力的演藝技巧、帶領 Justice 追捕 Advent 罪犯逃犯。", "relations": "Justice 首領；與 Gigi、Cecilia、Raora 共同組成為維護正義的執法人員。", "memes": "「真正女王歌喉」、「英國腔優雅霸氣」、「正義執行官」。"}, {"index": 72, "id": "gigi-murin", "name_zh": "吉吉·茉莉", "name_jp": "ジジ・ミュリン", "name_en": "Gigi Murin", "branch": "Hololive EN", "generation": "Justice", "gen_id": "en-justice", "status": "active", "debut_date": "2024-06-22", "graduation_date": null, "fan_name": "Gremlins", "oshi_mark": "🐒", "illustrator": "なつめえり", "image": "../asset/picture/hololive/Gigi-Murin_list_thumb.png", "opening_greeting": "YOOOOO! It's your favorite gremlin Gigi Murin!", "closing_greeting": "Smell ya later, nerds!", "songs": ["Gremlin Beat"], "tags": ["justice", "gremlin", "chaos", "chatterbox", "en-justice"], "desc": "Hololive EN Justice 成員，活蹦亂跳的小鬼靈精獵人，語速極快、幽默搞笑的社內搞怪大師。", "features": "極限歡樂的搞笑反應、無休止的俏皮嘴砲與極速接梗能力、令人捧腹的即興表演。", "relations": "Justice 搞笑擔當，與 Cecilia 形成極佳搞笑相聲搭檔。", "memes": "「純血小鬼 (Gremlin)」、「尖叫大猴子」、「全天候整活小能手」。"}, {"index": 73, "id": "cecilia-immergreen", "name_zh": "賽西莉亞·伊默格林", "name_jp": "セシリア・イマーグリーン", "name_en": "Cecilia Immergreen", "branch": "Hololive EN", "generation": "Justice", "gen_id": "en-justice", "status": "active", "debut_date": "2024-06-22", "graduation_date": null, "fan_name": "Otomatons", "oshi_mark": "🍵", "illustrator": "まふゆ", "image": "../asset/picture/hololive/Cecilia-Immergreen_list_thumb.png", "opening_greeting": "Guten Tag! The automaton Cecilia Immergreen is operational!", "closing_greeting": "Winding down now, Auf Wiedersehen!", "songs": ["Automaton Waltz"], "tags": ["justice", "automaton", "violin", "german", "en-justice"], "desc": "Hololive EN Justice 成員，精緻發條自動人偶少女，精通小提琴演奏與古典音樂的高雅淑女。", "features": "真實的小提琴即興演奏、偶爾展現的人偶短路崩潰呆萌、喜愛下午茶與烘焙甜點。", "relations": "Justice 優雅音樂家；與 Gigi 的混亂常常產生絕妙喜感。", "memes": "「發條少女 (Winding Key)」、「小提琴大師」、「短路抽搐人偶」。"}, {"index": 74, "id": "raora-panthera", "name_zh": "蘿拉·潘瑟拉", "name_jp": "ラオラ・パンテーラ", "name_en": "Raora Panthera", "branch": "Hololive EN", "generation": "Justice", "gen_id": "en-justice", "status": "active", "debut_date": "2024-06-23", "graduation_date": null, "fan_name": "Chattini", "oshi_mark": "🎨", "illustrator": "治癒", "image": "../asset/picture/hololive/Raora-Panthera_list_thumb.png", "opening_greeting": "Ciao a tutti! Artist Raora Panthera is here!", "closing_greeting": "A presto! Arrivederci!", "songs": ["Pink Panthera"], "tags": ["justice", "panther", "artist", "italian", "en-justice"], "desc": "Hololive EN Justice 成員，優雅慵懶的粉紅豹插畫家，純正義大利血統的溫柔大貓貓。", "features": "純正義大利語發音與迷人意式風情、現場高超電繪功力、將觀眾親切稱呼為小小貓咪「Chattini」。", "relations": "Justice 首席畫師；以柔軟蓬鬆的治癒感溫暖全隊。", "memes": "「義大利手勢 Mamma Mia」、「超溫柔大貓咪」、「Chattini 貓貓召集」。"}, {"index": 75, "id": "ayunda-risu", "name_zh": "阿優達·理樹", "name_jp": "アユンダ・リス", "name_en": "Ayunda Risu", "branch": "Hololive ID", "generation": "1st Generation (Area 15)", "gen_id": "id-1st", "status": "active", "debut_date": "2020-04-10", "graduation_date": null, "fan_name": "Risuners", "oshi_mark": "🐿️", "illustrator": "やまもと", "image": "../asset/picture/hololive/Ayunda-Risu_list_thumb.png", "opening_greeting": "Pagi~! Ayunda Risu di sini!", "closing_greeting": "Sampai jumpa lagi, bye-bye!", "songs": ["ALICE", "1:15 AM"], "tags": ["squirrel", "voice-range", "nnn", "vocal-god", "id-1st"], "desc": "Hololive ID 1期生，從魔法森林誤入人間的松鼠少女，擁有四個八度音域的跨維度歌姬。", "features": "自由切換幼童蘿莉音與霸氣熟女低音（Ayunda vs Risu）、每年 11 月的全球狂歡迷因《Non-stop Nut November》創始人。", "relations": "與 Moona、Iofi 共同開創 Hololive ID 的先驅大姐大。", "memes": "「NNN (Non-stop Nut November 收集松果核桃)」、「雙重人格聲線變形」。"}, {"index": 76, "id": "moona-hoshinova", "name_zh": "慕娜·星諾瓦", "name_jp": "ムーナ・ホシノヴァ", "name_en": "Moona Hoshinova", "branch": "Hololive ID", "generation": "1st Generation (Area 15)", "gen_id": "id-1st", "status": "active", "debut_date": "2020-04-11", "graduation_date": null, "fan_name": "Moonafic", "oshi_mark": "🔮", "illustrator": "により", "image": "../asset/picture/hololive/Moona-Hoshinova_list_thumb.png", "opening_greeting": "Moon moon, Moona Hoshinova here!", "closing_greeting": "Thank you for watching, bye bye!", "songs": ["High Tide", "Ai no Chiisana Uta", "Perisai Jitu"], "tags": ["moon", "model", "vocal-pro", "usada-kensetsu", "id-1st"], "desc": "Hololive ID 1期生，月亮化身的女大學生模特兒，ID 首屈一指的國際流行歌姬與建築巨匠。", "features": "震撼歐美與印尼樂壇的原創單曲《High Tide》、在 Minecraft 中擔任兔田建設首席工程部長打造多座宏偉建築。", "relations": "與兔田佩克拉組成傳奇跨國羈絆 PekoMoona；ID 1期生支柱。", "memes": "「兔田建設部長」、「Hey Moona! 經典跨國戀曲」、「月神霸氣唱功」。"}, {"index": 77, "id": "airani-iofifteen", "name_zh": "愛拉妮·伊歐芳汀", "name_jp": "アイラニ・イオフィフティーン", "name_en": "Airani Iofifteen", "branch": "Hololive ID", "generation": "1st Generation (Area 15)", "gen_id": "id-1st", "status": "active", "debut_date": "2020-04-12", "graduation_date": null, "fan_name": "Ioforia", "oshi_mark": "🎨", "illustrator": "夜ノみつき", "image": "../asset/picture/hololive/Airani-Iofifteen_list_thumb.png", "opening_greeting": "Iofi di sini! Obisa!", "closing_greeting": "Sampai jumpa! Dadaah!", "songs": ["Daisuki", "Blowing"], "tags": ["alien", "artist", "polyglot", "id-1st"], "desc": "Hololive ID 1期生，逃出母星的外星人繪畫系留學生，掌握五種以上語言的外語交際神童。", "features": "精通印尼語、英語、日語、韓語、德語等，經常擔任跨社與海外成員交流的橋樑、專業繪師。", "relations": "ID 早期與 JP/Holostars 聯動的核心推動者；與全社感情極佳。", "memes": "「多語種外星大腦」、「全社的可愛妹妹」、「熱情繪畫大師」。"}, {"index": 78, "id": "kureiji-ollie", "name_zh": "瘋狂奧莉", "name_jp": "クレイジー・オリー", "name_en": "Kureiji Ollie", "branch": "Hololive ID", "generation": "2nd Generation (Holoro)", "gen_id": "id-2nd", "status": "active", "debut_date": "2020-12-04", "graduation_date": null, "fan_name": "ZOMBRILY", "oshi_mark": "🧟‍♀️", "illustrator": "LAM", "image": "../asset/picture/hololive/Kureiji-Ollie_list_thumb.png", "opening_greeting": "ZOMBNICHIWA! Kureiji Ollie is here!", "closing_greeting": "Bye-bye! Ollie love you all!", "songs": ["JOLLIE JOLLIE", "Pillar of Truth"], "tags": ["zombie", "hyper", "screaming", "chess", "id-2nd"], "desc": "Hololive ID 2期生，從墓地復活的活潑殭屍少女，音量極大、精力無限的超高速發電機。", "features": "破壞耳膜的熱情高分貝尖叫、西洋棋高超大師實力、見到可愛女孩子便立刻發起求婚的社內頭號直球狂人。", "relations": "與全社乃至 VTuber 界幾乎全員有過求婚記錄；Apex 與西洋棋大賽主辦常客。", "memes": "「音量警告殭屍 (Earphone Warning)」、「求婚成癮者」、「下棋天才殭屍」。"}, {"index": 79, "id": "anya-melfissa", "name_zh": "安喵·梅爾菲莎", "name_jp": "アーニャ・メルフィッサ", "name_en": "Anya Melfissa", "branch": "Hololive ID", "generation": "2nd Generation (Holoro)", "gen_id": "id-2nd", "status": "active", "debut_date": "2020-12-05", "graduation_date": null, "fan_name": "Melfriends", "oshi_mark": "🍂", "illustrator": "上倉エク", "image": "../asset/picture/hololive/Anya-Melfissa_list_thumb.png", "opening_greeting": "Halo semuanya! Anya Melfissa di sini!", "closing_greeting": "Mata ne~ Dadaah!", "songs": ["Everlasting Nipah"], "tags": ["kris", "dagger", "calm", "mellow", "id-2nd"], "desc": "Hololive ID 2期生，由印尼傳統名刃「克里斯短劍 (Kris)」化身而成的冷靜知性少女。", "features": "慵懶冷靜的語調與不動聲色的吐槽、極度精通各類文字解謎與日語生僻字、經典厭世表情包。", "relations": "Holoro 隊內的冷靜煞車皮；與 JP 前輩交流自然從容。", "memes": "「Anya Face (全網 P 圖換臉迷因神顏)」、「行走的冷靜短劍」。"}, {"index": 80, "id": "pavolia-reine", "name_zh": "帕沃莉亞·雷納", "name_jp": "パヴォリア・レイネ", "name_en": "Pavolia Reine", "branch": "Hololive ID", "generation": "2nd Generation (Holoro)", "gen_id": "id-2nd", "status": "active", "debut_date": "2020-12-06", "graduation_date": null, "fan_name": "Merakyat", "oshi_mark": "🦚", "illustrator": "飯田ぽち。", "image": "../asset/picture/hololive/Pavolia-Reine_list_thumb.png", "opening_greeting": "Salam sekalian! Lady Pavolia Reine di sini!", "closing_greeting": "Terima kasih, sampay jumpa!", "songs": ["Gate Open: START!", "Illusion", "Sway"], "tags": ["peafowl", "lady", "water-drop", "vocal", "id-2nd"], "desc": "Hololive ID 2期生，孔雀國度的尊貴千金大小姐，優雅氣度與逗趣笑聲並存的迷人歌姬。", "features": "發笑時發出如同水滴滴落的奇妙「滴水笑聲」、成熟端莊的千金談吐、極高素質的原創曲編排。", "relations": "Holoro 大小姐；與寶鐘瑪琳等日語組前輩多次展開深度跨國對談。", "memes": "「滴水笑聲 (Water-drop laugh)」、「優雅大小姐發狂日常」。"}, {"index": 81, "id": "vestia-zeta", "name_zh": "薇絲緹雅·潔塔", "name_jp": "ベスティア・ゼータ", "name_en": "Vestia Zeta", "branch": "Hololive ID", "generation": "3rd Generation (HoloH3ro)", "gen_id": "id-3rd", "status": "active", "debut_date": "2022-03-25", "graduation_date": null, "fan_name": "Zecretary", "oshi_mark": "📜", "illustrator": "あるてら", "image": "../asset/picture/hololive/Vestia-Zeta_list_thumb.png", "opening_greeting": "Mission start! Secret agent Vestia Zeta here!", "closing_greeting": "Mission accomplished, see ya!", "songs": ["You're Mine"], "tags": ["secret-agent", "cat-not", "ponkotsu", "id-3rd"], "desc": "Hololive ID 3期生，秘密組織代號「V.7」的特務少女，堅稱自己是特工而非貓咪的呆萌特務。", "features": "軟萌甜美的聲線、執行任務時屢屢出包的廢柴呆萌反差、極其可愛的貓耳髮型。", "relations": "HoloH3ro 特務擔當；深受海外組與 JP 組前輩喜愛。", "memes": "「我不是貓！(I am NOT a CAT!)」、「笨拙廢柴特工」、「小貓咪潔塔」。"}, {"index": 82, "id": "kaela-kovalskia", "name_zh": "卡埃拉·科瓦爾斯基亞", "name_jp": "カエラ・コヴァルスキア", "name_en": "Kaela Kovalskia", "branch": "Hololive ID", "generation": "3rd Generation (HoloH3ro)", "gen_id": "id-3rd", "status": "active", "debut_date": "2022-03-26", "graduation_date": null, "fan_name": "Pemaloe", "oshi_mark": "🔨", "illustrator": "ヤスダスズヒト", "image": "../asset/picture/hololive/Kaela-Kovalskia_list_thumb.png", "opening_greeting": "GSH! Get Some Help! Kaela here.", "closing_greeting": "Thank you, now go sleep!", "songs": ["TBA"], "tags": ["blacksmith", "grind-god", "no-sleep", "minecraft", "id-3rd"], "desc": "Hololive ID 3期生，繼承偉大工匠衣缽的帥氣鐵匠少女，全社乃至全球直播界的「爆肝肝帝第一人」。", "features": "動輒連續直播 15~30 小時不眠不休、在 Minecraft 中單人挖穿伺服器建造奇蹟級材料庫、冷面笑匠無聲笑聲。", "relations": "Minecraft 終極資源供應商；古石比啾 (Biboo) 的打磨鐵匠師父。", "memes": "「GSH (Get Some Help! 去找醫生看腦袋啦)」、「不睡覺機器人鐵匠」、「挖空整個伺服器的狂人」。"}, {"index": 83, "id": "kobo-kanaeru", "name_zh": "科波·卡納耶魯", "name_jp": "こぼ・かなえる", "name_en": "Kobo Kanaeru", "branch": "Hololive ID", "generation": "3rd Generation (HoloH3ro)", "gen_id": "id-3rd", "status": "active", "debut_date": "2022-03-27", "graduation_date": null, "fan_name": "Kobokerz", "oshi_mark": "☔", "illustrator": "ぽんかん⑧", "image": "../asset/picture/hololive/Kobo-Kanaeru_list_thumb.png", "opening_greeting": "Ehe! Rain shaman Kobo Kanaeru is here!", "closing_greeting": "Dadaaah Kobokerz!", "songs": ["Mantra Hujan", "Entah", "Sebatas Formalitas"], "tags": ["rain-shaman", "blue-kusogaki", "speed-record", "music", "id-3rd"], "desc": "Hololive ID 3期生，雨之巫師家族末裔，以席捲東南亞的超凡人氣創下東南亞最速百萬破兩百萬訂閱紀錄的天才兒童。", "features": "原創曲《Mantra Hujan》在 TikTok 突破數億次播放、任性撒嬌臭小鬼性格、精通吉他即興彈唱與編程。", "relations": "常闇托娃與小鳥遊琪亞拉的乾女兒；跨社與彩虹社及電競圈熱門焦點。", "memes": "「藍色雨巫女臭小鬼」、「東南亞人氣核彈」、「哭鬧撒嬌大王」。"}, {"index": 84, "id": "hanasaki-miyabi", "name_zh": "花咲雅", "name_jp": "花咲みやび", "name_en": "Hanasaki Miyabi", "branch": "HOLOSTARS JP", "generation": "1st Generation", "gen_id": "holostars-jp-1st", "status": "graduate", "debut_date": "2019-06-08", "graduation_date": "2026-06-08", "fan_name": "花見友", "oshi_mark": "🌺", "illustrator": "官方", "image": "../asset/picture/holostars/Hanasaki-Miyabi_list_thumb.png", "opening_greeting": "こんみやび！花咲みやびです！", "closing_greeting": "おつみやびでしたー！", "songs": ["花妖折枝"], "tags": ["holostars", "flower", "gentle", "jp-1st"], "desc": "HOLOSTARS 1期生兼創始第一人，性格溫和治癒的桃花少年，身旁常伴有食人植物佩普。", "features": "溫柔如清風的談吐與喜愛園藝森林自然的優雅少年。", "relations": "HOLOSTARS 最初始成員，受到後輩全員敬重。", "memes": "「HOLOSTARS 的原點」、「食人植物飼主」。"}, {"index": 85, "id": "kanade-izuru", "name_zh": "奏手一豆", "name_jp": "奏手イヅル", "name_en": "Kanade Izuru", "branch": "HOLOSTARS JP", "generation": "1st Generation", "gen_id": "holostars-jp-1st", "status": "active", "debut_date": "2019-06-22", "graduation_date": null, "fan_name": "イヅル組", "oshi_mark": "🎸", "illustrator": "官方", "image": "../asset/picture/holostars/Kanade-Izuru_list_thumb.png", "opening_greeting": "よっ。奏手イヅルだ。", "closing_greeting": "じゃあな、また。", "songs": ["連なるモノローグ"], "tags": ["holostars", "guitar", "vocal-god", "cat", "jp-1st"], "desc": "HOLOSTARS 1期生，彈著吉他流浪的孤高貓系少年，擁有震撼靈魂的原聲彈唱實力。", "features": "粗礪卻深具爆發力的搖滾嗓音、精湛吉他演奏與極高的音樂原創天賦。", "relations": "與律可同為音樂核心搭檔。", "memes": "「吉他彈唱天才」、「流浪貓性格」。"}, {"index": 86, "id": "arurandeisu", "name_zh": "阿蘭蒂斯", "name_jp": "アルランディス", "name_en": "Arurandeisu", "branch": "HOLOSTARS JP", "generation": "1st Generation", "gen_id": "holostars-jp-1st", "status": "graduate", "debut_date": "2019-09-08", "graduation_date": "2026-06-10", "fan_name": "ファミランディス", "oshi_mark": "🍕", "illustrator": "官方", "image": "../asset/picture/holostars/Arurandeisu_list_thumb.png", "opening_greeting": "Buon giorno! アルランディスだ！", "closing_greeting": "Ciao ciao! またな！", "songs": ["Wup it up"], "tags": ["holostars", "pizza", "italian", "papalan", "jp-1st"], "desc": "HOLOSTARS 1期生，包容力極強的義大利熟男大叔（Arupapa），經歷外觀大幅美青年化改版的帥氣大叔。", "features": "對歐美迷因極高接納度、溫暖包容所有後輩的大家長氣質。", "relations": "HOLOSTARS 最可靠的爸爸型前輩。", "memes": "「Pizza Papa (比薩爸爸)」、「年輕化逆生長」。"}, {"index": 87, "id": "rikka", "name_zh": "律可", "name_jp": "律可", "name_en": "Rikka", "branch": "HOLOSTARS JP", "generation": "1st Generation", "gen_id": "holostars-jp-1st", "status": "graduate", "debut_date": "2019-10-20", "graduation_date": "2026-06-09", "fan_name": "りっかー", "oshi_mark": "⚙️", "illustrator": "官方", "image": "../asset/picture/holostars/Rikka_list_thumb.png", "opening_greeting": "ハロー！ホロロイドの律可です！", "closing_greeting": "おつりっかー！", "songs": ["Re:Hello world", "アーカイブ"], "tags": ["holostars", "robot", "vocal", "holoroid", "jp-1st"], "desc": "HOLOSTARS 1期生，記憶體只有 2GB 的機人少年「Holoroid」，才華橫溢的創作型歌手。", "features": "清澈透亮的高難度流行歌喉、親自創作多首原創曲、與知名音樂人跨界頻繁合作。", "relations": "與奏手一豆、星街彗星等歌唱實力派多有切磋。", "memes": "「記憶體只有 2GB」、「高性能機人歌姬」。"}, {"index": 88, "id": "kagami-kira", "name_zh": "鏡見吉良", "name_jp": "鏡見キラ", "name_en": "Kagami Kira", "branch": "HOLOSTARS JP", "generation": "1st Generation", "gen_id": "holostars-jp-1st", "status": "graduate", "debut_date": "2019-06-09", "graduation_date": "2020-11-30", "fan_name": "キラキラ組", "oshi_mark": "✨", "illustrator": "官方", "image": "../asset/picture/holostars/Kagami-Kira_list_thumb.png", "opening_greeting": "みんなー！鏡見キラだよ！", "closing_greeting": "ばいばーい！", "songs": [], "tags": ["holostars", "cute", "graduate", "jp-1st"], "desc": "HOLOSTARS 1期生早期成員，外貌甜美可愛的偽娘風少年，2020年11月因身體原因畢業。", "features": "甜美可愛的聲線與元氣少年感。", "relations": "1期生早期的可愛忙內。", "memes": "「初代可愛擔當」。"}, {"index": 89, "id": "astel-leda", "name_zh": "阿斯特爾·瑞達", "name_jp": "アステル・レダ", "name_en": "Astel Leda", "branch": "HOLOSTARS JP", "generation": "2nd Generation (SunTempo)", "gen_id": "holostars-jp-2nd", "status": "active", "debut_date": "2019-12-07", "graduation_date": null, "fan_name": "アステラー", "oshi_mark": "🎭", "illustrator": "官方", "image": "../asset/picture/holostars/Astel-Leda_list_thumb.png", "opening_greeting": "ちわっす！アステル・レダだ！", "closing_greeting": "おつかれ、バイバイ！", "songs": ["未来銀河と汽笛の号令"], "tags": ["holostars", "apex-predator", "disney-vocal", "endurance", "jp-2nd"], "desc": "HOLOSTARS 2期生（SunTempo），來自異星的任性王子，Apex 頂級獵殺者與迪士尼天籟歌喉化身。", "features": "長達數十小時的極限 Apex 戰鬥耐久、宛如迪士尼百老匯舞台劇的高亢穿透美聲。", "relations": "與 Ollie、Chocosen 等跨組聯動親暱；SunTempo 核心。", "memes": "「迪士尼在逃王子」、「無極限 Apex 耐久機器」。"}, {"index": 90, "id": "kishido-temma", "name_zh": "岸堂天真", "name_jp": "岸堂天真", "name_en": "Kishido Temma", "branch": "HOLOSTARS JP", "generation": "2nd Generation (SunTempo)", "gen_id": "holostars-jp-2nd", "status": "graduate", "debut_date": "2019-12-14", "graduation_date": "2026-06-08", "fan_name": "岸堂組", "oshi_mark": "🦔", "illustrator": "官方", "image": "../asset/picture/holostars/Kishido-Temma_list_thumb.png", "opening_greeting": "こんてんま！騎士見習いの岸堂天真です！", "closing_greeting": "おつてんま！またね！", "songs": ["Shooting Star"], "tags": ["holostars", "knight", "dead-by-daylight", "dark-side", "jp-2nd"], "desc": "HOLOSTARS 2期生，看似陽光的見習騎士，在《Dead by Daylight》中化身冷酷無情「暗黑天真騎士」。", "features": "爽朗陽光的大男孩外表下隱藏著強悍的 PVP 殺手技術、超人耐力。", "relations": "SunTempo 隊員。", "memes": "「暗黑天真 (Dark Temma)」、「黎明殺機大魔王」。"}, {"index": 91, "id": "yukoku-roberu", "name_zh": "夕刻羅貝爾", "name_jp": "夕刻ロベル", "name_en": "Yukoku Roberu", "branch": "HOLOSTARS JP", "generation": "2nd Generation (SunTempo)", "gen_id": "holostars-jp-2nd", "status": "active", "debut_date": "2019-12-24", "graduation_date": null, "fan_name": "常連さん", "oshi_mark": "🍷", "illustrator": "官方", "image": "../asset/picture/holostars/Yukoku-Roberu_list_thumb.png", "opening_greeting": "乾杯！BAR ROBELへようこそ！夕刻ロベルです！", "closing_greeting": "閉店！ありがとうございました！", "songs": ["POP-TALK"], "tags": ["holostars", "bartender", "our-son", "talker", "jp-2nd"], "desc": "HOLOSTARS 2期生，隱密酒吧「BAR ROBEL」店主，全界公認的頂級單口相聲談話大師、全球粉絲的「我們的兒子（Winning Son）」", "features": "永不停歇的機關槍關西腔脫口秀、無與倫比的控場主持技巧、全球走紅的 Winning Son 迷因。", "relations": "HOLOSTARS 社交與談話門面；與彩虹社舞元啟介等主辦廣受歡迎的跨界訪談。", "memes": "「Winning Son (全網爭相認兒子)」、「夜間關西腔脫口秀」、「營業中酒吧」。"}, {"index": 92, "id": "kageyama-shien", "name_zh": "影山紫炎", "name_jp": "影山シエン", "name_en": "Kageyama Shien", "branch": "HOLOSTARS JP", "generation": "3rd Generation (TriNero)", "gen_id": "holostars-jp-3rd", "status": "graduate", "debut_date": "2020-04-24", "graduation_date": "2026-07-05", "fan_name": "シエン組", "oshi_mark": "🟣", "illustrator": "官方", "image": "../asset/picture/holostars/Kageyama-Shien_list_thumb.png", "opening_greeting": "お前ら！こんシエン！影山シエンだ！", "closing_greeting": "じゃあな！また会おう！", "songs": ["Beginning"], "tags": ["holostars", "boss", "mafia", "voice-actor", "jp-3rd"], "desc": "HOLOSTARS 3期生（MaFia），黑手黨首領胡狼獸人，兼具專業聲優級磁性低沉聲線與呆萌笨蛋反差。", "features": "低沉動聽的池面男低音、配音功底扎實、常被部下與粉絲戲稱為「可愛首領（Boss）」。", "relations": "與荒咬皇牙組成經典 MaFia 雙人拍檔。", "memes": "「黑手黨呆萌首領」、「池面美聲」。"}, {"index": 93, "id": "aragami-oga", "name_zh": "荒咬皇牙", "name_jp": "荒咬オウガ", "name_en": "Aragami Oga", "branch": "HOLOSTARS JP", "generation": "3rd Generation (TriNero)", "gen_id": "holostars-jp-3rd", "status": "active", "debut_date": "2020-05-10", "graduation_date": null, "fan_name": "オウガ組", "oshi_mark": "🦏", "illustrator": "官方", "image": "../asset/picture/holostars/Aragami-Oga_list_thumb.png", "opening_greeting": "よぉ、オウガだ。", "closing_greeting": "おつオウガ、またな。", "songs": ["Silent Night"], "tags": ["holostars", "ogre", "deep-voice", "plamo", "jp-3rd"], "desc": "HOLOSTARS 3期生（MaFia），異世界退役軍人魔人，擁有撼動地表的極限超重低音與熱愛鋼普拉模型反差。", "features": "極深沉磁性的重低音嗓音、熱愛拼裝鋼彈塑膠模型（鋼普拉）與 ASMR 催眠低語。", "relations": "與大空昴、癒月巧可等有過名聯動；MaFia 核心重砲。", "memes": "「極限低音大魔人」、「鋼普拉狂魔」。"}, {"index": 94, "id": "yatogami-fuma", "name_zh": "夜十神封魔", "name_jp": "夜十神封魔", "name_en": "Yatogami Fuma", "branch": "HOLOSTARS JP", "generation": "UPROAR!!", "gen_id": "holostars-jp-uproar", "status": "active", "debut_date": "2022-03-29", "graduation_date": null, "fan_name": "封魔組", "oshi_mark": "🦝", "illustrator": "官方", "image": "../asset/picture/holostars/Yatogami-Fuma_list_thumb.png", "opening_greeting": "ちわーっす！夜十神封魔だ！", "closing_greeting": "おつふうま！またな！", "songs": ["UPROAR!! Originals"], "tags": ["holostars", "uproar", "tanuki", "fps"], "desc": "HOLOSTARS UPROAR!! 隊長，經營萬事屋的狸貓妖怪少年，性格爽朗極富活力。", "features": "卓越的 FPS 槍法技術、元氣滿滿的帶隊氣質與親和力。", "relations": "UPROAR!! 領軍核心，與烏有、燐央攜手成長。", "memes": "「狸貓隊長」、「萬事屋接單中」。"}, {"index": 95, "id": "utsugi-uyu", "name_zh": "羽繼烏有", "name_jp": "羽継烏有", "name_en": "Utsugi Uyu", "branch": "HOLOSTARS JP", "generation": "UPROAR!!", "gen_id": "holostars-jp-uproar", "status": "active", "debut_date": "2022-03-29", "graduation_date": null, "fan_name": "烏有組", "oshi_mark": "🃏", "illustrator": "官方", "image": "../asset/picture/holostars/Utsugi-Uyu_list_thumb.png", "opening_greeting": "ようこそ！怪盗の羽継烏有です！", "closing_greeting": "またお会いしましょう！", "songs": ["UPROAR!! Originals"], "tags": ["holostars", "uproar", "phantom-thief", "magic"], "desc": "HOLOSTARS UPROAR!! 成員，優雅神秘的千面怪盜，擅長魔術表演與多變話術。", "features": "充滿紳士魅力的談吐、魔術表演秀與靈活敏捷的遊戲操作。", "relations": "UPROAR!! 智慧智囊。", "memes": "「優雅怪盜烏有」、「變魔術反被捉弄」。"}, {"index": 96, "id": "minase-rio", "name_zh": "水無世燐央", "name_jp": "水無世燐央", "name_en": "Minase Rio", "branch": "HOLOSTARS JP", "generation": "UPROAR!!", "gen_id": "holostars-jp-uproar", "status": "graduate", "debut_date": "2022-03-30", "graduation_date": "2026-06-25", "fan_name": "燐央組", "oshi_mark": "🕯️", "illustrator": "官方", "image": "../asset/picture/holostars/Minase-Rio_list_thumb.png", "opening_greeting": "幽霊の水無世燐央です...", "closing_greeting": "成仏〜またね！", "songs": ["UPROAR!! Originals"], "tags": ["holostars", "uproar", "ghost", "vocal-god"], "desc": "HOLOSTARS UPROAR!! 成員，生前懷抱偶像夢想的幽靈少年，擁有全社頂級的高音震撼美聲。", "features": "空靈清澈的超高音女聲域唱腔、悲劇身世與搞笑陰濕日常的鮮明對比。", "relations": "UPROAR!! 歌唱最強支柱。", "memes": "「成佛幽靈歌姬」、「超絕高音殺手」。"}, {"index": 97, "id": "regis-altare", "name_zh": "里吉斯·阿爾泰爾", "name_jp": "リージス・アルテア", "name_en": "Regis Altare", "branch": "HOLOSTARS EN", "generation": "TEMPUS", "gen_id": "holostars-en-tempus", "status": "active", "debut_date": "2022-07-22", "graduation_date": null, "fan_name": "Altartists", "oshi_mark": "🗡️", "illustrator": "官方", "image": "../asset/picture/holostars/Regis-Altare_list_thumb.png", "opening_greeting": "Greetings! Guild Leader Regis Altare is here!", "closing_greeting": "Until the next quest, farewell!", "songs": ["Top of the World"], "tags": ["holostars-en", "tempus", "leader", "hero"], "desc": "冒險者公會 TEMPUS 勇者公會長，性格謙遜溫厚，被公認為受後輩與同伴全員欺負的溫柔好隊長。", "features": "清澈乾淨的少年歌喉、親和力滿分、擅長帶領團隊完成各種高難度合作冒險。", "relations": "TEMPUS 創立會長，與 Axel、Hakka、Shinri、Flayon 並肩作戰。", "memes": "「受氣包勇者隊長」、「公會全勤吉祥物」。"}, {"index": 98, "id": "axel-syrios", "name_zh": "艾克賽爾·席里歐斯", "name_jp": "アクセル・シリオス", "name_en": "Axel Syrios", "branch": "HOLOSTARS EN", "generation": "TEMPUS", "gen_id": "holostars-en-tempus", "status": "active", "debut_date": "2022-07-22", "graduation_date": null, "fan_name": "Axelots", "oshi_mark": "🪓", "illustrator": "官方", "image": "../asset/picture/holostars/Axel-Syrios_list_thumb.png", "opening_greeting": "G'day mates! Axel Syrios in the house!", "closing_greeting": "Catch ya later, legends!", "songs": ["Top of the World"], "tags": ["holostars-en", "tempus", "gladiator", "australian", "apex"], "desc": "冒險者公會 TEMPUS 鬥士，來自澳洲的豪爽角鬥士競技場主人，精通 Apex 與高難度槍戰。", "features": "濃厚道地的澳洲俚語口音、開朗奔放直言不諱的男子氣概、日語會話極其流暢。", "relations": "與 Altare 歡喜冤家；經常與 JP 成員跨國聯動。", "memes": "「澳洲角鬥士狗子」、「直男求生記」。"}, {"index": 99, "id": "magni-dezmondt", "name_zh": "馬格尼·戴茲蒙德", "name_jp": "マグニ・デズモンド", "name_en": "Magni Dezmond", "branch": "HOLOSTARS EN", "generation": "TEMPUS", "gen_id": "holostars-en-tempus", "status": "Breakoff", "debut_date": "2022-07-23", "graduation_date": "2023-08-31", "fan_name": "Magnation", "oshi_mark": "🧤", "illustrator": "官方", "image": "../asset/picture/holostars/Magni-Dezmondt_list_thumb.png", "opening_greeting": "It's Maggin' time! Great Alchemist Magni here!", "closing_greeting": "Stay classy, Magnation!", "songs": ["Top of the World"], "tags": ["holostars-en", "tempus", "alchemist", "Breakoff"], "desc": "冒險者公會 TEMPUS 煉金術師，鬼才藝術家與狂歡整活大師，2023年8月合約結束終止活動。", "features": "極高水準的數位板繪畫手速、狂放不羈的喜劇演員風格。", "relations": "與 Noir Vesper 曾為 TEMPUS 核心元老。", "memes": "「It's Maggin Time (煉金魔性台詞)」、「生化毒藥煉金術」。"}, {"index": 100, "id": "noir-vesper", "name_zh": "諾瓦·威斯珀", "name_jp": "ノワール・ヴェスパー", "name_en": "Noir Vesper", "branch": "HOLOSTARS EN", "generation": "TEMPUS", "gen_id": "holostars-en-tempus", "status": "Breakoff", "debut_date": "2022-07-23", "graduation_date": "2023-08-31", "fan_name": "Vesties", "oshi_mark": "📜", "illustrator": "官方", "image": "../asset/picture/holostars/Noir-Vesper_list_thumb.png", "opening_greeting": "Good day, scholars. Scholar Noir Vesper here.", "closing_greeting": "Until our paths cross again.", "songs": ["Top of the World"], "tags": ["holostars-en", "tempus", "scholar", "gramps", "Breakoff"], "desc": "冒險者公會 TEMPUS 學者，熱愛野外荒野求生的老派知性爺爺，2023年8月合約結束終止活動。", "features": "深沉儒雅的談吐、滿腹豐富的戶外露營野外求生常識與哲學思辨。", "relations": "公會長輩；深受全公會愛戴。", "memes": "「荒野求生老學者 (Gramps)」、「塑膠球刺槍防身術」。"}, {"index": 101, "id": "banzoin-hakka", "name_zh": "萬象院八花", "name_jp": "万象院ハッカ", "name_en": "Banzoin Hakka", "branch": "HOLOSTARS EN", "generation": "TEMPUS (Vanguard)", "gen_id": "holostars-en-tempus", "status": "active", "debut_date": "2023-01-07", "graduation_date": null, "fan_name": "Hakkito", "oshi_mark": "🪓", "illustrator": "官方", "image": "../asset/picture/holostars/Banzoin-Hakka_list_thumb.png", "opening_greeting": "HAKKACHEW! Banzoin Hakka is here!", "closing_greeting": "See ya, Hakkito!", "songs": ["Raven's Song"], "tags": ["holostars-en", "tempus", "exorcist", "metal-vocal", "spanish"], "desc": "TEMPUS 驅魔師陰陽師少年，精通西班牙語、日語與英語，擁有震撼人心的死亡重金屬黑腔嘶吼。", "features": "極高亢的重金屬嘶吼（Metal Screams）、熱情奔放的拉丁血統與溫柔心靈。", "relations": "TEMPUS 先鋒陣容。", "memes": "「金屬黑腔驅魔師」、「拉丁超狂尖叫」。"}, {"index": 102, "id": "josuiji-shinri", "name_zh": "定水寺真理", "name_jp": "定水寺シンリ", "name_en": "Josuiji Shinri", "branch": "HOLOSTARS EN", "generation": "TEMPUS (Vanguard)", "gen_id": "holostars-en-tempus", "status": "active", "debut_date": "2023-01-07", "graduation_date": null, "fan_name": "Shinrin", "oshi_mark": "🏹", "illustrator": "官方", "image": "../asset/picture/holostars/Josuiji-Shinri_list_thumb.png", "opening_greeting": "Greetings, traveler. Shinri here.", "closing_greeting": "Rest easy, goodbye.", "songs": [], "tags": ["holostars-en", "tempus", "ronin", "archer", "asmr-god"], "desc": "TEMPUS 浪人神射手，手持巨弓的浪客浪人，擁有讓無數觀眾秒睡的極致磁性低音炮 ASMR。", "features": "宛如夜風撫慰心靈的極度放鬆深沉低音、熱愛恐怖故事朗讀與沉浸式遊戲。", "relations": "公會最沉穩可靠的心靈港灣。", "memes": "「催眠級性感低音炮」、「溫柔弓箭浪人」。"}, {"index": 103, "id": "machina-x-flayon", "name_zh": "馬基那·X·弗雷恩", "name_jp": "マキナ・X・フレオン", "name_en": "Machina X Flayon", "branch": "HOLOSTARS EN", "generation": "TEMPUS (Vanguard)", "gen_id": "holostars-en-tempus", "status": "active", "debut_date": "2023-01-08", "graduation_date": null, "fan_name": "Flayliens", "oshi_mark": "✈️", "illustrator": "官方", "image": "../asset/picture/holostars/Machina-X-Flayon_list_thumb.png", "opening_greeting": "Pilot Flayon ready for takeoff!", "closing_greeting": "Landing complete, see ya!", "songs": ["Ready Flight"], "tags": ["holostars-en", "tempus", "pilot", "mecha", "broadway-vocal"], "desc": "TEMPUS 機甲飛行員少年，狂熱熱愛機器人與鋼彈，擁有極具百老匯戲劇震撼力的爆發歌喉。", "features": "極高亢的高音吶喊、機甲戰士熱血之魂、超高語速興奮解說。", "relations": "TEMPUS 先鋒主力駕駛。", "memes": "「機甲宅飛行員」、「熱血尖叫駕駛員」。"}, {"index": 104, "id": "jurard-t-rexford", "name_zh": "茱拉德·T·雷克斯福德", "name_jp": "ジュラード・T・レクスフォード", "name_en": "Jurard T Rexford", "branch": "HOLOSTARS EN", "generation": "ARMIS", "gen_id": "holostars-en-armis", "status": "active", "debut_date": "2023-11-18", "graduation_date": null, "fan_name": "Rexies", "oshi_mark": "🦖", "illustrator": "官方", "image": "../asset/picture/holostars/Jurard-T-Rexford_list_thumb.png", "opening_greeting": "ROAAAR! The Dinosaur Prince Jurard is here!", "closing_greeting": "Catch ya later, peasants!", "songs": ["ARMIS Anthem"], "tags": ["holostars-en", "armis", "dinosaur", "screaming", "comedy"], "desc": "賞金獵人團 ARMIS 成員，恐龍王子霸王龍化身，高分貝尖叫與無盡自信搞笑受氣包的反差。", "features": "狂暴破音的搞笑叫聲、極其強烈的綜藝體質與真誠可愛的少年心。", "relations": "ARMIS 歡樂活寶兼受氣包隊長。", "memes": "「霸王龍小恐龍」、「破音尖叫小王子」。"}, {"index": 105, "id": "goldbullet", "name_zh": "黃金子彈", "name_jp": "ゴールドブレット", "name_en": "Goldbullet", "branch": "HOLOSTARS EN", "generation": "ARMIS", "gen_id": "holostars-en-armis", "status": "active", "debut_date": "2023-11-18", "graduation_date": null, "fan_name": "Bullets", "oshi_mark": "🎯", "illustrator": "官方", "image": "../asset/picture/holostars/Goldbullet_list_thumb.png", "opening_greeting": "Target locked. Goldbullet is here.", "closing_greeting": "Mission done, see you next time.", "songs": ["ARMIS Anthem"], "tags": ["holostars-en", "armis", "sniper", "chill", "coffee"], "desc": "賞金獵人團 ARMIS 神槍狙擊手，沉著冷靜的百步穿楊神射手，同時也是專業咖啡與美食烹飪愛好者。", "features": "極度放鬆放鬆的說話節奏、冷靜沉著的槍戰實力、親切溫暖的長兄風範。", "relations": "ARMIS 冷靜核心。", "memes": "「咖啡狙擊手」、「極致 Chill 哥」。"}, {"index": 106, "id": "crimzon-ruze", "name_zh": "緋紅·露姿", "name_jp": "クリムゾン・ルーズ", "name_en": "Crimzon Ruze", "branch": "HOLOSTARS EN", "generation": "ARMIS", "gen_id": "holostars-en-armis", "status": "active", "debut_date": "2023-11-19", "graduation_date": null, "fan_name": "Ruzers", "oshi_mark": "🩸", "illustrator": "官方", "image": "../asset/picture/holostars/Crimzon-Ruze_list_thumb.png", "opening_greeting": "Ready for action! Ruze is here to brawl!", "closing_greeting": "Later, losers!", "songs": ["ARMIS Anthem"], "tags": ["holostars-en", "armis", "brawler", "axe", "energy"], "desc": "賞金獵人團 ARMIS 狂戰士，手持重斧的暴力美學少年，性格狂放不羈但對同伴極其護短。", "features": "狂暴激昂的戰鬥風格、直率的爽朗大笑與極具磁性的青年嗓音。", "relations": "ARMIS 近戰主力重裝。", "memes": "「暴走斧頭狂人」、「嘴硬心軟的大哥」。"}, {"index": 107, "id": "octavio", "name_zh": "奧克塔維奧", "name_jp": "オクタビオ", "name_en": "Octavio", "branch": "HOLOSTARS EN", "generation": "ARMIS", "gen_id": "holostars-en-armis", "status": "active", "debut_date": "2023-11-19", "graduation_date": null, "fan_name": "Octavians", "oshi_mark": "🎭", "illustrator": "官方", "image": "../asset/picture/holostars/Octavio_list_thumb.png", "opening_greeting": "Encore! Puppeteer Octavio at your service!", "closing_greeting": "Curtain falls, farewell!", "songs": ["ARMIS Anthem"], "tags": ["holostars-en", "armis", "puppeteer", "singing", "musical"], "desc": "賞金獵人團 ARMIS 操偶師，操縱提線木偶的華麗藝術家，具備極高戲劇天賦與天籟般的抒情美聲。", "features": "華麗優雅的舞台語調、多重角色聲線變換的配音功底、天籟歌喉。", "relations": "ARMIS 藝術操盤手。", "memes": "「木偶操縱師」、「戲劇狂熱玩家」。"}];
+    const GENS = [{"branch": "Hololive JP", "generation": "0th Generation", "first_slide": 1}, {"branch": "Hololive JP", "generation": "1st Generation / Gamers", "first_slide": 6}, {"branch": "Hololive JP", "generation": "1st Generation", "first_slide": 7}, {"branch": "Hololive JP", "generation": "2nd Generation", "first_slide": 10}, {"branch": "Hololive JP", "generation": "Gamers", "first_slide": 15}, {"branch": "Hololive JP", "generation": "3rd Generation (HoloFantasy)", "first_slide": 18}, {"branch": "Hololive JP", "generation": "4th Generation (HoloForce)", "first_slide": 22}, {"branch": "Hololive JP", "generation": "5th Generation (NePoLaBo)", "first_slide": 27}, {"branch": "Hololive JP", "generation": "6th Generation (Secret Society holoX)", "first_slide": 31}, {"branch": "DEV_IS", "generation": "ReGLOSS", "first_slide": 36}, {"branch": "DEV_IS", "generation": "FLOW GLOW", "first_slide": 41}, {"branch": "Hololive JP", "generation": "ASOBI☆MAWARI-TAI!", "first_slide": 46}, {"branch": "Staff / holoAN", "generation": "holoAN Announcer", "first_slide": 49}, {"branch": "Staff", "generation": "Staff", "first_slide": 53}, {"branch": "Hololive EN", "generation": "Myth", "first_slide": 55}, {"branch": "Hololive EN", "generation": "Project: HOPE / Promise", "first_slide": 60}, {"branch": "Hololive EN", "generation": "Council / Promise", "first_slide": 61}, {"branch": "Hololive EN", "generation": "Council", "first_slide": 65}, {"branch": "Hololive EN", "generation": "Advent", "first_slide": 66}, {"branch": "Hololive EN", "generation": "Justice", "first_slide": 71}, {"branch": "Hololive ID", "generation": "1st Generation (Area 15)", "first_slide": 75}, {"branch": "Hololive ID", "generation": "2nd Generation (Holoro)", "first_slide": 78}, {"branch": "Hololive ID", "generation": "3rd Generation (HoloH3ro)", "first_slide": 81}, {"branch": "HOLOSTARS JP", "generation": "1st Generation", "first_slide": 84}, {"branch": "HOLOSTARS JP", "generation": "2nd Generation (SunTempo)", "first_slide": 89}, {"branch": "HOLOSTARS JP", "generation": "3rd Generation (TriNero)", "first_slide": 92}, {"branch": "HOLOSTARS JP", "generation": "UPROAR!!", "first_slide": 94}, {"branch": "HOLOSTARS EN", "generation": "TEMPUS", "first_slide": 97}, {"branch": "HOLOSTARS EN", "generation": "TEMPUS (Vanguard)", "first_slide": 101}, {"branch": "HOLOSTARS EN", "generation": "ARMIS", "first_slide": 104}];
+
+    let currentIndex = 0;
+    const totalSlides = SLIDES.length;
+
+    const viewport = document.getElementById('viewport');
+    const slideNum = document.getElementById('slideNum');
+    const slideGenLabel = document.getElementById('slideGenLabel');
+    const progressBar = document.getElementById('progressBar');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const genSelect = document.getElementById('genSelect');
+    const talentDrawer = document.getElementById('talentDrawer');
+    const btnToggleDrawer = document.getElementById('btnToggleDrawer');
+    const btnCloseDrawer = document.getElementById('btnCloseDrawer');
+    const drawerList = document.getElementById('drawerList');
+    const drawerSearch = document.getElementById('drawerSearch');
+    const btnFullscreen = document.getElementById('btnFullscreen');
+
+    // Populate Generation Select
+    GENS.forEach(g => {
+      const opt = document.createElement('option');
+      opt.value = g.first_slide - 1;
+      opt.textContent = `${g.branch} - ${g.generation}`;
+      genSelect.appendChild(opt);
+    });
+
+    genSelect.addEventListener('change', (e) => {
+      if (e.target.value !== "") {
+        goToSlide(parseInt(e.target.value));
+        genSelect.value = "";
+      }
+    });
+
+    // Build Single Slide Card HTML (Only active slide is rendered or shown)
+    function renderCard(s) {
+      let statusClass = 'status-active';
+      let statusText = '現役 (ACTIVE)';
+      if (s.status === 'graduate') {
+        statusClass = 'status-graduate';
+        statusText = `卒業 (${s.graduation_date || 'GRADUATED'})`;
+      } else if (s.status === 'Breakoff') {
+        statusClass = 'status-breakoff';
+        statusText = `契約終了 (${s.graduation_date || 'BREAKOFF'})`;
+      } else if (s.status === 'resign') {
+        statusClass = 'status-resign';
+        statusText = `退職 (${s.graduation_date || 'RESIGNED'})`;
+      }
+
+      const songsHtml = (s.songs && s.songs.length > 0)
+        ? s.songs.map(song => `<span class="song-pill">${song}</span>`).join('')
+        : '<span style="color: var(--text-muted); font-size: 0.85rem;">暫無專屬原創代表曲記錄</span>';
+
+      return `
+        <div class="slide-card active">
+          <!-- Left Column -->
+          <div class="portrait-col">
+            <div class="avatar-wrapper">
+              <img src="${s.image}" alt="${s.name_en}" onerror="this.src='../asset/picture/hololive/head_l_in_rnew.png'">
+              <div class="status-badge ${statusClass}">${statusText}</div>
+              <div class="oshi-mark-badge" title="推特標誌符號">${s.oshi_mark}</div>
+            </div>
+
+            <div class="meta-list">
+              <div class="meta-item">
+                <span class="meta-label">出道日期</span>
+                <span class="meta-value">${s.debut_date}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">粉絲名稱</span>
+                <span class="meta-value">${s.fan_name}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">擔綱繪師</span>
+                <span class="meta-value">${s.illustrator}</span>
+              </div>
+              <div class="meta-item">
+                <span class="meta-label">推特符號</span>
+                <span class="meta-value">${s.oshi_mark}</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div class="content-col">
+            <div class="talent-header">
+              <div class="name-title-group">
+                <h1>
+                  ${s.name_zh}
+                  <span class="name-en-sub">${s.name_en}</span>
+                </h1>
+                <div class="name-jp-sub">${s.name_jp}</div>
+              </div>
+
+              <div class="gen-badge-group">
+                <span class="branch-pill">${s.branch}</span>
+                <span class="gen-pill">${s.generation}</span>
+              </div>
+            </div>
+
+            <!-- Greetings Box -->
+            <div class="greetings-box">
+              <div class="greeting-line">
+                <span class="greeting-tag">開場問候</span>
+                <span>「${s.opening_greeting}」</span>
+              </div>
+              <div class="greeting-line">
+                <span class="greeting-tag">結尾問候</span>
+                <span style="color: #94a3b8;">「${s.closing_greeting}」</span>
+              </div>
+            </div>
+
+            <!-- Features & Bio -->
+            <div class="section-box">
+              <div class="section-title">藝人簡介與演藝特色</div>
+              <div class="section-body">${s.desc} ${s.features}</div>
+            </div>
+
+            <!-- Representative Songs -->
+            <div class="section-box">
+              <div class="section-title">代表音樂作品</div>
+              <div class="songs-container">${songsHtml}</div>
+            </div>
+
+            <!-- Units & Relations -->
+            <div class="section-box">
+              <div class="section-title">主要搭檔與連動關係</div>
+              <div class="section-body">${s.relations}</div>
+            </div>
+
+            <!-- Memes & Lore -->
+            <div class="section-box">
+              <div class="section-title">社內名梗與傳奇名言</div>
+              <div class="meme-highlight">${s.memes}</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    // Switch to Slide
+    function goToSlide(newIndex) {
+      if (newIndex < 0 || newIndex >= totalSlides) return;
+      currentIndex = newIndex;
+      const s = SLIDES[currentIndex];
+
+      // Re-render viewport with the new active slide (Instant, clean, 0 layout conflict)
+      viewport.innerHTML = renderCard(s);
+
+      // Update footer controls
+      slideNum.textContent = s.index;
+      slideGenLabel.textContent = `${s.branch} | ${s.generation}`;
+      progressBar.style.width = `${(s.index / totalSlides) * 100}%`;
+
+      btnPrev.disabled = currentIndex === 0;
+      btnNext.disabled = currentIndex === totalSlides - 1;
+
+      // Update Drawer active item
+      document.querySelectorAll('.drawer-item').forEach((el, idx) => {
+        el.classList.toggle('active', idx === currentIndex);
+      });
+    }
+
+    // Drawer Directory list render
+    function renderDrawerList(filter = '') {
+      drawerList.innerHTML = '';
+      SLIDES.forEach((s, idx) => {
+        const searchTarget = `${s.name_zh} ${s.name_en} ${s.name_jp} ${s.generation}`.toLowerCase();
+        if (filter && !searchTarget.includes(filter.toLowerCase())) return;
+
+        const item = document.createElement('div');
+        item.className = `drawer-item ${idx === currentIndex ? 'active' : ''}`;
+        item.innerHTML = `
+          <span><b>${s.index}.</b> ${s.name_zh}</span>
+          <span style="font-size: 0.72rem; color: var(--text-muted);">${s.generation.split(' ')[0]}</span>
+        `;
+        item.addEventListener('click', () => {
+          goToSlide(idx);
+          talentDrawer.classList.remove('open');
+        });
+        drawerList.appendChild(item);
+      });
+    }
+
+    drawerSearch.addEventListener('input', (e) => {
+      renderDrawerList(e.target.value);
+    });
+
+    btnToggleDrawer.addEventListener('click', () => {
+      talentDrawer.classList.toggle('open');
+      drawerSearch.focus();
+    });
+
+    btnCloseDrawer.addEventListener('click', () => {
+      talentDrawer.classList.remove('open');
+    });
+
+    // Fullscreen toggle
+    btnFullscreen.addEventListener('click', () => {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(() => {});
+      } else {
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        }
+      }
+    });
+
+    // Navigation events
+    btnPrev.addEventListener('click', () => goToSlide(currentIndex - 1));
+    btnNext.addEventListener('click', () => goToSlide(currentIndex + 1));
+
+    document.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'SELECT') return;
+
+      if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'PageDown') {
+        e.preventDefault();
+        goToSlide(currentIndex + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+        e.preventDefault();
+        goToSlide(currentIndex - 1);
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        goToSlide(0);
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        goToSlide(totalSlides - 1);
+      }
+    });
+
+    // Initialize
+    renderDrawerList();
+    goToSlide(0);
+  </script>
+</body>
+</html>

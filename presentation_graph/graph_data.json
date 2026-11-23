@@ -1,0 +1,6765 @@
+{
+  "nodes": [
+    {
+      "id": "tokino-sora",
+      "name_zh": "時乃空",
+      "name_en": "Tokino Sora",
+      "name_jp": "ときのそら",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "0th Generation",
+      "gen_id": "jp-0th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "そらとも (Soratomo)",
+      "oshi_mark": "🐻",
+      "illustrator": "おるだん",
+      "image": "../asset/picture/hololive/Tokino-Sora_list_thumb.png",
+      "beginner_summary": "Hololive 的最初起點與永遠的大前輩。平時溫柔優雅、毫無恐懼抗性的清楚女神，但在 Minecraft 偶爾說出的「那麼，你就是敵人囉？」具備頂級反差威壓。",
+      "opening_greeting": "そらとものみんなー！元気ー？ときのそらです！",
+      "closing_greeting": "ではでは、ときのそらでした！ばいばーい！",
+      "songs": [
+        "Dreaming Days",
+        "Step and Go!!",
+        "ピッとして！マーマレード",
+        "Beyond"
+      ],
+      "x": 345.0,
+      "y": 0.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "roboco",
+          "name_zh": "蘿蔔子",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakura-miko",
+          "name_zh": "櫻巫女",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hoshimachi-suisei",
+          "name_zh": "星街彗星",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "azki",
+          "name_zh": "AZKi",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "friend-a",
+          "name_zh": "友人A (A醬)",
+          "type": "cross_cluster",
+          "label": "🌌 【STAFF ⟷ JP】草創歲月摯友 營運與元祖偶像紐帶"
+        }
+      ]
+    },
+    {
+      "id": "roboco",
+      "name_zh": "蘿蔔子",
+      "name_en": "Robocosan",
+      "name_jp": "ロボ子さん",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "0th Generation",
+      "gen_id": "jp-0th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ろぼっ子 (Robokko)",
+      "oshi_mark": "🤖",
+      "illustrator": "ぽよよんろっく",
+      "image": "../asset/picture/hololive/Robocosan_list_thumb.png",
+      "beginner_summary": "來自未來的高性能機器人少女。聲線極度慵懶治癒，雖然自稱高性能但經常展現按錯按鈕或迷路的可愛廢柴（呆萌）屬性。",
+      "opening_greeting": "ハローぼこー！ロボ子さんだよー！",
+      "closing_greeting": "おつぼこでしたー！",
+      "songs": [
+        "アザミ",
+        "Kira meki Rider☆",
+        "リルビ"
+      ],
+      "x": 286.3,
+      "y": 80.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "tokino-sora",
+          "name_zh": "時乃空",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakura-miko",
+          "name_zh": "櫻巫女",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hoshimachi-suisei",
+          "name_zh": "星街彗星",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "azki",
+          "name_zh": "AZKi",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "sakura-miko",
+      "name_zh": "櫻巫女",
+      "name_en": "Sakura Miko",
+      "name_jp": "さくらみこ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "0th Generation",
+      "gen_id": "jp-0th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "35P (Mikopi)",
+      "oshi_mark": "🌸",
+      "illustrator": "田中雄一 / おるだん",
+      "image": "../asset/picture/hololive/Sakura-Miko_talent_list_thumb.png",
+      "beginner_summary": "全社公認的頂級綜藝之神。自稱「菁英」但說話自帶咬舌嬰兒音，在 GTA 中的「Stay Home」與在 Minecraft 中無數次被熔岩燒毀神社的場面笑翻全網。",
+      "opening_greeting": "にゃっはろー！ホロライブ0期生のさくらみこです！",
+      "closing_greeting": "おつみこー！ばいばーい！",
+      "songs": [
+        "サクラカゼ",
+        "花月ノ夢",
+        "僕らと君のうた",
+        "DAI DA DAI FANTASY"
+      ],
+      "x": 191.2,
+      "y": 50.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "tokino-sora",
+          "name_zh": "時乃空",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "roboco",
+          "name_zh": "蘿蔔子",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hoshimachi-suisei",
+          "name_zh": "星街彗星",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "azki",
+          "name_zh": "AZKi",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hiodoshi-ao",
+          "name_zh": "火威青",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ DEV_IS】本家綜藝之神 ⟷ DEV_IS 遺憾帥哥"
+        }
+      ]
+    },
+    {
+      "id": "hoshimachi-suisei",
+      "name_zh": "星街彗星",
+      "name_en": "Hoshimachi Suisei",
+      "name_jp": "星街すいせい",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "0th Generation",
+      "gen_id": "jp-0th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "星詠者 (Hoshayomi)",
+      "oshi_mark": "☄️",
+      "illustrator": "手島nari",
+      "image": "../asset/picture/hololive/Hoshimachi-Suisei_list_thumb.png",
+      "beginner_summary": "首位登上日本《THE FIRST TAKE》殿堂的全能歌姬。歌聲爆發力震撼人心，但在生存遊戲與俄羅斯方塊中手持黃金斧頭屠殺對手時極度冷酷狂氣。",
+      "opening_greeting": "こんすいー！ホロライブ0期生の星街すいせいです！",
+      "closing_greeting": "それでは、おやすみー！",
+      "songs": [
+        "Stellar Stellar",
+        "GHOST",
+        "NEXT COLOR PLANET",
+        "ビビデバ (Bibbidiba)"
+      ],
+      "x": 191.2,
+      "y": -50.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "tokino-sora",
+          "name_zh": "時乃空",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "roboco",
+          "name_zh": "蘿蔔子",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakura-miko",
+          "name_zh": "櫻巫女",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "azki",
+          "name_zh": "AZKi",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】SuiCalli 跨星系音樂雙天后 (Wicked)"
+        }
+      ]
+    },
+    {
+      "id": "azki",
+      "name_zh": "AZKi",
+      "name_en": "AZKi",
+      "name_jp": "AZKi",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "0th Generation",
+      "gen_id": "jp-0th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "開拓者 (Pioneer)",
+      "oshi_mark": "⚒️",
+      "illustrator": "焦茶 / 加隈亜衣 / ぽよよんろっく",
+      "image": "../asset/picture/hololive/AZKi_list_thumb.png",
+      "beginner_summary": "原為音樂特化廠牌引領者，音色深邃動人。近年因在《GeoGuessr》中僅憑一根電線桿或路面柏油就能數秒內精確盲猜到地點而被封為「地圖女神」。",
+      "opening_greeting": "こんあずきー！AZKiです！",
+      "closing_greeting": "おつあずきでしたー！",
+      "songs": [
+        "いのち",
+        "青い夢",
+        "Without U",
+        "Creating world"
+      ],
+      "x": 286.3,
+      "y": -80.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "tokino-sora",
+          "name_zh": "時乃空",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "roboco",
+          "name_zh": "蘿蔔子",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakura-miko",
+          "name_zh": "櫻巫女",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hoshimachi-suisei",
+          "name_zh": "星街彗星",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "shirakami-fubuki",
+      "name_zh": "白上吹雪",
+      "name_en": "Shirakami Fubuki",
+      "name_jp": "白上フブキ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "1st Generation / Gamers",
+      "gen_id": "jp-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "すこん部 (Sukonbu)",
+      "oshi_mark": "🌽",
+      "illustrator": "凪白みと",
+      "image": "../asset/picture/hololive/Shirakami-Fubuki_list_thumb.png",
+      "beginner_summary": "全社的靈魂隊長與核心精神支柱。情商極高、熱愛二次元動漫，每當海外粉絲求婚時會微笑斬釘截鐵發卡：「No wife! Friends!」。",
+      "opening_greeting": "こんこんきーつね！白上フブキです！",
+      "closing_greeting": "おつこーん！またね！",
+      "songs": [
+        "Say!ファンファーレ!",
+        "KINGWORLD",
+        "KONKON Beats"
+      ],
+      "x": 268.8,
+      "y": 183.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "natsuiro-matsuri",
+          "name_zh": "夏色祭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "akai-haato",
+          "name_zh": "赤井心 / 哈洽馬",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "aki-rosenthal",
+          "name_zh": "亞綺·羅森塔爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ookami-mio",
+          "name_zh": "大神澪",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 隊長兼靈魂神柱"
+        },
+        {
+          "target_id": "nekomata-okayu",
+          "name_zh": "貓又小粥",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 同組夥伴"
+        },
+        {
+          "target_id": "inugami-korone",
+          "name_zh": "戌神沁音",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 同組夥伴"
+        },
+        {
+          "target_id": "ayunda-risu",
+          "name_zh": "阿優達·理樹",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】JP-ID 早期獸耳同盟先鋒"
+        },
+        {
+          "target_id": "ninomae-inanis",
+          "name_zh": "一伊那爾棲",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】白狐與章魚 跨國繪師靈魂知心好友"
+        },
+        {
+          "target_id": "otonose-kanade",
+          "name_zh": "音乃瀨奏",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ DEV_IS】吹雪隊長 ⟷ 音樂天才奏 (憧憬前輩)"
+        }
+      ]
+    },
+    {
+      "id": "natsuiro-matsuri",
+      "name_zh": "夏色祭",
+      "name_en": "Natsuiro Matsuri",
+      "name_jp": "夏色まつり",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "1st Generation",
+      "gen_id": "jp-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "まつりす (Matsurisu)",
+      "oshi_mark": "🏮",
+      "illustrator": "皆村春樹",
+      "image": "../asset/picture/hololive/Natsuiro-Matsuri_list_thumb.png",
+      "beginner_summary": "充滿元氣活力的啦啦隊少女。性格直率豪爽、毫無偶像包袱，對可愛美少女同伴完全沒有抵抗力，射擊遊戲槍法亦非常強悍。",
+      "opening_greeting": "こんにちわっしょーい！夏色まつりです！",
+      "closing_greeting": "おつまつりー！ばいばーい！",
+      "songs": [
+        "君と眺める夏の花",
+        "HiHiハイテンション！",
+        "ネバギバ夏色ストーリー"
+      ],
+      "x": 183.8,
+      "y": 268.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "akai-haato",
+          "name_zh": "赤井心 / 哈洽馬",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "aki-rosenthal",
+          "name_zh": "亞綺·羅森塔爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "akai-haato",
+      "name_zh": "赤井心 / 哈洽馬",
+      "name_en": "Akai Haato",
+      "name_jp": "赤井はあと",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "1st Generation",
+      "gen_id": "jp-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "はあとん (Haaton)",
+      "oshi_mark": "❤️",
+      "illustrator": "はる雪",
+      "image": "../asset/picture/hololive/Akai-Haato_list_thumb.png",
+      "beginner_summary": "從最初的金髮傲嬌大小姐，進化為全社最前衛的混沌藝術家「哈洽馬 (Haachama)」。以油炸整隻狼蛛等暗黑料理與獵奇雙重人格影片震驚世界。",
+      "opening_greeting": "はあちゃまっちゃま〜！赤井はあとです！",
+      "closing_greeting": "おつるーじゅ！ばいばーい！",
+      "songs": [
+        "REDHEART",
+        "Infinity",
+        "豚骨インキュベーター"
+      ],
+      "x": 98.8,
+      "y": 183.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "natsuiro-matsuri",
+          "name_zh": "夏色祭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "aki-rosenthal",
+          "name_zh": "亞綺·羅森塔爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "aki-rosenthal",
+      "name_zh": "亞綺·羅森塔爾",
+      "name_en": "Aki Rosenthal",
+      "name_jp": "アキ・ローゼンタール",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "1st Generation",
+      "gen_id": "jp-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ロゼ隊 (Rosetai)",
+      "oshi_mark": "🍎",
+      "illustrator": "安曇アキタケ",
+      "image": "../asset/picture/hololive/Aki-Rosenthal_list_thumb.png",
+      "beginner_summary": "異世界的半精靈少女，以自創虛構架空語言演唱民族神曲《シャルイース》。擅長高難度肚皮舞，在荒野生存遊戲中擁有極強拓荒耐力。",
+      "opening_greeting": "アローナ！アキ・ローゼンタールだよ！",
+      "closing_greeting": "おつローナ！まったねー！",
+      "songs": [
+        "シャルイース (Shallys)",
+        "ヒロインオーディション",
+        "Rose of the Lamp"
+      ],
+      "x": 183.8,
+      "y": 98.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "natsuiro-matsuri",
+          "name_zh": "夏色祭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "akai-haato",
+          "name_zh": "赤井心 / 哈洽馬",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "minato-aqua",
+      "name_zh": "湊阿庫婭",
+      "name_en": "Minato Aqua",
+      "name_jp": "湊あくあ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "2nd Generation",
+      "gen_id": "jp-2nd",
+      "status": "graduate",
+      "graduation_date": "2024-08-28",
+      "fan_name": "あくああくるー (Aqua Crew)",
+      "oshi_mark": "⚓",
+      "illustrator": "がおう",
+      "image": "../asset/picture/hololive/Minato-Aqua_talent_list_thumb.png",
+      "beginner_summary": "穿著女僕裝的電競天才。雖然私底下重度社恐到跟人講話都會發抖，但在 Apex 戰場上卻是全社頂級的無敵獵殺者戰神。",
+      "opening_greeting": "こんあくあー！ホロライブ2期生の湊あくあです！",
+      "closing_greeting": "おつあくあー！",
+      "songs": [
+        "あくあ色ぱれっと",
+        "#あくあ色パレット",
+        "Uni-glory",
+        "きらきら"
+      ],
+      "x": 85.0,
+      "y": 260.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "murasaki-shion",
+          "name_zh": "紫咲詩音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nakiri-ayame",
+          "name_zh": "百鬼綾目",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yuzuki-choco",
+          "name_zh": "癒月巧可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "oozora-subaru",
+          "name_zh": "大空昴",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "murasaki-shion",
+      "name_zh": "紫咲詩音",
+      "name_en": "Murasaki Shion",
+      "name_jp": "紫咲シオン",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "2nd Generation",
+      "gen_id": "jp-2nd",
+      "status": "graduate",
+      "graduation_date": "2025-04-26",
+      "fan_name": "塩っ子 (Shiokko)",
+      "oshi_mark": "🌙",
+      "illustrator": "Tam-U",
+      "image": "../asset/picture/hololive/Murasaki-Shion_list_thumb.png",
+      "beginner_summary": "黑魔導名門出身的傲嬌臭小鬼。招牌魔性嘲諷笑聲極具辨識度，唱歌時卻擁有清澈高亢的美聲，曾因睡過頭引來數萬觀眾在待機室圍觀聊天。",
+      "opening_greeting": "こんしお〜！紫咲シオンだよ！",
+      "closing_greeting": "おつしお〜！ばいばーい！",
+      "songs": [
+        "メイジ・オブ・ヴァイオレット",
+        "シャンデリア",
+        "ディソナンス"
+      ],
+      "x": 26.3,
+      "y": 340.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "minato-aqua",
+          "name_zh": "湊阿庫婭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nakiri-ayame",
+          "name_zh": "百鬼綾目",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yuzuki-choco",
+          "name_zh": "癒月巧可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "oozora-subaru",
+          "name_zh": "大空昴",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "nakiri-ayame",
+      "name_zh": "百鬼綾目",
+      "name_en": "Nakiri Ayame",
+      "name_jp": "百鬼あやめ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "2nd Generation",
+      "gen_id": "jp-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "百鬼組 (Nakirigumi)",
+      "oshi_mark": "😈",
+      "illustrator": "ななかぐら",
+      "image": "../asset/picture/hololive/Nakiri-Ayame_list_thumb.png",
+      "beginner_summary": "魔界學校的百鬼大小姐。笑點極低，其軟萌純粹的呵呵笑聲被全體粉絲奉為能治癒一切疲勞的「百鬼正能量元素 (Nakirium)」。",
+      "opening_greeting": "こんなきりー！百鬼あやめだぞ！",
+      "closing_greeting": "おつなきりー！またね！",
+      "songs": [
+        "かわ世",
+        "夢花火",
+        "宵の余、良い！"
+      ],
+      "x": -68.8,
+      "y": 310.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "minato-aqua",
+          "name_zh": "湊阿庫婭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "murasaki-shion",
+          "name_zh": "紫咲詩音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yuzuki-choco",
+          "name_zh": "癒月巧可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "oozora-subaru",
+          "name_zh": "大空昴",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "yuzuki-choco",
+      "name_zh": "癒月巧可",
+      "name_en": "Yuzuki Choco",
+      "name_jp": "癒月ちょこ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "2nd Generation",
+      "gen_id": "jp-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ちょこ民 (Chocomin)",
+      "oshi_mark": "💋",
+      "illustrator": "Masami Chie",
+      "image": "../asset/picture/hololive/Yuzuki-Choco_list_thumb.png",
+      "beginner_summary": "魔界學校保健室惡魔護士。聲線極度性感沙啞，也是全社廚藝最精湛的料理大廚，早期曾舉辦無數爆笑的「學力常識身體檢查」企劃。",
+      "opening_greeting": "Good morning, my sweet students! 癒月ちょこです！",
+      "closing_greeting": "お疲れ様でした、またねー！",
+      "songs": [
+        "NoDistance",
+        "Sick Hack",
+        "ChocoLove"
+      ],
+      "x": -68.8,
+      "y": 210.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "minato-aqua",
+          "name_zh": "湊阿庫婭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "murasaki-shion",
+          "name_zh": "紫咲詩音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nakiri-ayame",
+          "name_zh": "百鬼綾目",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "oozora-subaru",
+          "name_zh": "大空昴",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "oozora-subaru",
+      "name_zh": "大空昴",
+      "name_en": "Oozora Subaru",
+      "name_jp": "大空スバル",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "2nd Generation",
+      "gen_id": "jp-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "スバ友 (Subatomo)",
+      "oshi_mark": "🚑",
+      "illustrator": "しぐれうい",
+      "image": "../asset/picture/hololive/Oozora-Subaru_list_thumb.png",
+      "beginner_summary": "綜合格鬥技部元氣經理。陽光爽朗的社內最強吐槽役，聲音酷似唐老鴨，其二創「魔性搖擺跳舞小黃鴨 (Shuba Duck)」風靡全球歐美主流迷因界。",
+      "opening_greeting": "ちわーす！ホロライブ2期生の大空スバルっス！",
+      "closing_greeting": "おつばるー！ばいばーい！",
+      "songs": [
+        "太陽少女",
+        "ぷ・れ・あ・で・す！",
+        "スターライト"
+      ],
+      "x": 26.3,
+      "y": 179.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "minato-aqua",
+          "name_zh": "湊阿庫婭",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "murasaki-shion",
+          "name_zh": "紫咲詩音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nakiri-ayame",
+          "name_zh": "百鬼綾目",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yuzuki-choco",
+          "name_zh": "癒月巧可",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "ookami-mio",
+      "name_zh": "大神澪",
+      "name_en": "Ookami Mio",
+      "name_jp": "大神ミオ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "Gamers",
+      "gen_id": "jp-gamers",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ミオリファ (Miofa)",
+      "oshi_mark": "🌲",
+      "illustrator": "泉彩",
+      "image": "../asset/picture/hololive/Ookami-Mio_thumb.png",
+      "beginner_summary": "全社成員最信賴的心靈港灣「澪媽媽」。擅長靈驗無比的塔羅牌占卜算命，但被逗樂時笑到乾嘔咳嗽的反差魔性笑聲深得觀眾喜愛。",
+      "opening_greeting": "こんばんみぉーん！大神ミオだよー！",
+      "closing_greeting": "おつみぉーん！またね！",
+      "songs": [
+        "Howling",
+        "夜光通信",
+        "わんわん日和"
+      ],
+      "x": -98.8,
+      "y": 183.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "nekomata-okayu",
+          "name_zh": "貓又小粥",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "inugami-korone",
+          "name_zh": "戌神沁音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 隊長兼靈魂神柱"
+        }
+      ]
+    },
+    {
+      "id": "nekomata-okayu",
+      "name_zh": "貓又小粥",
+      "name_en": "Nekomata Okayu",
+      "name_jp": "猫又おかゆ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "Gamers",
+      "gen_id": "jp-gamers",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "おにぎりゃー (Onigirya)",
+      "oshi_mark": "🍙",
+      "illustrator": "神岡ちろる",
+      "image": "../asset/picture/hololive/Nekomata-Okayu_list_thumb.png",
+      "beginner_summary": "經營飯糰店的悠閒紫貓。聲音慵懶迷人，在談吐間無形撩撥全社女孩子，常因偷吃食物被大空昴送上法庭審判卻總能無罪獲釋。",
+      "opening_greeting": "もぐもぐ〜おかゆ〜！猫又おかゆです！",
+      "closing_greeting": "おつかれさま〜！ばいばい！",
+      "songs": [
+        "もぐもぐYUMMY！",
+        "パボ",
+        "毒の王子さま",
+        "デタラメな残像"
+      ],
+      "x": -226.3,
+      "y": 257.5,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "ookami-mio",
+          "name_zh": "大神澪",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "inugami-korone",
+          "name_zh": "戌神沁音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 同組夥伴"
+        }
+      ]
+    },
+    {
+      "id": "inugami-korone",
+      "name_zh": "戌神沁音",
+      "name_en": "Inugami Korone",
+      "name_jp": "戌神ころね",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "Gamers",
+      "gen_id": "jp-gamers",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ころねすきー (Koronesuki)",
+      "oshi_mark": "🥐",
+      "illustrator": "フカヒレ",
+      "image": "../asset/picture/hololive/Inugami-Korone_talent_list_thumb.png",
+      "beginner_summary": "麵包店打工的柴犬娘。以動輒十幾二十小時的超長耐久直播聞名，開播要求觀眾切下「手指 (Yubi)」保管的獵奇可愛設定連歐美電玩官方都致敬。",
+      "opening_greeting": "おほ〜！ゆびゆび〜！戌神ころねだよ！",
+      "closing_greeting": "おつころーん！ばいばーい！",
+      "songs": [
+        "ころねの最凶天災☆わんだふぉー❤",
+        "Wonky Monkey",
+        "Doggy god's street"
+      ],
+      "x": -226.3,
+      "y": 110.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "ookami-mio",
+          "name_zh": "大神澪",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nekomata-okayu",
+          "name_zh": "貓又小粥",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_gen",
+          "label": "🔹 跨期兼任：Gamers 同組夥伴"
+        }
+      ]
+    },
+    {
+      "id": "usada-pekora",
+      "name_zh": "兔田佩克拉",
+      "name_en": "Usada Pekora",
+      "name_jp": "兎田ぺこら",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "3rd Generation (HoloFantasy)",
+      "gen_id": "jp-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "野兔 (Nousagi)",
+      "oshi_mark": "👯‍♀️",
+      "illustrator": "憂姫はぐれ",
+      "image": "../asset/picture/hololive/Usada-Pekora_list_thumb.png",
+      "beginner_summary": "全球女性實況收視冠軍的頂級狂笑喜劇兔。招牌「AH↓HA↑HA↑HA↑」機關槍笑聲極具感染力，在 Minecraft 創立黑科技兔田建設稱霸全服。",
+      "opening_greeting": "こんぺこ！こんぺこ！こんぺこ！兎田ぺこらぺこ！",
+      "closing_greeting": "おつぺこでしたー！",
+      "songs": [
+        "ぺこらんだむぶれいん！",
+        "全人類　兎化計画！",
+        "ラッキー☆オーケストラ"
+      ],
+      "x": -175.0,
+      "y": 0.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shiranui-flare",
+          "name_zh": "不知火芙蕾雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirogane-noel",
+          "name_zh": "白銀諾艾爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "houshou-marine",
+          "name_zh": "寶鐘瑪琳",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "moona-hoshinova",
+          "name_zh": "慕娜·星諾瓦",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】PekoMoona 跨星系世紀兔月羈絆"
+        }
+      ]
+    },
+    {
+      "id": "shiranui-flare",
+      "name_zh": "不知火芙蕾雅",
+      "name_en": "Shiranui Flare",
+      "name_jp": "不知火フレア",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "3rd Generation (HoloFantasy)",
+      "gen_id": "jp-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "エルフレンド (Elfriend)",
+      "oshi_mark": "🔥",
+      "illustrator": "Lack",
+      "image": "../asset/picture/hololive/Shiranui-Flare_list_thumb.png",
+      "beginner_summary": "褐色皮膚半精靈少女，不知火建設社長。聲線沉穩帥氣且極具「男友力」，對建築設計與審美有極高堅持，歌聲深情動人。",
+      "opening_greeting": "こんふぁいやー！不知火フレアだよ！",
+      "closing_greeting": "おつふぁいやー！またね！",
+      "songs": [
+        "Smile & Go!!",
+        "SKYSONG",
+        "ユグドラシル"
+      ],
+      "x": -260.0,
+      "y": 85.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "usada-pekora",
+          "name_zh": "兔田佩克拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirogane-noel",
+          "name_zh": "白銀諾艾爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "houshou-marine",
+          "name_zh": "寶鐘瑪琳",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "shirogane-noel",
+      "name_zh": "白銀諾艾爾",
+      "name_en": "Shirogane Noel",
+      "name_jp": "白銀ノエル",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "3rd Generation (HoloFantasy)",
+      "gen_id": "jp-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "白銀聖騎士團 (Shirogane Seikishidan)",
+      "oshi_mark": "⚔️",
+      "illustrator": "わたお",
+      "image": "../asset/picture/hololive/Shirogane-Noel_list_thumb.png",
+      "beginner_summary": "力大無窮的實習白銀女騎士。性格溫柔天然呆，熱愛大口暴飲暴食牛丼，其細膩治癒的 ASMR 音聲被譽為睡眠神器。",
+      "opening_greeting": "こんばんまっする！白銀ノエルです！",
+      "closing_greeting": "おつまっする〜！",
+      "songs": [
+        "ほめのび",
+        "OUR TREE",
+        "リリカルMonster"
+      ],
+      "x": -345.0,
+      "y": 0.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "usada-pekora",
+          "name_zh": "兔田佩克拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shiranui-flare",
+          "name_zh": "不知火芙蕾雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "houshou-marine",
+          "name_zh": "寶鐘瑪琳",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "houshou-marine",
+      "name_zh": "寶鐘瑪琳",
+      "name_en": "Houshou Marine",
+      "name_jp": "宝鐘マリン",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "3rd Generation (HoloFantasy)",
+      "gen_id": "jp-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "寶鐘一味 (Houshou Ichimi)",
+      "oshi_mark": "🏴‍☠️",
+      "illustrator": "あかさあい",
+      "image": "../asset/picture/hololive/Houshou-Marine_list_thumb.png",
+      "beginner_summary": "自稱寶鐘海賊團船長（但至今還沒買船）。口才比專業聲優還敏銳，熱愛昭和老歌，原創曲 MV《美少女無罪》《マリ箱》點閱破億引爆全網翻跳。",
+      "opening_greeting": "Ahoy! 宝鐘海賊団船長、宝鐘マリンですぅ〜！",
+      "closing_greeting": "それではみなさん、出航〜！",
+      "songs": [
+        "Ahoy!! 我ら宝鐘海賊団☆",
+        "美少女無罪♡パイレーツ",
+        "I’m Your Treasure Box",
+        "マリ箱"
+      ],
+      "x": -260.0,
+      "y": -85.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "usada-pekora",
+          "name_zh": "兔田佩克拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shiranui-flare",
+          "name_zh": "不知火芙蕾雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirogane-noel",
+          "name_zh": "白銀諾艾爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】瑪琳Bae 跨星系舞蹈與相聲搭檔"
+        }
+      ]
+    },
+    {
+      "id": "amane-kanata",
+      "name_zh": "天音彼方",
+      "name_en": "Amane Kanata",
+      "name_jp": "天音かなた",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "4th Generation (HoloForce)",
+      "gen_id": "jp-4th",
+      "status": "graduate",
+      "graduation_date": "2025-12-27",
+      "fan_name": "へい民 (Heimin)",
+      "oshi_mark": "💫",
+      "illustrator": "おしおしお",
+      "image": "../asset/picture/hololive/Amane-Kanata_talent_list_thumb.png",
+      "beginner_summary": "天界來到人間的見習天使。雖然外表嬌小，但握力高達驚人的 50 公斤能徒手捏碎蘋果，被粉絲愛稱為「握力大猩猩天使」。",
+      "opening_greeting": "こんかなたー！天音かなたです！",
+      "closing_greeting": "おつかなたー！ばいばーい！",
+      "songs": [
+        "特者生存ワンダラダー!!",
+        "別世界",
+        "Knock it out!"
+      ],
+      "x": -98.8,
+      "y": -183.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "tsunomaki-watame",
+          "name_zh": "角卷綿芽",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokoyami-towa",
+          "name_zh": "常闇永遠",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "himemori-luna",
+          "name_zh": "姬森璐娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "tsunomaki-watame",
+      "name_zh": "角卷綿芽",
+      "name_en": "Tsunomaki Watame",
+      "name_jp": "角巻わため",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "4th Generation (HoloForce)",
+      "gen_id": "jp-4th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "わためいと (Watamate)",
+      "oshi_mark": "🐏",
+      "illustrator": "ふーみ",
+      "image": "../asset/picture/hololive/Tsunomaki-Watame_talent_list_thumb.png",
+      "beginner_summary": "以登上日本武道館為夢想的吟遊詩人綿羊。歌聲治癒溫暖，晨間節目《綿芽之歌》長壽連載，經典口號是「綿芽沒有做壞事對吧？」。",
+      "opening_greeting": "こんばんわため〜！角巻わためです！",
+      "closing_greeting": "おつわため〜！ばいばーい！",
+      "songs": [
+        "My song",
+        "愛昧ショコラーテ",
+        "曇天羊",
+        "RAINBOW"
+      ],
+      "x": -157.6,
+      "y": -103.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "amane-kanata",
+          "name_zh": "天音彼方",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokoyami-towa",
+          "name_zh": "常闇永遠",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "himemori-luna",
+          "name_zh": "姬森璐娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "tokoyami-towa",
+      "name_zh": "常闇永遠",
+      "name_en": "Tokoyami Towa",
+      "name_jp": "常闇トワ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "4th Generation (HoloForce)",
+      "gen_id": "jp-4th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "眷屬 (Kenzoku)",
+      "oshi_mark": "👾",
+      "illustrator": "rurudo",
+      "image": "../asset/picture/hololive/Tokoyami-Towa_list_thumb.png",
+      "beginner_summary": "本想成為邪惡小惡魔，卻因行事過於正義善良講義氣，被全社一致高呼「托娃真是天使 (TMT)」的超磁性低音實力派歌姬。",
+      "opening_greeting": "こんやっぴー！常闇トワ様です！",
+      "closing_greeting": "おつやっぴー！またね！",
+      "songs": [
+        "Palette",
+        "FACT",
+        "サンビタリア",
+        "ライメイ"
+      ],
+      "x": -252.6,
+      "y": -133.9,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "amane-kanata",
+          "name_zh": "天音彼方",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsunomaki-watame",
+          "name_zh": "角卷綿芽",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "himemori-luna",
+          "name_zh": "姬森璐娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kobo-kanaeru",
+          "name_zh": "科波·卡納耶魯",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】Kobo & Towa 跨星系母女羈絆"
+        }
+      ]
+    },
+    {
+      "id": "himemori-luna",
+      "name_zh": "姬森璐娜",
+      "name_en": "Himemori Luna",
+      "name_jp": "姫森ルーナ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "4th Generation (HoloForce)",
+      "gen_id": "jp-4th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ルーナイト (LuKnight)",
+      "oshi_mark": "🍬",
+      "illustrator": "かんざきひろ",
+      "image": "../asset/picture/hololive/Himemori-Luna_list_thumb.png",
+      "beginner_summary": "糖果王國的嬌生慣養小公主。說話自帶「Nanora」嬰兒口音，但實際上精通高難度電子琴演奏，且在魔物獵人中是身手老練的狂暴獵人。",
+      "opening_greeting": "みんな〜！お菓子の国のお姫様、姫森ルーナなのら！",
+      "closing_greeting": "おつのら〜！ばいばいなのら！",
+      "songs": [
+        "ぐるぐるめぐる〜ふ",
+        "Luna say maybe",
+        "まんなかぼたん"
+      ],
+      "x": -252.6,
+      "y": -233.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "amane-kanata",
+          "name_zh": "天音彼方",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsunomaki-watame",
+          "name_zh": "角卷綿芽",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokoyami-towa",
+          "name_zh": "常闇永遠",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kiryu-coco",
+      "name_zh": "桐生可可",
+      "name_en": "Kiryu Coco",
+      "name_jp": "桐生ココ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "4th Generation (HoloForce)",
+      "gen_id": "jp-4th",
+      "status": "graduate",
+      "graduation_date": "2021-07-01",
+      "fan_name": "たつまき (桐生會)",
+      "oshi_mark": "🐉",
+      "illustrator": "yaman**",
+      "image": "../asset/picture/hololive/Kiryu-Coco_list_thumb.png",
+      "beginner_summary": "異世界的傳奇龍之少女。創辦晨間新聞《早安可可》，把西方 Reddit 迷因帶入日本，徹底改變了 Hololive 的文化並引領事務所走向全球世界。",
+      "opening_greeting": "Good Morning Motherfuckers!! 桐生ココです！",
+      "closing_greeting": "おつココ！ばいばーい！",
+      "songs": [
+        "Weather Hackers",
+        "ファンサ"
+      ],
+      "x": -157.6,
+      "y": -264.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "amane-kanata",
+          "name_zh": "天音彼方",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsunomaki-watame",
+          "name_zh": "角卷綿芽",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokoyami-towa",
+          "name_zh": "常闇永遠",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "himemori-luna",
+          "name_zh": "姬森璐娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】可可與死神 跨星系先驅引路人"
+        },
+        {
+          "target_id": "gawr-gura",
+          "name_zh": "噶嗚·古拉",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】早安新聞與跨國啟蒙"
+        }
+      ]
+    },
+    {
+      "id": "yukihana-lamy",
+      "name_zh": "雪花菈米",
+      "name_en": "Yukihana Lamy",
+      "name_jp": "雪花ラミィ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "5th Generation (NePoLaBo)",
+      "gen_id": "jp-5th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "雪民 (Yukimin)",
+      "oshi_mark": "☃️",
+      "illustrator": "リン☆ユウ",
+      "image": "../asset/picture/hololive/Yukihana-Lamy_list_thumb.png",
+      "beginner_summary": "雪精靈純潔美少女，實則是專業的日本酒鑑賞大師。親自與酒莊釀造的聯名清酒「雪夜月」斬獲倫敦世界酒類競賽金獎。",
+      "opening_greeting": "こんらみ〜！雪花ラミィです！",
+      "closing_greeting": "おつらみ〜！ばいばーい！",
+      "songs": [
+        "明日への境界線",
+        "Fleur",
+        "FLOWER of the MOON"
+      ],
+      "x": 85.0,
+      "y": -260.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "momosuzu-nene",
+          "name_zh": "桃鈴音音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shishiro-botan",
+          "name_zh": "獅白牡丹",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "omaru-polka",
+          "name_zh": "尾丸波爾卡",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "momosuzu-nene",
+      "name_zh": "桃鈴音音",
+      "name_en": "Momosuzu Nene",
+      "name_jp": "桃鈴ねね",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "5th Generation (NePoLaBo)",
+      "gen_id": "jp-5th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ねっ子 (Nekko)",
+      "oshi_mark": "🥟",
+      "illustrator": "西沢5㍉",
+      "image": "../asset/picture/hololive/Momosuzu-Nene_talent_list_thumb.png",
+      "beginner_summary": "元氣滿滿的金髮包子頭少女。熱愛飼養各類甲蟲，天真浪漫地把全球數百萬粉絲強行收編為自己的「老公後宮」，宛如可愛的小海豹。",
+      "opening_greeting": "こんにちぱお〜ん！桃鈴ねねです！",
+      "closing_greeting": "おつねね〜！ばいばーい！",
+      "songs": [
+        "ねねねねねねねね!大爆走",
+        "Lunch with me",
+        "モモノネ"
+      ],
+      "x": -0.0,
+      "y": -175.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "yukihana-lamy",
+          "name_zh": "雪花菈米",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shishiro-botan",
+          "name_zh": "獅白牡丹",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "omaru-polka",
+          "name_zh": "尾丸波爾卡",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "shishiro-botan",
+      "name_zh": "獅白牡丹",
+      "name_en": "Shishiro Botan",
+      "name_jp": "獅白ぼたん",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "5th Generation (NePoLaBo)",
+      "gen_id": "jp-5th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "SSRB",
+      "oshi_mark": "♌",
+      "illustrator": "トマリン",
+      "image": "../asset/picture/hololive/Shishiro-Botan_list_thumb.png",
+      "beginner_summary": "帥氣銀髮白獅少女。擁有如特種部隊般百步穿楊的頂級 FPS 槍法，在玩恐怖遊戲時更是毫無畏懼一邊大笑一邊擊斃喪屍。",
+      "opening_greeting": "ぐっもーにん！獅白ぼたんだよ！",
+      "closing_greeting": "おつぼたんでしたー！",
+      "songs": [
+        "Lioness' Pride",
+        "I overload",
+        "Connect:Addict"
+      ],
+      "x": -85.0,
+      "y": -260.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "yukihana-lamy",
+          "name_zh": "雪花菈米",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "momosuzu-nene",
+          "name_zh": "桃鈴音音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "omaru-polka",
+          "name_zh": "尾丸波爾卡",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "omaru-polka",
+      "name_zh": "尾丸波爾卡",
+      "name_en": "Omaru Polka",
+      "name_jp": "尾丸ポルカ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "5th Generation (NePoLaBo)",
+      "gen_id": "jp-5th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "座員 (Zain)",
+      "oshi_mark": "🎪",
+      "illustrator": "こうましろ",
+      "image": "../asset/picture/hololive/Omaru-Polka_list_thumb.png",
+      "beginner_summary": "馬戲團座長耳廓狐。語速極快、機智敏捷的廣播脫口秀女王，主持長壽個人官方綜藝節目《波爾卡之傳說》。",
+      "opening_greeting": "ポルカおるかー？おるよー！尾丸ポルカだよ！",
+      "closing_greeting": "おつぽるでしたー！",
+      "songs": [
+        "エヴァーグリーン",
+        "サイキョウ神話",
+        "HOLOGRAM CIRCUS",
+        "屋根裏部屋のポルカ"
+      ],
+      "x": -0.0,
+      "y": -345.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "yukihana-lamy",
+          "name_zh": "雪花菈米",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "momosuzu-nene",
+          "name_zh": "桃鈴音音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shishiro-botan",
+          "name_zh": "獅白牡丹",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "la-darknesss",
+      "name_zh": "拉普拉斯·達克尼斯",
+      "name_en": "La+ Darknesss",
+      "name_jp": "ラプラス・ダークネス",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "6th Generation (Secret Society holoX)",
+      "gen_id": "jp-6th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ぷらすめいと (Plusmate)",
+      "oshi_mark": "🛸💜",
+      "illustrator": "三嶋くろね",
+      "image": "../asset/picture/hololive/La-Darknesss_list_thumb.png",
+      "beginner_summary": "秘密結社 holoX 總帥。頭頂巨大黑角自稱要征服世界，但往往維持不到三秒就淪為傲嬌臭小鬼，被粉絲親切戲稱為「山田 (Yamada)」。",
+      "opening_greeting": "貴様ら！跪け！holoX総帥、ラプラス・ダークネスだ！",
+      "closing_greeting": "おつぷら！ひれ伏せ！",
+      "songs": [
+        "合縁事変",
+        "Dark Breath",
+        "Bung-Round"
+      ],
+      "x": 268.8,
+      "y": -183.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "takane-lui",
+          "name_zh": "鷹嶺琉依",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakui-koyori",
+          "name_zh": "博衣小夜璃",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakamata-chloe",
+          "name_zh": "沙花叉克蘿耶",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazama-iroha",
+          "name_zh": "風真伊呂波",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "takane-lui",
+      "name_zh": "鷹嶺琉依",
+      "name_en": "Takane Lui",
+      "name_jp": "鷹嶺ルイ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "6th Generation (Secret Society holoX)",
+      "gen_id": "jp-6th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ルイ友 (Luitomo)",
+      "oshi_mark": "🥀",
+      "illustrator": "かかげ",
+      "image": "../asset/picture/hololive/Takane-Lui_list_thumb.png",
+      "beginner_summary": "holoX 幹事長，鷹之魔獸化身。情商極高、善於照顧全員的知心大姐姐兼實質大總管，是全社大型企劃與跨期合作的關鍵潤滑劑。",
+      "opening_greeting": "Good night, my ladies & gentlemen! 鷹嶺ルイです！",
+      "closing_greeting": "それでは、おやすみなさい！",
+      "songs": [
+        "オーバード",
+        "TSUBASA",
+        "ばかばっか"
+      ],
+      "x": 210.1,
+      "y": -103.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "la-darknesss",
+          "name_zh": "拉普拉斯·達克尼斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakui-koyori",
+          "name_zh": "博衣小夜璃",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakamata-chloe",
+          "name_zh": "沙花叉克蘿耶",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazama-iroha",
+          "name_zh": "風真伊呂波",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "hakui-koyori",
+      "name_zh": "博衣小夜璃",
+      "name_en": "Hakui Koyori",
+      "name_jp": "博衣こより",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "6th Generation (Secret Society holoX)",
+      "gen_id": "jp-6th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "こよりの助手くん (Joshukun)",
+      "oshi_mark": "🧪",
+      "illustrator": "ももこ",
+      "image": "../asset/picture/hololive/Hakui-Koyori_list_thumb.png",
+      "beginner_summary": "holoX 天才大腦研究員郊狼。以每月直播超過 200~300 小時的恐怖毅力被全社封為「不知疲倦的直播怪物」，每日清晨堅持主持《朝こよ》新聞。",
+      "opening_greeting": "こんこよー！holoXの研究者、博衣こよりです！",
+      "closing_greeting": "おつこよー！ばいばーい！",
+      "songs": [
+        "WAO!!",
+        "史上最大のプレパラート",
+        "アンバランス"
+      ],
+      "x": 115.1,
+      "y": -133.9,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "la-darknesss",
+          "name_zh": "拉普拉斯·達克尼斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takane-lui",
+          "name_zh": "鷹嶺琉依",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakamata-chloe",
+          "name_zh": "沙花叉克蘿耶",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazama-iroha",
+          "name_zh": "風真伊呂波",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "sakamata-chloe",
+      "name_zh": "沙花叉克蘿耶",
+      "name_en": "Sakamata Chloe",
+      "name_jp": "沙花叉クロヱ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "6th Generation (Secret Society holoX)",
+      "gen_id": "jp-6th",
+      "status": "graduate",
+      "graduation_date": "2025-01-26",
+      "fan_name": "飼育員 (Shiikuin)",
+      "oshi_mark": "🎣",
+      "illustrator": "パセリ",
+      "image": "../asset/picture/hololive/Sakamata-Chloe_list_thumb.png",
+      "beginner_summary": "holoX 實習殺手虎鯨。擁有神級作詞作曲歌唱天賦，但自爆極度討厭洗澡且字跡如同甲骨文般無人能識，萌度與才華兼備。",
+      "opening_greeting": "ばっくばっくばく〜ん！沙花叉クロヱだよ！",
+      "closing_greeting": "おつかれさま〜！またね！",
+      "songs": [
+        "人生リセットボタンぽちーw",
+        "擬態ごっこ",
+        "パラサイト"
+      ],
+      "x": 115.1,
+      "y": -233.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "la-darknesss",
+          "name_zh": "拉普拉斯·達克尼斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takane-lui",
+          "name_zh": "鷹嶺琉依",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakui-koyori",
+          "name_zh": "博衣小夜璃",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazama-iroha",
+          "name_zh": "風真伊呂波",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kazama-iroha",
+      "name_zh": "風真伊呂波",
+      "name_en": "Kazama Iroha",
+      "name_jp": "風真いろは",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "6th Generation (Secret Society holoX)",
+      "gen_id": "jp-6th",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "風真組 (かざま隊)",
+      "oshi_mark": "🍃",
+      "illustrator": "うみぼうず",
+      "image": "../asset/picture/hololive/Kazama-Iroha_talent_list_thumb.png",
+      "beginner_summary": "深山修行的純樸天然少女。手持長刀身手敏捷，但堅決強調自己是「武士」而非忍者，每句話結尾帶「～でござる」的清楚擔當。",
+      "opening_greeting": "でござる！holoXの用心棒、風真いろはでござる！",
+      "closing_greeting": "おつでござるー！ばいばーい！",
+      "songs": [
+        "いろはすてっぷ！",
+        "言の葉日和",
+        "風を仰ぎて"
+      ],
+      "x": 210.1,
+      "y": -264.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "la-darknesss",
+          "name_zh": "拉普拉斯·達克尼斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takane-lui",
+          "name_zh": "鷹嶺琉依",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakui-koyori",
+          "name_zh": "博衣小夜璃",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakamata-chloe",
+          "name_zh": "沙花叉克蘿耶",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "hiodoshi-ao",
+      "name_zh": "火威青",
+      "name_en": "Hiodoshi Ao",
+      "name_jp": "火威青",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "ReGLOSS",
+      "gen_id": "dev-is-regloss",
+      "status": "graduate",
+      "graduation_date": "2025-10-03",
+      "fan_name": "読者 (Reader)",
+      "oshi_mark": "🖋️",
+      "illustrator": "むっしゅ",
+      "image": "../asset/picture/hololive/Hiodoshi-Ao_list_thumb.png",
+      "beginner_summary": "孤高的純情帥氣少年漫畫家。雖然極力想維持瀟灑池面形象，但每次帥不過三秒就會被隊友無情吐槽反殺，極具受氣包喜感。",
+      "opening_greeting": "やあ！ReGLOSSの火威青だよ！",
+      "closing_greeting": "また会おうね、バイバイ！",
+      "songs": [
+        "瞬間ハートビート",
+        "ステアウェイ・ダンス",
+        "パントマイム"
+      ],
+      "x": -585.0,
+      "y": -200.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "otonose-kanade",
+          "name_zh": "音乃瀨奏",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ichijou-ririka",
+          "name_zh": "一條莉莉華",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "juufuutei-raden",
+          "name_zh": "儒烏風亭螺鈿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "todoroki-hajime",
+          "name_zh": "轟一 (轟初美)",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sakura-miko",
+          "name_zh": "櫻巫女",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ DEV_IS】本家綜藝之神 ⟷ DEV_IS 遺憾帥哥"
+        }
+      ]
+    },
+    {
+      "id": "otonose-kanade",
+      "name_zh": "音乃瀨奏",
+      "name_en": "Otonose Kanade",
+      "name_jp": "音乃瀬奏",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "ReGLOSS",
+      "gen_id": "dev-is-regloss",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "音符 (Notes)",
+      "oshi_mark": "🎹",
+      "illustrator": "うごんば",
+      "image": "../asset/picture/hololive/Otonose-Kanade_list_thumb.png",
+      "beginner_summary": "音樂家雛鳥少女。日常是吵吵鬧鬧如大喇叭般的搗蛋鬼，但唱歌時卻擁有震撼靈魂的絕對音感天籟美聲。",
+      "opening_greeting": "ハロー！ReGLOSSの音乃瀬奏だよー！",
+      "closing_greeting": "おつかなでー！ばいばーい！",
+      "songs": [
+        "瞬間ハートビート",
+        "ソラトレイン",
+        "ワンダー・ワンダー"
+      ],
+      "x": -643.7,
+      "y": -119.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hiodoshi-ao",
+          "name_zh": "火威青",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ichijou-ririka",
+          "name_zh": "一條莉莉華",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "juufuutei-raden",
+          "name_zh": "儒烏風亭螺鈿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "todoroki-hajime",
+          "name_zh": "轟一 (轟初美)",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ DEV_IS】吹雪隊長 ⟷ 音樂天才奏 (憧憬前輩)"
+        }
+      ]
+    },
+    {
+      "id": "ichijou-ririka",
+      "name_zh": "一條莉莉華",
+      "name_en": "Ichijou Ririka",
+      "name_jp": "一条莉々華",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "ReGLOSS",
+      "gen_id": "dev-is-regloss",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "社員 (Employees)",
+      "oshi_mark": "🌃",
+      "illustrator": "なかむら",
+      "image": "../asset/picture/hololive/Ichijou-Ririka_list_thumb.png",
+      "beginner_summary": "年輕幹練的陽光辣妹女高中生社長。商業企劃執行力超強，兼具溫暖照顧團隊的大姐姐氣度與元氣辣妹談吐。",
+      "opening_greeting": "おはよー！一条莉々華社長です！",
+      "closing_greeting": "おつりりかー！お仕事お疲れ様！",
+      "songs": [
+        "瞬間ハートビート",
+        "ライアー・ガール",
+        "Good Bye Days"
+      ],
+      "x": -738.8,
+      "y": -150.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hiodoshi-ao",
+          "name_zh": "火威青",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "otonose-kanade",
+          "name_zh": "音乃瀨奏",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "juufuutei-raden",
+          "name_zh": "儒烏風亭螺鈿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "todoroki-hajime",
+          "name_zh": "轟一 (轟初美)",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "juufuutei-raden",
+      "name_zh": "儒烏風亭螺鈿",
+      "name_en": "Juufuutei Raden",
+      "name_jp": "儒烏風亭らでん",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "ReGLOSS",
+      "gen_id": "dev-is-regloss",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "贔屓 (Hiki)",
+      "oshi_mark": "🐚",
+      "illustrator": "カオミン",
+      "image": "../asset/picture/hololive/Juufuutei-Raden_list_thumb.png",
+      "beginner_summary": "博學知性的落語文化藝人。淵博的日本傳統文化與世界美術館知識，多次推動國家博物館聯動與文化科普。",
+      "opening_greeting": "毎度お馴染み、儒烏風亭らでんでございます！",
+      "closing_greeting": "それではお後がよろしいようで、バイバイ！",
+      "songs": [
+        "瞬間ハートビート",
+        "落語心心中",
+        "あやかし横丁"
+      ],
+      "x": -738.8,
+      "y": -250.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hiodoshi-ao",
+          "name_zh": "火威青",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "otonose-kanade",
+          "name_zh": "音乃瀨奏",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ichijou-ririka",
+          "name_zh": "一條莉莉華",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "todoroki-hajime",
+          "name_zh": "轟一 (轟初美)",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "todoroki-hajime",
+      "name_zh": "轟一 (轟初美)",
+      "name_en": "Todoroki Hajime",
+      "name_jp": "轟はじめ",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "ReGLOSS",
+      "gen_id": "dev-is-regloss",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "番長組 (Banchogumi)",
+      "oshi_mark": "🐧",
+      "illustrator": "Aちき",
+      "image": "../asset/picture/hololive/Todoroki-Hajime_list_thumb.png",
+      "beginner_summary": "自稱宇宙第一不良老大的企鵝番長。說話是完全聽不懂的可愛嬰兒含糊呢喃，但站上舞台卻展現全社頂級的炸裂街舞神技。",
+      "opening_greeting": "押忍！宇宙一の番長、轟はじめだ！",
+      "closing_greeting": "押忍！おつはじめー！",
+      "songs": [
+        "瞬間ハートビート",
+        "乱数調整",
+        "Baddest"
+      ],
+      "x": -643.7,
+      "y": -280.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hiodoshi-ao",
+          "name_zh": "火威青",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "otonose-kanade",
+          "name_zh": "音乃瀨奏",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ichijou-ririka",
+          "name_zh": "一條莉莉華",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "juufuutei-raden",
+          "name_zh": "儒烏風亭螺鈿",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "isaki-riona",
+      "name_zh": "響咲莉音",
+      "name_en": "Isaki Riona",
+      "name_jp": "響咲リオナ",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "FLOW GLOW",
+      "gen_id": "dev-is-flow-glow",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "莉音組",
+      "oshi_mark": "👑",
+      "illustrator": "DSマイル",
+      "image": "../asset/picture/hololive/Isaki-Riona_list_thumb.png",
+      "beginner_summary": "FLOW GLOW 隊長。擁有極具爆發力的流行搖滾唱腔，帶領團隊開拓街頭潮流新領域。",
+      "opening_greeting": "こんリオナ！響咲リオナだよ！",
+      "closing_greeting": "おつリオナでした！",
+      "songs": [
+        "FG ROAD",
+        "FLOW GLOW Originals"
+      ],
+      "x": -637.7,
+      "y": -72.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "koganei-niko",
+          "name_zh": "虎金妃笑虎",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mizumiya-su",
+          "name_zh": "水宮樞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rindo-chihaya",
+          "name_zh": "輪堂千速",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kikirara-vivi",
+          "name_zh": "綺々羅々薇薇",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "koganei-niko",
+      "name_zh": "虎金妃笑虎",
+      "name_en": "Koganei Niko",
+      "name_jp": "虎金妃笑虎",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "FLOW GLOW",
+      "gen_id": "dev-is-flow-glow",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "笑虎組",
+      "oshi_mark": "🐯",
+      "illustrator": "灸場メロ",
+      "image": "../asset/picture/hololive/Koganei-Niko_list_thumb.png",
+      "beginner_summary": "元氣四射的小老虎少女。節奏感極佳且擅長街頭 Rap 說唱，為團隊注入無限活力。",
+      "opening_greeting": "がおー！虎金妃笑虎だぞ！",
+      "closing_greeting": "おつニコ！またな！",
+      "songs": [
+        "FG ROAD"
+      ],
+      "x": -696.5,
+      "y": 8.1,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "isaki-riona",
+          "name_zh": "響咲莉音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mizumiya-su",
+          "name_zh": "水宮樞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rindo-chihaya",
+          "name_zh": "輪堂千速",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kikirara-vivi",
+          "name_zh": "綺々羅々薇薇",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "mizumiya-su",
+      "name_zh": "水宮樞",
+      "name_en": "Mizumiya Su",
+      "name_jp": "水宮枢",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "FLOW GLOW",
+      "gen_id": "dev-is-flow-glow",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "樞民",
+      "oshi_mark": "💧",
+      "illustrator": "bob",
+      "image": "../asset/picture/hololive/Mizumiya-Su_list_thumb.png",
+      "beginner_summary": "性格冷靜從容的藍色少女。音色透明清澈如流水，舞台表現洗鍊沉穩。",
+      "opening_greeting": "こんすー！水宮枢だよ！",
+      "closing_greeting": "おつすーでした！",
+      "songs": [
+        "FG ROAD"
+      ],
+      "x": -791.5,
+      "y": -22.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "isaki-riona",
+          "name_zh": "響咲莉音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koganei-niko",
+          "name_zh": "虎金妃笑虎",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rindo-chihaya",
+          "name_zh": "輪堂千速",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kikirara-vivi",
+          "name_zh": "綺々羅々薇薇",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "rindo-chihaya",
+      "name_zh": "輪堂千速",
+      "name_en": "Rindo Chihaya",
+      "name_jp": "輪堂千速",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "FLOW GLOW",
+      "gen_id": "dev-is-flow-glow",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "千速組",
+      "oshi_mark": "🏎️",
+      "illustrator": "めばち",
+      "image": "../asset/picture/hololive/Rindo-Chihaya_list_thumb.png",
+      "beginner_summary": "熱愛極速奔馳的重機賽車系少女。性格豪爽俐落，節奏明快如同極速疾馳。",
+      "opening_greeting": "ぶっちぎり！輪堂千速だ！",
+      "closing_greeting": "おつちはや！飛ばしていくぜ！",
+      "songs": [
+        "FG ROAD"
+      ],
+      "x": -791.5,
+      "y": -122.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "isaki-riona",
+          "name_zh": "響咲莉音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koganei-niko",
+          "name_zh": "虎金妃笑虎",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mizumiya-su",
+          "name_zh": "水宮樞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kikirara-vivi",
+          "name_zh": "綺々羅々薇薇",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kikirara-vivi",
+      "name_zh": "綺々羅々薇薇",
+      "name_en": "Kikirara Vivi",
+      "name_jp": "綺々羅々ヴィヴィ",
+      "branch": "DEV_IS",
+      "branch_group": "DEV_IS",
+      "generation": "FLOW GLOW",
+      "gen_id": "dev-is-flow-glow",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "薇薇組",
+      "oshi_mark": "💄",
+      "illustrator": "米室",
+      "image": "../asset/picture/hololive/Kikirara-Vivi_list_thumb.png",
+      "beginner_summary": "華麗精緻的時尚系大小姐。具備超高美學品味，為街頭潮流注入摩登時尚視覺。",
+      "opening_greeting": "ごきげんよう！綺々羅々ヴィヴィですわ！",
+      "closing_greeting": "それではごめんあそばせ！",
+      "songs": [
+        "FG ROAD"
+      ],
+      "x": -696.5,
+      "y": -153.6,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "isaki-riona",
+          "name_zh": "響咲莉音",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koganei-niko",
+          "name_zh": "虎金妃笑虎",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mizumiya-su",
+          "name_zh": "水宮樞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rindo-chihaya",
+          "name_zh": "輪堂千速",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "achichi-mela",
+      "name_zh": "熱千梅拉",
+      "name_en": "Achichi Mela",
+      "name_jp": "熱千めら",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "ASOBI☆MAWARI-TAI!",
+      "gen_id": "asobi-mawari-tai",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "めら組",
+      "oshi_mark": "🔥",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Achichi-Mela_list_thumb.png",
+      "beginner_summary": "ASOBI☆MAWARI-TAI! 元氣蠑螈消防隊員少女。以火之用心為己任，性格熱情活潑。",
+      "opening_greeting": "あちち〜！熱千めらじゃ！",
+      "closing_greeting": "火の用心じゃぞ！ばいばーい！",
+      "songs": [
+        "ASOBI☆MAWARI Anthem"
+      ],
+      "x": 85.0,
+      "y": 260.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "sorashina-sopia",
+          "name_zh": "空科索菲亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "suzuna-tsuzuri",
+          "name_zh": "鈴名綴",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hyakuto-kyoko",
+          "name_zh": "百燈恭子",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "sorashina-sopia",
+      "name_zh": "空科索菲亞",
+      "name_en": "Sorashina Sopia",
+      "name_jp": "空科ソピア",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "ASOBI☆MAWARI-TAI!",
+      "gen_id": "asobi-mawari-tai",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ソピア組",
+      "oshi_mark": "🌌",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Sorashina-Sopia_list_thumb.png",
+      "beginner_summary": "浪漫天文系少女。對浩瀚星空與宇宙科普充滿好奇探索之心。",
+      "opening_greeting": "ハロー！空科ソピアだよ！",
+      "closing_greeting": "また星空の下で会おうね！",
+      "songs": [
+        "Starry Play"
+      ],
+      "x": 0.0,
+      "y": 345.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "achichi-mela",
+          "name_zh": "熱千梅拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "suzuna-tsuzuri",
+          "name_zh": "鈴名綴",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hyakuto-kyoko",
+          "name_zh": "百燈恭子",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "suzuna-tsuzuri",
+      "name_zh": "鈴名綴",
+      "name_en": "Suzuna Tsuzuri",
+      "name_jp": "鈴名つづり",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "ASOBI☆MAWARI-TAI!",
+      "gen_id": "asobi-mawari-tai",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "つづり組",
+      "oshi_mark": "🔔",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Suzuna-Tsuzuri_list_thumb.png",
+      "beginner_summary": "宛如清脆鈴聲般治癒人心的元氣少女，風格清純明亮。",
+      "opening_greeting": "りんりん〜！鈴名つづりです！",
+      "closing_greeting": "今日も一日お疲れ様でした！",
+      "songs": [
+        "Bell Chronicle"
+      ],
+      "x": -85.0,
+      "y": 260.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "achichi-mela",
+          "name_zh": "熱千梅拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sorashina-sopia",
+          "name_zh": "空科索菲亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hyakuto-kyoko",
+          "name_zh": "百燈恭子",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "hyakuto-kyoko",
+      "name_zh": "百燈恭子",
+      "name_en": "Hyakuto Kyoko",
+      "name_jp": "百灯キョーコ",
+      "branch": "Hololive JP",
+      "branch_group": "JP",
+      "generation": "ASOBI☆MAWARI-TAI!",
+      "gen_id": "asobi-mawari-tai",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "百灯一課",
+      "oshi_mark": "📢",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Hyakuto-Kyoko_list_thumb.png",
+      "beginner_summary": "全新企劃團體「アソビ☆まわり隊！」（ASOBI☆MAWARI-TAI!）成員。熱血勇敢、手持擴音器的正義警察英雄，嗓門極大自帶亢奮氣場的力量型擔當。",
+      "opening_greeting": "こんキョーコ！アソビ☆まわり隊の百灯キョーコだ！",
+      "closing_greeting": "おつキョーコ！任務完了！",
+      "songs": [],
+      "x": 0.0,
+      "y": 175.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "achichi-mela",
+          "name_zh": "熱千梅拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "sorashina-sopia",
+          "name_zh": "空科索菲亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "suzuna-tsuzuri",
+          "name_zh": "鈴名綴",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "hanazono-sayaka",
+      "name_zh": "花園彩香",
+      "name_en": "Hanazono Sayaka",
+      "name_jp": "花園さやか",
+      "branch": "Staff / holoAN",
+      "branch_group": "STAFF",
+      "generation": "holoAN Announcer",
+      "gen_id": "staff",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "さやか組",
+      "oshi_mark": "🌸",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Hanazono-Sayaka_list_thumb.png",
+      "beginner_summary": "官方情報頻道 holoAN 當家播報主播，為觀眾傳遞即時社內重大快訊。",
+      "opening_greeting": "皆様こんにちは！holoANキャスターの花園さやかです！",
+      "closing_greeting": "以上、holoANニュースでした！",
+      "songs": [],
+      "x": -42.3,
+      "y": 807.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "izuki-michiru",
+          "name_zh": "伊月滿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazeshiro-yuki",
+          "name_zh": "風白由希",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "friend-a",
+          "name_zh": "友人A (A醬)",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "harusaki-nodoka",
+          "name_zh": "春先和香",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "izuki-michiru",
+      "name_zh": "伊月滿",
+      "name_en": "Izuki Michiru",
+      "name_jp": "伊月みちる",
+      "branch": "Staff / holoAN",
+      "branch_group": "STAFF",
+      "generation": "holoAN Announcer",
+      "gen_id": "staff",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "みちる組",
+      "oshi_mark": "🌙",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Izuki-Michiru_list_thumb.png",
+      "beginner_summary": "holoAN 播報團隊主播，風格清晰敏銳，負責特輯與活動導覽。",
+      "opening_greeting": "holoANの伊月みちるです！今週のトピックスをお届けします！",
+      "closing_greeting": "次回もお楽しみに！",
+      "songs": [],
+      "x": -101.0,
+      "y": 888.1,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanazono-sayaka",
+          "name_zh": "花園彩香",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazeshiro-yuki",
+          "name_zh": "風白由希",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "friend-a",
+          "name_zh": "友人A (A醬)",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "harusaki-nodoka",
+          "name_zh": "春先和香",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kazeshiro-yuki",
+      "name_zh": "風白由希",
+      "name_en": "Kazeshiro Yuki",
+      "name_jp": "風白ゆき",
+      "branch": "Staff / holoAN",
+      "branch_group": "STAFF",
+      "generation": "holoAN Announcer",
+      "gen_id": "staff",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ゆき組",
+      "oshi_mark": "❄️",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Kazeshiro Yuki_list_thumb-1.png",
+      "beginner_summary": "官方情報頻道 holoAN 專屬播報主播，「雪月花」主播三人組之雪，外表成熟沉著的大姊姊擔當。",
+      "opening_greeting": "みなさんこんにちは！holoANの風白ゆきです！",
+      "closing_greeting": "それでは、次回の配信でお会いしましょう！",
+      "songs": [],
+      "x": -196.0,
+      "y": 857.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanazono-sayaka",
+          "name_zh": "花園彩香",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "izuki-michiru",
+          "name_zh": "伊月滿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "friend-a",
+          "name_zh": "友人A (A醬)",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "harusaki-nodoka",
+          "name_zh": "春先和香",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "friend-a",
+      "name_zh": "友人A (A醬)",
+      "name_en": "Friend A",
+      "name_jp": "友人A (えーちゃん)",
+      "branch": "Staff",
+      "branch_group": "STAFF",
+      "generation": "Staff",
+      "gen_id": "staff",
+      "status": "resign",
+      "graduation_date": "2024-06-30",
+      "fan_name": "A-Staff",
+      "oshi_mark": "👓",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Friend-A_list_thumb.png",
+      "beginner_summary": "Hololive 傳奇經紀人兼營運總管「A 醬」。陪伴時乃空與事務所走過六年草創歲月，控場專業、深受全體藝人與粉絲敬重（2024 年退職）。",
+      "opening_greeting": "みなさんこんにちは！友人Aです！",
+      "closing_greeting": "お疲れ様でした！",
+      "songs": [],
+      "x": -196.0,
+      "y": 757.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanazono-sayaka",
+          "name_zh": "花園彩香",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "izuki-michiru",
+          "name_zh": "伊月滿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazeshiro-yuki",
+          "name_zh": "風白由希",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "harusaki-nodoka",
+          "name_zh": "春先和香",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokino-sora",
+          "name_zh": "時乃空",
+          "type": "cross_cluster",
+          "label": "🌌 【STAFF ⟷ JP】草創歲月摯友 營運與元祖偶像紐帶"
+        }
+      ]
+    },
+    {
+      "id": "harusaki-nodoka",
+      "name_zh": "春先和香",
+      "name_en": "Harusaki Nodoka",
+      "name_jp": "春先のどか",
+      "branch": "Staff",
+      "branch_group": "STAFF",
+      "generation": "Staff",
+      "gen_id": "staff",
+      "status": "resign",
+      "graduation_date": "2025-09-30",
+      "fan_name": "のどか組",
+      "oshi_mark": "🌸",
+      "illustrator": "official",
+      "image": "../asset/picture/hololive/Harusaki-Nodoka_list_thumb.png",
+      "beginner_summary": "接棒 A 醬的官方主播工作人員。甜美親切、認真負責，深受前輩藝人寵愛（2025 年退職）。",
+      "opening_greeting": "皆様こんにちは！新人の春先のどかです！",
+      "closing_greeting": "本日もありがとうございました！",
+      "songs": [],
+      "x": -101.0,
+      "y": 726.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanazono-sayaka",
+          "name_zh": "花園彩香",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "izuki-michiru",
+          "name_zh": "伊月滿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kazeshiro-yuki",
+          "name_zh": "風白由希",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "friend-a",
+          "name_zh": "友人A (A醬)",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "mori-calliope",
+      "name_zh": "森美聲",
+      "name_en": "Mori Calliope",
+      "name_jp": "森カリオペ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Myth",
+      "gen_id": "en-myth",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Dead Beats",
+      "oshi_mark": "💀",
+      "illustrator": "ゆきさめ",
+      "image": "../asset/picture/hololive/Mori-Calliope_list_thumb.png",
+      "beginner_summary": "死神的第一徒弟，簽約環球音樂的世界級饒舌巨星。看似冷酷霸氣，私底下卻是笨拙、努力打拼養家的工作狂，被粉絲尊稱為「Dad (爸爸)」。",
+      "opening_greeting": "Yo, what's up Dead Beats? Mori Calliope here!",
+      "closing_greeting": "Peace out, homies!",
+      "songs": [
+        "Excuse My Rudeness, But Could You Please RIP?",
+        "Red",
+        "End of a life",
+        "Future Island"
+      ],
+      "x": 755.0,
+      "y": -350.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "takanashi-kiara",
+          "name_zh": "小鳥遊琪亞拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ninomae-inanis",
+          "name_zh": "一伊那爾棲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gawr-gura",
+          "name_zh": "噶嗚·古拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "watson-amelia",
+          "name_zh": "華生·艾米莉亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】可可與死神 跨星系先驅引路人"
+        },
+        {
+          "target_id": "hoshimachi-suisei",
+          "name_zh": "星街彗星",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】SuiCalli 跨星系音樂雙天后 (Wicked)"
+        }
+      ]
+    },
+    {
+      "id": "takanashi-kiara",
+      "name_zh": "小鳥遊琪亞拉",
+      "name_en": "Takanashi Kiara",
+      "name_jp": "小鳥遊キアラ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Myth",
+      "gen_id": "en-myth",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "KFP (Kiara Fried Phoenix)",
+      "oshi_mark": "🐔",
+      "illustrator": "huke",
+      "image": "../asset/picture/hololive/Takanashi-Kiara_list_thumb.png",
+      "beginner_summary": "掌握英德日三語的火鳳凰少女。經營神秘連鎖快餐店 KFP，不聽話的員工會被關進傳說中的小黑屋 (The Usual Room) 再教育。",
+      "opening_greeting": "KIKKERIKIIII! It's your boss Takanashi Kiara!",
+      "closing_greeting": "Vielen Dank and goodbye!",
+      "songs": [
+        "HINOTORI",
+        "SPARKS",
+        "DO U",
+        "CHIMERA"
+      ],
+      "x": 696.3,
+      "y": -269.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ninomae-inanis",
+          "name_zh": "一伊那爾棲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gawr-gura",
+          "name_zh": "噶嗚·古拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "watson-amelia",
+          "name_zh": "華生·艾米莉亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "ninomae-inanis",
+      "name_zh": "一伊那爾棲",
+      "name_en": "Ninomae Ina'nis",
+      "name_jp": "一伊那尓栖",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Myth",
+      "gen_id": "en-myth",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Tentacult (Takodachi)",
+      "oshi_mark": "🐙",
+      "illustrator": "黒星紅白",
+      "image": "../asset/picture/hololive/Ninomae-Inanis_list_thumb.png",
+      "beginner_summary": "古神祭司章魚少女。現場電繪技術高超如神級畫師，聲線極度平靜溫柔，熱愛講冷笑話雙關語（Puns），招牌是「WAH！」。",
+      "opening_greeting": "Wah! Hello everyone, Ninomae Ina'nis here!",
+      "closing_greeting": "Otsukaresama, and WAH!",
+      "songs": [
+        "VIOLET",
+        "Meconopsis"
+      ],
+      "x": 601.2,
+      "y": -300.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takanashi-kiara",
+          "name_zh": "小鳥遊琪亞拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gawr-gura",
+          "name_zh": "噶嗚·古拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "watson-amelia",
+          "name_zh": "華生·艾米莉亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】白狐與章魚 跨國繪師靈魂知心好友"
+        }
+      ]
+    },
+    {
+      "id": "gawr-gura",
+      "name_zh": "噶嗚·古拉",
+      "name_en": "Gawr Gura",
+      "name_jp": "がうる・ぐら",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Myth",
+      "gen_id": "en-myth",
+      "status": "graduate",
+      "graduation_date": "2025-05-01",
+      "fan_name": "Chumbuds",
+      "oshi_mark": "🔱",
+      "illustrator": "甘城なつき",
+      "image": "../asset/picture/hololive/Gawr-Gura_list_thumb.png",
+      "beginner_summary": "全球首位突破 400 萬訂閱的世界第一 VTuber 頂級小鯊魚。出道只憑一個「a」字震撼全球，天籟般的爵士老歌喉與節奏感讓人徹底沉迷。",
+      "opening_greeting": "SHAAAAARK! Hi everyone, Gawr Gura here!",
+      "closing_greeting": "Bye bye chumbuds!",
+      "songs": [
+        "REFLECT",
+        "Tokyo Wabi-Sabi",
+        "Ashikoshi"
+      ],
+      "x": 601.2,
+      "y": -400.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takanashi-kiara",
+          "name_zh": "小鳥遊琪亞拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ninomae-inanis",
+          "name_zh": "一伊那爾棲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "watson-amelia",
+          "name_zh": "華生·艾米莉亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kiryu-coco",
+          "name_zh": "桐生可可",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】早安新聞與跨國啟蒙"
+        }
+      ]
+    },
+    {
+      "id": "watson-amelia",
+      "name_zh": "華生·艾米莉亞",
+      "name_en": "Watson Amelia",
+      "name_jp": "ワトソン・アメリア",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Myth",
+      "gen_id": "en-myth",
+      "status": "graduate",
+      "graduation_date": "2024-09-30",
+      "fan_name": "Teammates",
+      "oshi_mark": "🔎",
+      "illustrator": "ナビ",
+      "image": "../asset/picture/hololive/Watson-Amelia_list_thumb.png",
+      "beginner_summary": "時間旅行金髮偵探。社內傳奇技術革新者，自主研發動作捕捉與自製 VR 攝影棚，推動了整個 EN 組 3D 舞台的誕生。",
+      "opening_greeting": "Hello Teammates! Detective Watson Amelia is here!",
+      "closing_greeting": "See you later, Teammates!",
+      "songs": [
+        "ChikuTaku"
+      ],
+      "x": 696.3,
+      "y": -430.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "mori-calliope",
+          "name_zh": "森美聲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "takanashi-kiara",
+          "name_zh": "小鳥遊琪亞拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ninomae-inanis",
+          "name_zh": "一伊那爾棲",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gawr-gura",
+          "name_zh": "噶嗚·古拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "irys",
+      "name_zh": "IRyS",
+      "name_en": "IRyS",
+      "name_jp": "IRyS",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Project: HOPE / Promise",
+      "gen_id": "en-promise",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "GuyRyS",
+      "oshi_mark": "💎",
+      "illustrator": "redjuice",
+      "image": "../asset/picture/hololive/IRyS_list_thumb.png",
+      "beginner_summary": "半天使半惡魔的虛擬歌手。擁有爆發力極強的歌劇級美聲，日英語流暢切換，聊天時經常不經意說出危險雙關語的反差萌極受歡迎。",
+      "opening_greeting": "HiRyS, it's IRyS!",
+      "closing_greeting": "ByeRyS!",
+      "songs": [
+        "Caesura of Despair",
+        "Sparks of Joy",
+        "Gravity",
+        "Till the End of Me"
+      ],
+      "x": 807.7,
+      "y": -477.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "ceres-fauna",
+          "name_zh": "賽麗絲·芳娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ouro-kronii",
+          "name_zh": "歐羅·克洛妮",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nanashi-mumei",
+          "name_zh": "七詩無銘",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsukumo-sana",
+          "name_zh": "九十九佐命",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "ceres-fauna",
+      "name_zh": "賽麗絲·芳娜",
+      "name_en": "Ceres Fauna",
+      "name_jp": "セレス・ファウナ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Council / Promise",
+      "gen_id": "en-promise",
+      "status": "graduate",
+      "graduation_date": "2025-01-03",
+      "fan_name": "Saplings",
+      "oshi_mark": "🌿",
+      "illustrator": "朝凪",
+      "image": "../asset/picture/hololive/Ceres-Fauna_list_thumb.png",
+      "beginner_summary": "大自然化身的麒麟。聲線極度輕柔治癒被譽為 ASMR 天花板，但遊玩遊戲時突然流露出的冰冷病嬌威壓更是讓粉絲為之瘋狂。",
+      "opening_greeting": "Konfauna~! Nature is here!",
+      "closing_greeting": "Bye-bye Saplings!",
+      "songs": [
+        "Let Me Stay Here",
+        "Sweet Appetite"
+      ],
+      "x": 765.2,
+      "y": -403.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "irys",
+          "name_zh": "IRyS",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ouro-kronii",
+          "name_zh": "歐羅·克洛妮",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nanashi-mumei",
+          "name_zh": "七詩無銘",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsukumo-sana",
+          "name_zh": "九十九佐命",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "ouro-kronii",
+      "name_zh": "歐羅·克洛妮",
+      "name_en": "Ouro Kronii",
+      "name_jp": "オーロ・クロニー",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Council / Promise",
+      "gen_id": "en-promise",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Kronies",
+      "oshi_mark": "⏳",
+      "illustrator": "ワダアルコ",
+      "image": "../asset/picture/hololive/Ouro-Kronii_list_thumb.png",
+      "beginner_summary": "時間看守者。具備黃金名模身材與磁性低音，極度自戀但日常經常崩潰搞怪，曾將 5 天前的過期潛艇堡放進果汁機打成泥喝下去引爆話題。",
+      "opening_greeting": "Konnichiwa, warden of time Ouro Kronii is here.",
+      "closing_greeting": "Have the day you deserve. Goodbye.",
+      "songs": [
+        "Daydream"
+      ],
+      "x": 680.2,
+      "y": -403.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "irys",
+          "name_zh": "IRyS",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ceres-fauna",
+          "name_zh": "賽麗絲·芳娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nanashi-mumei",
+          "name_zh": "七詩無銘",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsukumo-sana",
+          "name_zh": "九十九佐命",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "nanashi-mumei",
+      "name_zh": "七詩無銘",
+      "name_en": "Nanashi Mumei",
+      "name_jp": "七詩ムメイ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Council / Promise",
+      "gen_id": "en-promise",
+      "status": "graduate",
+      "graduation_date": "2025-04-28",
+      "fan_name": "Hoomans",
+      "oshi_mark": "🪶",
+      "illustrator": "あざー",
+      "image": "../asset/picture/hololive/Nanashi-Mumei_list_thumb.png",
+      "beginner_summary": "守護人類文明的貓頭鷹。外表看似天真可愛的小女孩，卻常常隨手畫出掉 SAN 值的驚悚克蘇魯怪物，被粉絲笑稱為反差大師。",
+      "opening_greeting": "Oh, hi! It's me, Nanashi Mumei!",
+      "closing_greeting": "Bye bye! Don't forget me!",
+      "songs": [
+        "A New Start",
+        "mumei"
+      ],
+      "x": 637.7,
+      "y": -477.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "irys",
+          "name_zh": "IRyS",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ceres-fauna",
+          "name_zh": "賽麗絲·芳娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ouro-kronii",
+          "name_zh": "歐羅·克洛妮",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsukumo-sana",
+          "name_zh": "九十九佐命",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "hakos-baelz",
+      "name_zh": "哈珂斯·貝爾芙",
+      "name_en": "Hakos Baelz",
+      "name_jp": "ハコス・ベールズ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Council / Promise",
+      "gen_id": "en-promise",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Brats",
+      "oshi_mark": "🎲",
+      "illustrator": "Mika Pikazo",
+      "image": "../asset/picture/hololive/Hakos-Baelz_list_thumb.png",
+      "beginner_summary": "象徵混沌的紅髮澳洲鼠娘。雖然號稱混沌化身，卻是全隊裡行事最常理負責的學生會長，且舞技與節奏感在全社名列前茅。",
+      "opening_greeting": "G'day mate! Hakos Baelz is in the house!",
+      "closing_greeting": "See ya, ya little brats!",
+      "songs": [
+        "Play Dice!",
+        "GEEK:P",
+        "Boom"
+      ],
+      "x": 680.2,
+      "y": -550.9,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "irys",
+          "name_zh": "IRyS",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ceres-fauna",
+          "name_zh": "賽麗絲·芳娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ouro-kronii",
+          "name_zh": "歐羅·克洛妮",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nanashi-mumei",
+          "name_zh": "七詩無銘",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tsukumo-sana",
+          "name_zh": "九十九佐命",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "houshou-marine",
+          "name_zh": "寶鐘瑪琳",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ EN】瑪琳Bae 跨星系舞蹈與相聲搭檔"
+        }
+      ]
+    },
+    {
+      "id": "tsukumo-sana",
+      "name_zh": "九十九佐命",
+      "name_en": "Tsukumo Sana",
+      "name_jp": "九十九佐命",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Council",
+      "gen_id": "en-promise",
+      "status": "graduate",
+      "graduation_date": "2022-07-31",
+      "fan_name": "Sanallites",
+      "oshi_mark": "🪐",
+      "illustrator": "pako",
+      "image": "../asset/picture/hololive/Tsukumo-Sana_list_thumb.png",
+      "beginner_summary": "空間使者宇宙少女。具備淵博的天文學科普知識，性格爽朗溫柔，拿下頭飾就會膨脹為巨大宇宙天體。",
+      "opening_greeting": "Sananana~! The speaker of space is here!",
+      "closing_greeting": "Keep shining, Sanallites!",
+      "songs": [
+        "Astrogirl"
+      ],
+      "x": 765.2,
+      "y": -550.9,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "irys",
+          "name_zh": "IRyS",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ceres-fauna",
+          "name_zh": "賽麗絲·芳娜",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "ouro-kronii",
+          "name_zh": "歐羅·克洛妮",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nanashi-mumei",
+          "name_zh": "七詩無銘",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "hakos-baelz",
+          "name_zh": "哈珂斯·貝爾芙",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "shiori-novella",
+      "name_zh": "席歐莉·諾維拉",
+      "name_en": "Shiori Novella",
+      "name_jp": "シオリ・ノヴェラ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Advent",
+      "gen_id": "en-advent",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Novellites",
+      "oshi_mark": "👁️‍🗨️",
+      "illustrator": "かやはら",
+      "image": "../asset/picture/hololive/Shiori-Novella_list_thumb.png",
+      "beginner_summary": "禁忌知識檔案管理員。說話思緒極度跳躍，喜歡研究黴菌與各類怪誕事物，文字創作功底深厚的哥德風奇女子。",
+      "opening_greeting": "Hello my bookmarks! Shiori Novella is here!",
+      "closing_greeting": "Until the next chapter, bye!",
+      "songs": [
+        "Rebellion",
+        "Overkill"
+      ],
+      "x": 935.0,
+      "y": -530.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "koseki-bijou",
+          "name_zh": "古石比啾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nerissa-ravencroft",
+          "name_zh": "奈莉莎·雷文克羅夫特",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "fuwawa-abyssgard",
+          "name_zh": "芙娃娃·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mococo-abyssgard",
+          "name_zh": "莫可可·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "koseki-bijou",
+      "name_zh": "古石比啾",
+      "name_en": "Koseki Bijou",
+      "name_jp": "古石ビジュー",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Advent",
+      "gen_id": "en-advent",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Pebbles",
+      "oshi_mark": "🗿",
+      "illustrator": "北隈",
+      "image": "../asset/picture/hololive/Koseki-Bijou_list_thumb.png",
+      "beginner_summary": "凝聚人類情感的遠古小寶石。精通現代網路迷因梗（Skibidi, Rizz），在極度受苦的高難度魂系遊戲中展現堅不可摧的鋼鐵韌性。",
+      "opening_greeting": ":D Beep Beep! Koseki Bijou here!",
+      "closing_greeting": "Bye bye Pebbles! :D",
+      "songs": [
+        "Rebellion",
+        "Moai Song"
+      ],
+      "x": 876.3,
+      "y": -449.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shiori-novella",
+          "name_zh": "席歐莉·諾維拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nerissa-ravencroft",
+          "name_zh": "奈莉莎·雷文克羅夫特",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "fuwawa-abyssgard",
+          "name_zh": "芙娃娃·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mococo-abyssgard",
+          "name_zh": "莫可可·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kaela-kovalskia",
+          "name_zh": "卡埃拉·科瓦爾斯基亞",
+          "type": "cross_cluster",
+          "label": "🌌 【ID ⟷ EN】Kaela & Biboo 跨星系鐵匠與石頭師徒"
+        }
+      ]
+    },
+    {
+      "id": "nerissa-ravencroft",
+      "name_zh": "奈莉莎·雷文克羅夫特",
+      "name_en": "Nerissa Ravencroft",
+      "name_jp": "ネリッサ・レイヴンクロフト",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Advent",
+      "gen_id": "en-advent",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Jailbirds",
+      "oshi_mark": "🪶",
+      "illustrator": "EB十",
+      "image": "../asset/picture/hololive/Nerissa-Ravencroft_list_thumb.png",
+      "beginner_summary": "魔音烏鴉惡魔。具備百老匯音樂劇水準的澎湃高音，本質是 Hololive 全員的狂熱迷妹，熱愛與粉絲分享溫馨搞怪的大家庭日常。",
+      "opening_greeting": "Caw caw! Hello my Jailbirds, Nerissa is here!",
+      "closing_greeting": "Goodnight, my sweet Jailbirds!",
+      "songs": [
+        "Rebellion",
+        "Say My Name"
+      ],
+      "x": 781.2,
+      "y": -480.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shiori-novella",
+          "name_zh": "席歐莉·諾維拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koseki-bijou",
+          "name_zh": "古石比啾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "fuwawa-abyssgard",
+          "name_zh": "芙娃娃·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mococo-abyssgard",
+          "name_zh": "莫可可·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "fuwawa-abyssgard",
+      "name_zh": "芙娃娃·阿比斯加德",
+      "name_en": "Fuwawa Abyssgard",
+      "name_jp": "フワワ・アビスガード",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Advent",
+      "gen_id": "en-advent",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Ruffians",
+      "oshi_mark": "🐾💙",
+      "illustrator": "イコモチ",
+      "image": "../asset/picture/hololive/Fuwawa-Abyssgard_list_thumb.png",
+      "beginner_summary": "雙子魔犬中的溫柔長女。看似溫柔體貼，但偶爾流露出掌握一切的腹黑氣質，與妹妹合體主持的晨間節目《FWMC Morning》天天帶來元氣。",
+      "opening_greeting": "BAU BAU! I'm Fuwawa, the fluffy older sister!",
+      "closing_greeting": "BAU BAU! See you soon!",
+      "songs": [
+        "Rebellion",
+        "Lifetime Showtime"
+      ],
+      "x": 781.2,
+      "y": -580.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shiori-novella",
+          "name_zh": "席歐莉·諾維拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koseki-bijou",
+          "name_zh": "古石比啾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nerissa-ravencroft",
+          "name_zh": "奈莉莎·雷文克羅夫特",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "mococo-abyssgard",
+          "name_zh": "莫可可·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "mococo-abyssgard",
+      "name_zh": "莫可可·阿比斯加德",
+      "name_en": "Mococo Abyssgard",
+      "name_jp": "モココ・アビスガード",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Advent",
+      "gen_id": "en-advent",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Ruffians",
+      "oshi_mark": "🐾💖",
+      "illustrator": "イコモチ",
+      "image": "../asset/picture/hololive/Mococo-Abyssgard_list_thumb.png",
+      "beginner_summary": "雙子魔犬中的傲嬌小妹。說話帶有軟萌鼻音「Ho'eh?」，遊戲失誤時發出的可愛無辜叫聲深受全球 Ruffians 粉絲瘋狂喜愛。",
+      "opening_greeting": "BAU BAU! I'm Mococo, the fuzzy younger sister!",
+      "closing_greeting": "BAU BAU! Bye-bye!",
+      "songs": [
+        "Rebellion",
+        "Lifetime Showtime"
+      ],
+      "x": 876.3,
+      "y": -610.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "shiori-novella",
+          "name_zh": "席歐莉·諾維拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koseki-bijou",
+          "name_zh": "古石比啾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "nerissa-ravencroft",
+          "name_zh": "奈莉莎·雷文克羅夫特",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "fuwawa-abyssgard",
+          "name_zh": "芙娃娃·阿比斯加德",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "elizabeth-rose-bloodflame",
+      "name_zh": "伊莉莎白·羅斯·血焰",
+      "name_en": "Elizabeth Rose Bloodflame",
+      "name_jp": "エリザベス・ローズ・ブラッドフレイム",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Justice",
+      "gen_id": "en-justice",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Bloodlines",
+      "oshi_mark": "👑",
+      "illustrator": "メカ",
+      "image": "../asset/picture/hololive/Elizabeth-Rose-Bloodflame_list_thumb.png",
+      "beginner_summary": "正義組領袖猩紅女王。高貴優雅的英倫腔調，具備宛如皇家劇院天崩地裂歌喉的頂級女高音。",
+      "opening_greeting": "Hail and well met! The Scarlet Queen Elizabeth is here!",
+      "closing_greeting": "Until justice is served, farewell!",
+      "songs": [
+        "Justice Anthem",
+        "Queen of the Night"
+      ],
+      "x": 1062.3,
+      "y": -477.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "gigi-murin",
+          "name_zh": "吉吉·茉莉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "cecilia-immergreen",
+          "name_zh": "賽西莉亞·伊默格林",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "raora-panthera",
+          "name_zh": "蘿拉·潘瑟拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "gigi-murin",
+      "name_zh": "吉吉·茉莉",
+      "name_en": "Gigi Murin",
+      "name_jp": "ジジ・ミュリン",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Justice",
+      "gen_id": "en-justice",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Gremlins",
+      "oshi_mark": "🐒",
+      "illustrator": "なつめえり",
+      "image": "../asset/picture/hololive/Gigi-Murin_list_thumb.png",
+      "beginner_summary": "精力無限的純血小鬼獵人。語速極快、反應靈活的搞怪大師，無窮無盡的幽默嘴砲讓觀眾捧腹大笑。",
+      "opening_greeting": "YOOOOO! It's your favorite gremlin Gigi Murin!",
+      "closing_greeting": "Smell ya later, nerds!",
+      "songs": [
+        "Gremlin Beat"
+      ],
+      "x": 977.3,
+      "y": -392.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "elizabeth-rose-bloodflame",
+          "name_zh": "伊莉莎白·羅斯·血焰",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "cecilia-immergreen",
+          "name_zh": "賽西莉亞·伊默格林",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "raora-panthera",
+          "name_zh": "蘿拉·潘瑟拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "cecilia-immergreen",
+      "name_zh": "賽西莉亞·伊默格林",
+      "name_en": "Cecilia Immergreen",
+      "name_jp": "セシリア・イマーグリーン",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Justice",
+      "gen_id": "en-justice",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Otomatons",
+      "oshi_mark": "🍵",
+      "illustrator": "まふゆ",
+      "image": "../asset/picture/hololive/Cecilia-Immergreen_list_thumb.png",
+      "beginner_summary": "發條自動人偶淑女。精通現場小提琴演奏與古典音樂，但經常在直播中遭遇人偶「短路抽搐」的搞笑反差。",
+      "opening_greeting": "Guten Tag! The automaton Cecilia Immergreen is operational!",
+      "closing_greeting": "Winding down now, Auf Wiedersehen!",
+      "songs": [
+        "Automaton Waltz"
+      ],
+      "x": 892.3,
+      "y": -477.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "elizabeth-rose-bloodflame",
+          "name_zh": "伊莉莎白·羅斯·血焰",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gigi-murin",
+          "name_zh": "吉吉·茉莉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "raora-panthera",
+          "name_zh": "蘿拉·潘瑟拉",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "raora-panthera",
+      "name_zh": "蘿拉·潘瑟拉",
+      "name_en": "Raora Panthera",
+      "name_jp": "ラオラ・パンテーラ",
+      "branch": "Hololive EN",
+      "branch_group": "EN",
+      "generation": "Justice",
+      "gen_id": "en-justice",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Chattini",
+      "oshi_mark": "🎨",
+      "illustrator": "治癒",
+      "image": "../asset/picture/hololive/Raora-Panthera_list_thumb.png",
+      "beginner_summary": "粉紅豹插畫家大貓貓。純正義大利血統的溫柔語氣，將觀眾親切稱呼為小小貓咪「Chattini」，電繪功底極佳。",
+      "opening_greeting": "Ciao a tutti! Artist Raora Panthera is here!",
+      "closing_greeting": "A presto! Arrivederci!",
+      "songs": [
+        "Pink Panthera"
+      ],
+      "x": 977.3,
+      "y": -562.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "elizabeth-rose-bloodflame",
+          "name_zh": "伊莉莎白·羅斯·血焰",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "gigi-murin",
+          "name_zh": "吉吉·茉莉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "cecilia-immergreen",
+          "name_zh": "賽西莉亞·伊默格林",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "ayunda-risu",
+      "name_zh": "阿優達·理樹",
+      "name_en": "Ayunda Risu",
+      "name_jp": "アユンダ・リス",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "1st Generation (Area 15)",
+      "gen_id": "id-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Risuners",
+      "oshi_mark": "🐿️",
+      "illustrator": "やまもと",
+      "image": "../asset/picture/hololive/Ayunda-Risu_list_thumb.png",
+      "beginner_summary": "魔法森林走出的松鼠少女。擁有跨越四個八度的驚人音域，每年 11 月推出的全球病毒迷因《Non-stop Nut November》狂收核桃引爆全網。",
+      "opening_greeting": "Pagi~! Ayunda Risu di sini!",
+      "closing_greeting": "Sampai jumpa lagi, bye-bye!",
+      "songs": [
+        "ALICE",
+        "1:15 AM"
+      ],
+      "x": 1065.0,
+      "y": 450.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "moona-hoshinova",
+          "name_zh": "慕娜·星諾瓦",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "airani-iofifteen",
+          "name_zh": "愛拉妮·伊歐芳汀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "shirakami-fubuki",
+          "name_zh": "白上吹雪",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】JP-ID 早期獸耳同盟先鋒"
+        }
+      ]
+    },
+    {
+      "id": "moona-hoshinova",
+      "name_zh": "慕娜·星諾瓦",
+      "name_en": "Moona Hoshinova",
+      "name_jp": "ムーナ・ホシノヴァ",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "1st Generation (Area 15)",
+      "gen_id": "id-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Moonafic",
+      "oshi_mark": "🔮",
+      "illustrator": "により",
+      "image": "../asset/picture/hololive/Moona-Hoshinova_list_thumb.png",
+      "beginner_summary": "月亮化身的女模特兒。ID 首屈一指的國際巨星歌姬，在 Minecraft 中作為兔田建設核心部長建造了無數宏偉工程。",
+      "opening_greeting": "Moon moon, Moona Hoshinova here!",
+      "closing_greeting": "Thank you for watching, bye bye!",
+      "songs": [
+        "High Tide",
+        "Ai no Chiisana Uta",
+        "Perisai Jitu"
+      ],
+      "x": 937.5,
+      "y": 523.6,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "ayunda-risu",
+          "name_zh": "阿優達·理樹",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "airani-iofifteen",
+          "name_zh": "愛拉妮·伊歐芳汀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "usada-pekora",
+          "name_zh": "兔田佩克拉",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】PekoMoona 跨星系世紀兔月羈絆"
+        }
+      ]
+    },
+    {
+      "id": "airani-iofifteen",
+      "name_zh": "愛拉妮·伊歐芳汀",
+      "name_en": "Airani Iofifteen",
+      "name_jp": "アイラニ・イオフィフティーン",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "1st Generation (Area 15)",
+      "gen_id": "id-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Ioforia",
+      "oshi_mark": "🎨",
+      "illustrator": "夜ノみつき",
+      "image": "../asset/picture/hololive/Airani-Iofifteen_list_thumb.png",
+      "beginner_summary": "外星人繪畫系留學生。精通五種以上語言，在 ID 早期擔任與日本及海外成員跨文化交流的最溫暖友誼橋樑。",
+      "opening_greeting": "Iofi di sini! Obisa!",
+      "closing_greeting": "Sampai jumpa! Dadaah!",
+      "songs": [
+        "Daisuki",
+        "Blowing"
+      ],
+      "x": 937.5,
+      "y": 376.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "ayunda-risu",
+          "name_zh": "阿優達·理樹",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "moona-hoshinova",
+          "name_zh": "慕娜·星諾瓦",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kureiji-ollie",
+      "name_zh": "瘋狂奧莉",
+      "name_en": "Kureiji Ollie",
+      "name_jp": "クレイジー・オリー",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "2nd Generation (Holoro)",
+      "gen_id": "id-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "ZOMBRILY",
+      "oshi_mark": "🧟‍♀️",
+      "illustrator": "LAM",
+      "image": "../asset/picture/hololive/Kureiji-Ollie_list_thumb.png",
+      "beginner_summary": "從墓地復活的活潑殭屍。音量破表的高分貝熱情尖叫，見到任何可愛女孩子都會立刻發起求婚，同時也是西洋棋大師。",
+      "opening_greeting": "ZOMBNICHIWA! Kureiji Ollie is here!",
+      "closing_greeting": "Bye-bye! Ollie love you all!",
+      "songs": [
+        "JOLLIE JOLLIE",
+        "Pillar of Truth"
+      ],
+      "x": 1012.3,
+      "y": 577.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "anya-melfissa",
+          "name_zh": "安喵·梅爾菲莎",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "pavolia-reine",
+          "name_zh": "帕沃莉亞·雷納",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "anya-melfissa",
+      "name_zh": "安喵·梅爾菲莎",
+      "name_en": "Anya Melfissa",
+      "name_jp": "アーニャ・メルフィッサ",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "2nd Generation (Holoro)",
+      "gen_id": "id-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Melfriends",
+      "oshi_mark": "🍂",
+      "illustrator": "上倉エク",
+      "image": "../asset/picture/hololive/Anya-Melfissa_list_thumb.png",
+      "beginner_summary": "印尼名刃克里斯短劍化身的少女。冷靜慵懶的語調與不動聲色的吐槽，其生動的「厭世臉」成為全網最知名的梗圖換臉素材。",
+      "opening_greeting": "Halo semuanya! Anya Melfissa di sini!",
+      "closing_greeting": "Mata ne~ Dadaah!",
+      "songs": [
+        "Everlasting Nipah"
+      ],
+      "x": 884.8,
+      "y": 650.9,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kureiji-ollie",
+          "name_zh": "瘋狂奧莉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "pavolia-reine",
+          "name_zh": "帕沃莉亞·雷納",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "pavolia-reine",
+      "name_zh": "帕沃莉亞·雷納",
+      "name_en": "Pavolia Reine",
+      "name_jp": "パヴォリア・レイネ",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "2nd Generation (Holoro)",
+      "gen_id": "id-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Merakyat",
+      "oshi_mark": "🦚",
+      "illustrator": "飯田ぽち。",
+      "image": "../asset/picture/hololive/Pavolia-Reine_list_thumb.png",
+      "beginner_summary": "孔雀國度的千金大小姐。端莊優雅的談吐中夾雜著宛如水滴滴落的奇妙「滴水笑聲」，原創曲水準極高。",
+      "opening_greeting": "Salam sekalian! Lady Pavolia Reine di sini!",
+      "closing_greeting": "Terima kasih, sampay jumpa!",
+      "songs": [
+        "Gate Open: START!",
+        "Illusion",
+        "Sway"
+      ],
+      "x": 884.8,
+      "y": 503.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kureiji-ollie",
+          "name_zh": "瘋狂奧莉",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "anya-melfissa",
+          "name_zh": "安喵·梅爾菲莎",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "vestia-zeta",
+      "name_zh": "薇絲緹雅·潔塔",
+      "name_en": "Vestia Zeta",
+      "name_jp": "ベスティア・ゼータ",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "3rd Generation (HoloH3ro)",
+      "gen_id": "id-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Zecretary",
+      "oshi_mark": "📜",
+      "illustrator": "あるてら",
+      "image": "../asset/picture/hololive/Vestia-Zeta_list_thumb.png",
+      "beginner_summary": "代號 V.7 的神秘特工少女。雖然堅稱自己是特務而不是貓咪，但執行任務時屢屢出包的呆萌廢柴反差深受大家喜愛。",
+      "opening_greeting": "Mission start! Secret agent Vestia Zeta here!",
+      "closing_greeting": "Mission accomplished, see ya!",
+      "songs": [
+        "You're Mine"
+      ],
+      "x": 885.0,
+      "y": 630.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kaela-kovalskia",
+          "name_zh": "卡埃拉·科瓦爾斯基亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kobo-kanaeru",
+          "name_zh": "科波·卡納耶魯",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kaela-kovalskia",
+      "name_zh": "卡埃拉·科瓦爾斯基亞",
+      "name_en": "Kaela Kovalskia",
+      "name_jp": "カエラ・コヴァルスキア",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "3rd Generation (HoloH3ro)",
+      "gen_id": "id-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Pemaloe",
+      "oshi_mark": "🔨",
+      "illustrator": "ヤスダスズヒト",
+      "image": "../asset/picture/hololive/Kaela-Kovalskia_list_thumb.png",
+      "beginner_summary": "鐵匠工匠大師。全社第一爆肝肝帝，動輒連續直播 20~30 小時不眠不休，面對犯傻的同伴會冷酷吐出招牌金句：「GSH! (去找醫生看腦袋啦)」。",
+      "opening_greeting": "GSH! Get Some Help! Kaela here.",
+      "closing_greeting": "Thank you, now go sleep!",
+      "songs": [
+        "TBA"
+      ],
+      "x": 757.5,
+      "y": 703.6,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "vestia-zeta",
+          "name_zh": "薇絲緹雅·潔塔",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kobo-kanaeru",
+          "name_zh": "科波·卡納耶魯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "koseki-bijou",
+          "name_zh": "古石比啾",
+          "type": "cross_cluster",
+          "label": "🌌 【ID ⟷ EN】Kaela & Biboo 跨星系鐵匠與石頭師徒"
+        }
+      ]
+    },
+    {
+      "id": "kobo-kanaeru",
+      "name_zh": "科波·卡納耶魯",
+      "name_en": "Kobo Kanaeru",
+      "name_jp": "こぼ・かなえる",
+      "branch": "Hololive ID",
+      "branch_group": "ID",
+      "generation": "3rd Generation (HoloH3ro)",
+      "gen_id": "id-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Kobokerz",
+      "oshi_mark": "☔",
+      "illustrator": "ぽんかん⑧",
+      "image": "../asset/picture/hololive/Kobo-Kanaeru_list_thumb.png",
+      "beginner_summary": "雨巫女家族末裔。以任性撒嬌臭小鬼性格席捲東南亞，原創曲《Mantra Hujan》在 TikTok 突破數億播放量，東南亞最速突破百萬訂閱的天才少女。",
+      "opening_greeting": "Ehe! Rain shaman Kobo Kanaeru is here!",
+      "closing_greeting": "Dadaaah Kobokerz!",
+      "songs": [
+        "Mantra Hujan",
+        "Entah",
+        "Sebatas Formalitas"
+      ],
+      "x": 757.5,
+      "y": 556.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "vestia-zeta",
+          "name_zh": "薇絲緹雅·潔塔",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kaela-kovalskia",
+          "name_zh": "卡埃拉·科瓦爾斯基亞",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "tokoyami-towa",
+          "name_zh": "常闇永遠",
+          "type": "cross_cluster",
+          "label": "🌌 【JP ⟷ ID】Kobo & Towa 跨星系母女羈絆"
+        }
+      ]
+    },
+    {
+      "id": "hanasaki-miyabi",
+      "name_zh": "花咲雅",
+      "name_en": "Hanasaki Miyabi",
+      "name_jp": "花咲みやび",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "1st Generation",
+      "gen_id": "holostars-jp-1st",
+      "status": "graduate",
+      "graduation_date": "2026-06-08",
+      "fan_name": "花見友",
+      "oshi_mark": "🌺",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Hanasaki-Miyabi_list_thumb.png",
+      "beginner_summary": "HOLOSTARS 創始第一人。溫和治癒的桃花少年，身旁常伴有食人植物佩普（2026 配信活動終了）。",
+      "opening_greeting": "こんみやび！花咲みやびです！",
+      "closing_greeting": "おつみやびでしたー！",
+      "songs": [
+        "花妖折枝"
+      ],
+      "x": -842.3,
+      "y": 627.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kanade-izuru",
+          "name_zh": "奏手一豆",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "arurandeisu",
+          "name_zh": "阿蘭蒂斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rikka",
+          "name_zh": "律可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kagami-kira",
+          "name_zh": "鏡見吉良",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kanade-izuru",
+      "name_zh": "奏手一豆",
+      "name_en": "Kanade Izuru",
+      "name_jp": "奏手イヅル",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "1st Generation",
+      "gen_id": "holostars-jp-1st",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "イヅル組",
+      "oshi_mark": "🎸",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Kanade-Izuru_list_thumb.png",
+      "beginner_summary": "流浪吉他貓系少年。粗礪卻充滿靈魂的搖滾彈唱實力震撼全場。",
+      "opening_greeting": "よっ。奏手イヅルだ。",
+      "closing_greeting": "じゃあな、また。",
+      "songs": [
+        "連なるモノローグ"
+      ],
+      "x": -901.0,
+      "y": 708.1,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanasaki-miyabi",
+          "name_zh": "花咲雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "arurandeisu",
+          "name_zh": "阿蘭蒂斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rikka",
+          "name_zh": "律可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kagami-kira",
+          "name_zh": "鏡見吉良",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "arurandeisu",
+      "name_zh": "阿蘭蒂斯",
+      "name_en": "Arurandeisu",
+      "name_jp": "アルランディス",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "1st Generation",
+      "gen_id": "holostars-jp-1st",
+      "status": "graduate",
+      "graduation_date": "2026-06-10",
+      "fan_name": "ファミランディス",
+      "oshi_mark": "🍕",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Arurandeisu_list_thumb.png",
+      "beginner_summary": "包容力極強的比薩爸爸大叔。戴著老花眼鏡虛心向海外粉絲請教網路流行俚語的溫馨畫面感動全球（2026 配信活動終了）。",
+      "opening_greeting": "Buon giorno! アルランディスだ！",
+      "closing_greeting": "Ciao ciao! またな！",
+      "songs": [
+        "Wup it up"
+      ],
+      "x": -996.0,
+      "y": 677.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanasaki-miyabi",
+          "name_zh": "花咲雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kanade-izuru",
+          "name_zh": "奏手一豆",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rikka",
+          "name_zh": "律可",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kagami-kira",
+          "name_zh": "鏡見吉良",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "rikka",
+      "name_zh": "律可",
+      "name_en": "Rikka",
+      "name_jp": "律可",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "1st Generation",
+      "gen_id": "holostars-jp-1st",
+      "status": "graduate",
+      "graduation_date": "2026-06-09",
+      "fan_name": "りっかー",
+      "oshi_mark": "⚙️",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Rikka_list_thumb.png",
+      "beginner_summary": "記憶體只有 2GB 的機人少年「Holoroid」。才華橫溢的創作型歌手，音色清澈高亢（2026 配信活動終了）。",
+      "opening_greeting": "ハロー！ホロロイドの律可です！",
+      "closing_greeting": "おつりっかー！",
+      "songs": [
+        "Re:Hello world",
+        "アーカイブ"
+      ],
+      "x": -996.0,
+      "y": 577.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanasaki-miyabi",
+          "name_zh": "花咲雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kanade-izuru",
+          "name_zh": "奏手一豆",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "arurandeisu",
+          "name_zh": "阿蘭蒂斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kagami-kira",
+          "name_zh": "鏡見吉良",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kagami-kira",
+      "name_zh": "鏡見吉良",
+      "name_en": "Kagami Kira",
+      "name_jp": "鏡見キラ",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "1st Generation",
+      "gen_id": "holostars-jp-1st",
+      "status": "graduate",
+      "graduation_date": "2020-11-30",
+      "fan_name": "キラキラ組",
+      "oshi_mark": "✨",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Kagami-Kira_list_thumb.png",
+      "beginner_summary": "HOLOSTARS 早期成員，外貌甜美可愛的偽娘風少年（2020 畢業）。",
+      "opening_greeting": "みんなー！鏡見キラだよ！",
+      "closing_greeting": "ばいばーい！",
+      "songs": [],
+      "x": -901.0,
+      "y": 546.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "hanasaki-miyabi",
+          "name_zh": "花咲雅",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kanade-izuru",
+          "name_zh": "奏手一豆",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "arurandeisu",
+          "name_zh": "阿蘭蒂斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "rikka",
+          "name_zh": "律可",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "astel-leda",
+      "name_zh": "阿斯特爾·瑞達",
+      "name_en": "Astel Leda",
+      "name_jp": "アステル・レダ",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "2nd Generation (SunTempo)",
+      "gen_id": "holostars-jp-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "アステラー",
+      "oshi_mark": "🎭",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Astel-Leda_list_thumb.png",
+      "beginner_summary": "來自異星的任性王子。具備 24 小時連續電競比賽的恐怖耐力，與迪士尼百老匯舞台劇般的超高音歌喉。",
+      "opening_greeting": "ちわっす！アステル・レダだ！",
+      "closing_greeting": "おつかれ、バイバイ！",
+      "songs": [
+        "未来銀河と汽笛の号令"
+      ],
+      "x": -895.0,
+      "y": 500.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kishido-temma",
+          "name_zh": "岸堂天真",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yukoku-roberu",
+          "name_zh": "夕刻羅貝爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kishido-temma",
+      "name_zh": "岸堂天真",
+      "name_en": "Kishido Temma",
+      "name_jp": "岸堂天真",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "2nd Generation (SunTempo)",
+      "gen_id": "holostars-jp-2nd",
+      "status": "graduate",
+      "graduation_date": "2026-06-08",
+      "fan_name": "岸堂組",
+      "oshi_mark": "🦔",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Kishido-Temma_list_thumb.png",
+      "beginner_summary": "表面陽光的見習騎士，在恐怖對抗遊戲中卻化身微笑殺手的暗黑天真騎士（2026 配信活動終了）。",
+      "opening_greeting": "こんてんま！騎士見習いの岸堂天真です！",
+      "closing_greeting": "おつてんま！またね！",
+      "songs": [
+        "Shooting Star"
+      ],
+      "x": -1022.5,
+      "y": 573.6,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "astel-leda",
+          "name_zh": "阿斯特爾·瑞達",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "yukoku-roberu",
+          "name_zh": "夕刻羅貝爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "yukoku-roberu",
+      "name_zh": "夕刻羅貝爾",
+      "name_en": "Yukoku Roberu",
+      "name_jp": "夕刻ロベル",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "2nd Generation (SunTempo)",
+      "gen_id": "holostars-jp-2nd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "常連さん",
+      "oshi_mark": "🍷",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Yukoku-Roberu_list_thumb.png",
+      "beginner_summary": "BAR ROBEL 酒吧店主。機關槍關西腔單口相聲大師，全球粉絲親切相認的「Our Winning Son (常勝之子)」。",
+      "opening_greeting": "乾杯！BAR ROBELへようこそ！夕刻ロベルです！",
+      "closing_greeting": "閉店！ありがとうございました！",
+      "songs": [
+        "POP-TALK"
+      ],
+      "x": -1022.5,
+      "y": 426.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "astel-leda",
+          "name_zh": "阿斯特爾·瑞達",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "kishido-temma",
+          "name_zh": "岸堂天真",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "kageyama-shien",
+      "name_zh": "影山紫炎",
+      "name_en": "Kageyama Shien",
+      "name_jp": "影山シエン",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "3rd Generation (TriNero)",
+      "gen_id": "holostars-jp-3rd",
+      "status": "graduate",
+      "graduation_date": "2026-07-05",
+      "fan_name": "シエン組",
+      "oshi_mark": "🟣",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Kageyama-Shien_list_thumb.png",
+      "beginner_summary": "黑手黨首領胡狼獸人。兼具專業聲優級磁性低沉聲線與呆萌首領反差（2026 配信活動終了）。",
+      "opening_greeting": "お前ら！こんシエン！影山シエンだ！",
+      "closing_greeting": "じゃあな！また会おう！",
+      "songs": [
+        "Beginning"
+      ],
+      "x": -842.3,
+      "y": 372.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "aragami-oga",
+          "name_zh": "荒咬皇牙",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "aragami-oga",
+      "name_zh": "荒咬皇牙",
+      "name_en": "Aragami Oga",
+      "name_jp": "荒咬オウガ",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "3rd Generation (TriNero)",
+      "gen_id": "holostars-jp-3rd",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "オウガ組",
+      "oshi_mark": "🦏",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Aragami-Oga_list_thumb.png",
+      "beginner_summary": "退役軍人魔人。撼動地表的極限超重低音炮，熱愛組裝鋼普拉模型。",
+      "opening_greeting": "よぉ、オウガだ。",
+      "closing_greeting": "おつオウガ、またな。",
+      "songs": [
+        "Silent Night"
+      ],
+      "x": -1012.3,
+      "y": 372.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "kageyama-shien",
+          "name_zh": "影山紫炎",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "yatogami-fuma",
+      "name_zh": "夜十神封魔",
+      "name_en": "Yatogami Fuma",
+      "name_jp": "夜十神封魔",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "UPROAR!!",
+      "gen_id": "holostars-jp-uproar",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "封魔組",
+      "oshi_mark": "🦝",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Yatogami-Fuma_list_thumb.png",
+      "beginner_summary": "UPROAR!! 隊長狸貓妖怪少年。經營萬事屋，槍法高超且元氣滿滿。",
+      "opening_greeting": "ちわーっす！夜十神封魔だ！",
+      "closing_greeting": "おつふうま！またな！",
+      "songs": [
+        "UPROAR!! Originals"
+      ],
+      "x": -715.0,
+      "y": 320.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "utsugi-uyu",
+          "name_zh": "羽繼烏有",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "minase-rio",
+          "name_zh": "水無世燐央",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "utsugi-uyu",
+      "name_zh": "羽繼烏有",
+      "name_en": "Utsugi Uyu",
+      "name_jp": "羽継烏有",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "UPROAR!!",
+      "gen_id": "holostars-jp-uproar",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "烏有組",
+      "oshi_mark": "🃏",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Utsugi-Uyu_list_thumb.png",
+      "beginner_summary": "UPROAR!! 千面怪盜。擅長魔術表演與靈活話術的紳士青年。",
+      "opening_greeting": "ようこそ！怪盗の羽継烏有です！",
+      "closing_greeting": "またお会いしましょう！",
+      "songs": [
+        "UPROAR!! Originals"
+      ],
+      "x": -842.5,
+      "y": 393.6,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "yatogami-fuma",
+          "name_zh": "夜十神封魔",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "minase-rio",
+          "name_zh": "水無世燐央",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "minase-rio",
+      "name_zh": "水無世燐央",
+      "name_en": "Minase Rio",
+      "name_jp": "水無世燐央",
+      "branch": "HOLOSTARS JP",
+      "branch_group": "STARS",
+      "generation": "UPROAR!!",
+      "gen_id": "holostars-jp-uproar",
+      "status": "graduate",
+      "graduation_date": "2026-06-25",
+      "fan_name": "燐央組",
+      "oshi_mark": "🕯️",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Minase-Rio_list_thumb.png",
+      "beginner_summary": "生前懷抱偶像夢想的幽靈少年。擁有空靈震撼的超高音天籟女聲域唱腔（2026 配信活動終了）。",
+      "opening_greeting": "幽霊の水無世燐央です...",
+      "closing_greeting": "成仏〜またね！",
+      "songs": [
+        "UPROAR!! Originals"
+      ],
+      "x": -842.5,
+      "y": 246.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "yatogami-fuma",
+          "name_zh": "夜十神封魔",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "utsugi-uyu",
+          "name_zh": "羽繼烏有",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "regis-altare",
+      "name_zh": "里吉斯·阿爾泰爾",
+      "name_en": "Regis Altare",
+      "name_jp": "リージス・アルテア",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS",
+      "gen_id": "holostars-en-tempus",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Altartists",
+      "oshi_mark": "🗡️",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Regis-Altare_list_thumb.png",
+      "beginner_summary": "冒險者公會 TEMPUS 勇者公會長。性格溫厚謙遜，深受全員欺負的溫柔好隊長。",
+      "opening_greeting": "Greetings! Guild Leader Regis Altare is here!",
+      "closing_greeting": "Until the next quest, farewell!",
+      "songs": [
+        "Top of the World"
+      ],
+      "x": 1062.3,
+      "y": -477.3,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "axel-syrios",
+      "name_zh": "艾克賽爾·席里歐斯",
+      "name_en": "Axel Syrios",
+      "name_jp": "アクセル・シリオス",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS",
+      "gen_id": "holostars-en-tempus",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Axelots",
+      "oshi_mark": "🪓",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Axel-Syrios_list_thumb.png",
+      "beginner_summary": "來自澳洲的豪爽角鬥士。濃郁澳洲俚語與直男氣質，日語交流極度流暢。",
+      "opening_greeting": "G'day mates! Axel Syrios in the house!",
+      "closing_greeting": "Catch ya later, legends!",
+      "songs": [
+        "Top of the World"
+      ],
+      "x": 1030.3,
+      "y": -410.8,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "magni-dezmondt",
+      "name_zh": "馬格尼·戴茲蒙德",
+      "name_en": "Magni Dezmond",
+      "name_jp": "マグニ・デズモンド",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS",
+      "gen_id": "holostars-en-tempus",
+      "status": "Breakoff",
+      "graduation_date": "2023-08-31",
+      "fan_name": "Magnation",
+      "oshi_mark": "🧤",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Magni-Dezmondt_list_thumb.png",
+      "beginner_summary": "TEMPUS 煉金術師鬼才。以狂放不羈的喜劇演員風格與手速繪圖聞名（2023 契約終止）。",
+      "opening_greeting": "It's Maggin' time! Great Alchemist Magni here!",
+      "closing_greeting": "Stay classy, Magnation!",
+      "songs": [
+        "Top of the World"
+      ],
+      "x": 958.4,
+      "y": -394.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "noir-vesper",
+      "name_zh": "諾瓦·威斯珀",
+      "name_en": "Noir Vesper",
+      "name_jp": "ノワール・ヴェスパー",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS",
+      "gen_id": "holostars-en-tempus",
+      "status": "Breakoff",
+      "graduation_date": "2023-08-31",
+      "fan_name": "Vesties",
+      "oshi_mark": "📜",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Noir-Vesper_list_thumb.png",
+      "beginner_summary": "TEMPUS 荒野求生老學者。深沉儒雅的談吐與滿腹野外露營常識（2023 契約終止）。",
+      "opening_greeting": "Good day, scholars. Scholar Noir Vesper here.",
+      "closing_greeting": "Until our paths cross again.",
+      "songs": [
+        "Top of the World"
+      ],
+      "x": 900.7,
+      "y": -440.4,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "banzoin-hakka",
+      "name_zh": "萬象院八花",
+      "name_en": "Banzoin Hakka",
+      "name_jp": "万象院ハッカ",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS (Vanguard)",
+      "gen_id": "holostars-en-tempus",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Hakkito",
+      "oshi_mark": "🪓",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Banzoin-Hakka_list_thumb.png",
+      "beginner_summary": "驅魔陰陽師少年。精通西日英三語，擁有震裂天際的重金屬黑腔嘶吼。",
+      "opening_greeting": "HAKKACHEW! Banzoin Hakka is here!",
+      "closing_greeting": "See ya, Hakkito!",
+      "songs": [
+        "Raven's Song"
+      ],
+      "x": 900.7,
+      "y": -514.2,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "josuiji-shinri",
+      "name_zh": "定水寺真理",
+      "name_en": "Josuiji Shinri",
+      "name_jp": "定水寺シンリ",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS (Vanguard)",
+      "gen_id": "holostars-en-tempus",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Shinrin",
+      "oshi_mark": "🏹",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Josuiji-Shinri_list_thumb.png",
+      "beginner_summary": "手持巨弓的浪人浪客。擁有讓人秒速入睡的極致催眠性感低音炮 ASMR。",
+      "opening_greeting": "Greetings, traveler. Shinri here.",
+      "closing_greeting": "Rest easy, goodbye.",
+      "songs": [],
+      "x": 958.4,
+      "y": -560.1,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "machina-x-flayon",
+          "name_zh": "馬基那·X·弗雷恩",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "machina-x-flayon",
+      "name_zh": "馬基那·X·弗雷恩",
+      "name_en": "Machina X Flayon",
+      "name_jp": "マキナ・X・フレオン",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "TEMPUS (Vanguard)",
+      "gen_id": "holostars-en-tempus",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Flayliens",
+      "oshi_mark": "✈️",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Machina-X-Flayon_list_thumb.png",
+      "beginner_summary": "機甲飛行員少年。狂熱鋼彈愛好者，擁有百老匯戲劇震撼力的爆發歌喉。",
+      "opening_greeting": "Pilot Flayon ready for takeoff!",
+      "closing_greeting": "Landing complete, see ya!",
+      "songs": [
+        "Ready Flight"
+      ],
+      "x": 1030.3,
+      "y": -543.7,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "regis-altare",
+          "name_zh": "里吉斯·阿爾泰爾",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "axel-syrios",
+          "name_zh": "艾克賽爾·席里歐斯",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "magni-dezmondt",
+          "name_zh": "馬格尼·戴茲蒙德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "noir-vesper",
+          "name_zh": "諾瓦·威斯珀",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "banzoin-hakka",
+          "name_zh": "萬象院八花",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "josuiji-shinri",
+          "name_zh": "定水寺真理",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "jurard-t-rexford",
+      "name_zh": "茱拉德·T·雷克斯福德",
+      "name_en": "Jurard T Rexford",
+      "name_jp": "ジュラード・T・レクスフォード",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "ARMIS",
+      "gen_id": "holostars-en-armis",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Rexies",
+      "oshi_mark": "🦖",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Jurard-T-Rexford_list_thumb.png",
+      "beginner_summary": "ARMIS 賞金獵人霸王龍恐龍王子。高分貝破音尖叫與自信受氣包反差喜劇人。",
+      "opening_greeting": "ROAAAR! The Dinosaur Prince Jurard is here!",
+      "closing_greeting": "Catch ya later, peasants!",
+      "songs": [
+        "ARMIS Anthem"
+      ],
+      "x": 1115.0,
+      "y": -350.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "goldbullet",
+          "name_zh": "黃金子彈",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "crimzon-ruze",
+          "name_zh": "緋紅·露姿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "octavio",
+          "name_zh": "奧克塔維奧",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "goldbullet",
+      "name_zh": "黃金子彈",
+      "name_en": "Goldbullet",
+      "name_jp": "ゴールドブレット",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "ARMIS",
+      "gen_id": "holostars-en-armis",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Bullets",
+      "oshi_mark": "🎯",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Goldbullet_list_thumb.png",
+      "beginner_summary": "ARMIS 百步穿楊神射手。手握狙擊槍卻熱愛烹飪精品咖啡的極致 Chill 哥。",
+      "opening_greeting": "Target locked. Goldbullet is here.",
+      "closing_greeting": "Mission done, see you next time.",
+      "songs": [
+        "ARMIS Anthem"
+      ],
+      "x": 1030.0,
+      "y": -265.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "jurard-t-rexford",
+          "name_zh": "茱拉德·T·雷克斯福德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "crimzon-ruze",
+          "name_zh": "緋紅·露姿",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "octavio",
+          "name_zh": "奧克塔維奧",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "crimzon-ruze",
+      "name_zh": "緋紅·露姿",
+      "name_en": "Crimzon Ruze",
+      "name_jp": "クリムゾン・ルーズ",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "ARMIS",
+      "gen_id": "holostars-en-armis",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Ruzers",
+      "oshi_mark": "🩸",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Crimzon-Ruze_list_thumb.png",
+      "beginner_summary": "ARMIS 狂戰士手持重斧。性格狂放不羈但對同伴極度護短的近戰大哥。",
+      "opening_greeting": "Ready for action! Ruze is here to brawl!",
+      "closing_greeting": "Later, losers!",
+      "songs": [
+        "ARMIS Anthem"
+      ],
+      "x": 945.0,
+      "y": -350.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "jurard-t-rexford",
+          "name_zh": "茱拉德·T·雷克斯福德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "goldbullet",
+          "name_zh": "黃金子彈",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "octavio",
+          "name_zh": "奧克塔維奧",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    },
+    {
+      "id": "octavio",
+      "name_zh": "奧克塔維奧",
+      "name_en": "Octavio",
+      "name_jp": "オクタビオ",
+      "branch": "HOLOSTARS EN",
+      "branch_group": "EN",
+      "generation": "ARMIS",
+      "gen_id": "holostars-en-armis",
+      "status": "active",
+      "graduation_date": null,
+      "fan_name": "Octavians",
+      "oshi_mark": "🎭",
+      "illustrator": "官方",
+      "image": "../asset/picture/holostars/Octavio_list_thumb.png",
+      "beginner_summary": "ARMIS 操偶提線木偶藝術家。華麗優雅的舞台語調與天籟抒情美聲。",
+      "opening_greeting": "Encore! Puppeteer Octavio at your service!",
+      "closing_greeting": "Curtain falls, farewell!",
+      "songs": [
+        "ARMIS Anthem"
+      ],
+      "x": 1030.0,
+      "y": -435.0,
+      "radius": 22,
+      "portals": [
+        {
+          "target_id": "jurard-t-rexford",
+          "name_zh": "茱拉德·T·雷克斯福德",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "goldbullet",
+          "name_zh": "黃金子彈",
+          "type": "gen",
+          "label": "同期夥伴"
+        },
+        {
+          "target_id": "crimzon-ruze",
+          "name_zh": "緋紅·露姿",
+          "type": "gen",
+          "label": "同期夥伴"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "source": "tokino-sora",
+      "target": "roboco",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "tokino-sora",
+      "target": "sakura-miko",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "tokino-sora",
+      "target": "hoshimachi-suisei",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "tokino-sora",
+      "target": "azki",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "roboco",
+      "target": "sakura-miko",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "roboco",
+      "target": "hoshimachi-suisei",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "roboco",
+      "target": "azki",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "sakura-miko",
+      "target": "hoshimachi-suisei",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "sakura-miko",
+      "target": "azki",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "hoshimachi-suisei",
+      "target": "azki",
+      "type": "generation",
+      "label": "同期：Hololive 0期生 (無印組)"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "natsuiro-matsuri",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "akai-haato",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "aki-rosenthal",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "natsuiro-matsuri",
+      "target": "akai-haato",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "natsuiro-matsuri",
+      "target": "aki-rosenthal",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "akai-haato",
+      "target": "aki-rosenthal",
+      "type": "generation",
+      "label": "同期：Hololive 1期生"
+    },
+    {
+      "source": "minato-aqua",
+      "target": "murasaki-shion",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "minato-aqua",
+      "target": "nakiri-ayame",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "minato-aqua",
+      "target": "yuzuki-choco",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "minato-aqua",
+      "target": "oozora-subaru",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "murasaki-shion",
+      "target": "nakiri-ayame",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "murasaki-shion",
+      "target": "yuzuki-choco",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "murasaki-shion",
+      "target": "oozora-subaru",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "nakiri-ayame",
+      "target": "yuzuki-choco",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "nakiri-ayame",
+      "target": "oozora-subaru",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "yuzuki-choco",
+      "target": "oozora-subaru",
+      "type": "generation",
+      "label": "同期：Hololive 2期生"
+    },
+    {
+      "source": "ookami-mio",
+      "target": "nekomata-okayu",
+      "type": "generation",
+      "label": "同期：Hololive Gamers"
+    },
+    {
+      "source": "ookami-mio",
+      "target": "inugami-korone",
+      "type": "generation",
+      "label": "同期：Hololive Gamers"
+    },
+    {
+      "source": "nekomata-okayu",
+      "target": "inugami-korone",
+      "type": "generation",
+      "label": "同期：Hololive Gamers"
+    },
+    {
+      "source": "usada-pekora",
+      "target": "shiranui-flare",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "usada-pekora",
+      "target": "shirogane-noel",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "usada-pekora",
+      "target": "houshou-marine",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "shiranui-flare",
+      "target": "shirogane-noel",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "shiranui-flare",
+      "target": "houshou-marine",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "shirogane-noel",
+      "target": "houshou-marine",
+      "type": "generation",
+      "label": "同期：Hololive 3期生 (HoloFantasy)"
+    },
+    {
+      "source": "amane-kanata",
+      "target": "tsunomaki-watame",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "amane-kanata",
+      "target": "tokoyami-towa",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "amane-kanata",
+      "target": "himemori-luna",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "amane-kanata",
+      "target": "kiryu-coco",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "tsunomaki-watame",
+      "target": "tokoyami-towa",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "tsunomaki-watame",
+      "target": "himemori-luna",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "tsunomaki-watame",
+      "target": "kiryu-coco",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "tokoyami-towa",
+      "target": "himemori-luna",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "tokoyami-towa",
+      "target": "kiryu-coco",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "himemori-luna",
+      "target": "kiryu-coco",
+      "type": "generation",
+      "label": "同期：Hololive 4期生 (HoloForce)"
+    },
+    {
+      "source": "yukihana-lamy",
+      "target": "momosuzu-nene",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "yukihana-lamy",
+      "target": "shishiro-botan",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "yukihana-lamy",
+      "target": "omaru-polka",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "momosuzu-nene",
+      "target": "shishiro-botan",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "momosuzu-nene",
+      "target": "omaru-polka",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "shishiro-botan",
+      "target": "omaru-polka",
+      "type": "generation",
+      "label": "同期：Hololive 5期生 (NePoLaBo)"
+    },
+    {
+      "source": "la-darknesss",
+      "target": "takane-lui",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "la-darknesss",
+      "target": "hakui-koyori",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "la-darknesss",
+      "target": "sakamata-chloe",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "la-darknesss",
+      "target": "kazama-iroha",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "takane-lui",
+      "target": "hakui-koyori",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "takane-lui",
+      "target": "sakamata-chloe",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "takane-lui",
+      "target": "kazama-iroha",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "hakui-koyori",
+      "target": "sakamata-chloe",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "hakui-koyori",
+      "target": "kazama-iroha",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "sakamata-chloe",
+      "target": "kazama-iroha",
+      "type": "generation",
+      "label": "同期：Hololive 6期生 (Secret Society holoX)"
+    },
+    {
+      "source": "hiodoshi-ao",
+      "target": "otonose-kanade",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "hiodoshi-ao",
+      "target": "ichijou-ririka",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "hiodoshi-ao",
+      "target": "juufuutei-raden",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "hiodoshi-ao",
+      "target": "todoroki-hajime",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "otonose-kanade",
+      "target": "ichijou-ririka",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "otonose-kanade",
+      "target": "juufuutei-raden",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "otonose-kanade",
+      "target": "todoroki-hajime",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "ichijou-ririka",
+      "target": "juufuutei-raden",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "ichijou-ririka",
+      "target": "todoroki-hajime",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "juufuutei-raden",
+      "target": "todoroki-hajime",
+      "type": "generation",
+      "label": "同期：DEV_IS ReGLOSS"
+    },
+    {
+      "source": "isaki-riona",
+      "target": "koganei-niko",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "isaki-riona",
+      "target": "mizumiya-su",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "isaki-riona",
+      "target": "rindo-chihaya",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "isaki-riona",
+      "target": "kikirara-vivi",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "koganei-niko",
+      "target": "mizumiya-su",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "koganei-niko",
+      "target": "rindo-chihaya",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "koganei-niko",
+      "target": "kikirara-vivi",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "mizumiya-su",
+      "target": "rindo-chihaya",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "mizumiya-su",
+      "target": "kikirara-vivi",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "rindo-chihaya",
+      "target": "kikirara-vivi",
+      "type": "generation",
+      "label": "同期：DEV_IS FLOW GLOW"
+    },
+    {
+      "source": "achichi-mela",
+      "target": "sorashina-sopia",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "achichi-mela",
+      "target": "suzuna-tsuzuri",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "achichi-mela",
+      "target": "hyakuto-kyoko",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "sorashina-sopia",
+      "target": "suzuna-tsuzuri",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "sorashina-sopia",
+      "target": "hyakuto-kyoko",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "suzuna-tsuzuri",
+      "target": "hyakuto-kyoko",
+      "type": "generation",
+      "label": "同期：ASOBI☆MAWARI-TAI!"
+    },
+    {
+      "source": "hanazono-sayaka",
+      "target": "izuki-michiru",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "hanazono-sayaka",
+      "target": "kazeshiro-yuki",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "hanazono-sayaka",
+      "target": "friend-a",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "hanazono-sayaka",
+      "target": "harusaki-nodoka",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "izuki-michiru",
+      "target": "kazeshiro-yuki",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "izuki-michiru",
+      "target": "friend-a",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "izuki-michiru",
+      "target": "harusaki-nodoka",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "kazeshiro-yuki",
+      "target": "friend-a",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "kazeshiro-yuki",
+      "target": "harusaki-nodoka",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "friend-a",
+      "target": "harusaki-nodoka",
+      "type": "generation",
+      "label": "同期：Hololive 營運工作人員 (Staff & holoAN)"
+    },
+    {
+      "source": "mori-calliope",
+      "target": "takanashi-kiara",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "mori-calliope",
+      "target": "ninomae-inanis",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "mori-calliope",
+      "target": "gawr-gura",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "mori-calliope",
+      "target": "watson-amelia",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "takanashi-kiara",
+      "target": "ninomae-inanis",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "takanashi-kiara",
+      "target": "gawr-gura",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "takanashi-kiara",
+      "target": "watson-amelia",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "ninomae-inanis",
+      "target": "gawr-gura",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "ninomae-inanis",
+      "target": "watson-amelia",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "gawr-gura",
+      "target": "watson-amelia",
+      "type": "generation",
+      "label": "同期：Hololive EN -Myth-"
+    },
+    {
+      "source": "irys",
+      "target": "ceres-fauna",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "irys",
+      "target": "ouro-kronii",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "irys",
+      "target": "nanashi-mumei",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "irys",
+      "target": "hakos-baelz",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "irys",
+      "target": "tsukumo-sana",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ceres-fauna",
+      "target": "ouro-kronii",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ceres-fauna",
+      "target": "nanashi-mumei",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ceres-fauna",
+      "target": "hakos-baelz",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ceres-fauna",
+      "target": "tsukumo-sana",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ouro-kronii",
+      "target": "nanashi-mumei",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ouro-kronii",
+      "target": "hakos-baelz",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "ouro-kronii",
+      "target": "tsukumo-sana",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "nanashi-mumei",
+      "target": "hakos-baelz",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "nanashi-mumei",
+      "target": "tsukumo-sana",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "hakos-baelz",
+      "target": "tsukumo-sana",
+      "type": "generation",
+      "label": "同期：Hololive EN -Promise-"
+    },
+    {
+      "source": "shiori-novella",
+      "target": "koseki-bijou",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "shiori-novella",
+      "target": "nerissa-ravencroft",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "shiori-novella",
+      "target": "fuwawa-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "shiori-novella",
+      "target": "mococo-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "koseki-bijou",
+      "target": "nerissa-ravencroft",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "koseki-bijou",
+      "target": "fuwawa-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "koseki-bijou",
+      "target": "mococo-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "nerissa-ravencroft",
+      "target": "fuwawa-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "nerissa-ravencroft",
+      "target": "mococo-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "fuwawa-abyssgard",
+      "target": "mococo-abyssgard",
+      "type": "generation",
+      "label": "同期：Hololive EN -Advent-"
+    },
+    {
+      "source": "elizabeth-rose-bloodflame",
+      "target": "gigi-murin",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "elizabeth-rose-bloodflame",
+      "target": "cecilia-immergreen",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "elizabeth-rose-bloodflame",
+      "target": "raora-panthera",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "gigi-murin",
+      "target": "cecilia-immergreen",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "gigi-murin",
+      "target": "raora-panthera",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "cecilia-immergreen",
+      "target": "raora-panthera",
+      "type": "generation",
+      "label": "同期：Hololive EN -Justice-"
+    },
+    {
+      "source": "ayunda-risu",
+      "target": "moona-hoshinova",
+      "type": "generation",
+      "label": "同期：Hololive ID 1期生 (Area 15)"
+    },
+    {
+      "source": "ayunda-risu",
+      "target": "airani-iofifteen",
+      "type": "generation",
+      "label": "同期：Hololive ID 1期生 (Area 15)"
+    },
+    {
+      "source": "moona-hoshinova",
+      "target": "airani-iofifteen",
+      "type": "generation",
+      "label": "同期：Hololive ID 1期生 (Area 15)"
+    },
+    {
+      "source": "kureiji-ollie",
+      "target": "anya-melfissa",
+      "type": "generation",
+      "label": "同期：Hololive ID 2期生 (Holoro)"
+    },
+    {
+      "source": "kureiji-ollie",
+      "target": "pavolia-reine",
+      "type": "generation",
+      "label": "同期：Hololive ID 2期生 (Holoro)"
+    },
+    {
+      "source": "anya-melfissa",
+      "target": "pavolia-reine",
+      "type": "generation",
+      "label": "同期：Hololive ID 2期生 (Holoro)"
+    },
+    {
+      "source": "vestia-zeta",
+      "target": "kaela-kovalskia",
+      "type": "generation",
+      "label": "同期：Hololive ID 3期生 (HoloH3ro)"
+    },
+    {
+      "source": "vestia-zeta",
+      "target": "kobo-kanaeru",
+      "type": "generation",
+      "label": "同期：Hololive ID 3期生 (HoloH3ro)"
+    },
+    {
+      "source": "kaela-kovalskia",
+      "target": "kobo-kanaeru",
+      "type": "generation",
+      "label": "同期：Hololive ID 3期生 (HoloH3ro)"
+    },
+    {
+      "source": "hanasaki-miyabi",
+      "target": "kanade-izuru",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "hanasaki-miyabi",
+      "target": "arurandeisu",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "hanasaki-miyabi",
+      "target": "rikka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "hanasaki-miyabi",
+      "target": "kagami-kira",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "kanade-izuru",
+      "target": "arurandeisu",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "kanade-izuru",
+      "target": "rikka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "kanade-izuru",
+      "target": "kagami-kira",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "arurandeisu",
+      "target": "rikka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "arurandeisu",
+      "target": "kagami-kira",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "rikka",
+      "target": "kagami-kira",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 1期生"
+    },
+    {
+      "source": "astel-leda",
+      "target": "kishido-temma",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 2期生 (SunTempo)"
+    },
+    {
+      "source": "astel-leda",
+      "target": "yukoku-roberu",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 2期生 (SunTempo)"
+    },
+    {
+      "source": "kishido-temma",
+      "target": "yukoku-roberu",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 2期生 (SunTempo)"
+    },
+    {
+      "source": "kageyama-shien",
+      "target": "aragami-oga",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP 3期生 (TriNero / MaFia)"
+    },
+    {
+      "source": "yatogami-fuma",
+      "target": "utsugi-uyu",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP (UPROAR!!)"
+    },
+    {
+      "source": "yatogami-fuma",
+      "target": "minase-rio",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP (UPROAR!!)"
+    },
+    {
+      "source": "utsugi-uyu",
+      "target": "minase-rio",
+      "type": "generation",
+      "label": "同期：HOLOSTARS JP (UPROAR!!)"
+    },
+    {
+      "source": "regis-altare",
+      "target": "axel-syrios",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "regis-altare",
+      "target": "magni-dezmondt",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "regis-altare",
+      "target": "noir-vesper",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "regis-altare",
+      "target": "banzoin-hakka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "regis-altare",
+      "target": "josuiji-shinri",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "regis-altare",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "axel-syrios",
+      "target": "magni-dezmondt",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "axel-syrios",
+      "target": "noir-vesper",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "axel-syrios",
+      "target": "banzoin-hakka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "axel-syrios",
+      "target": "josuiji-shinri",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "axel-syrios",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "magni-dezmondt",
+      "target": "noir-vesper",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "magni-dezmondt",
+      "target": "banzoin-hakka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "magni-dezmondt",
+      "target": "josuiji-shinri",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "magni-dezmondt",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "noir-vesper",
+      "target": "banzoin-hakka",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "noir-vesper",
+      "target": "josuiji-shinri",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "noir-vesper",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "banzoin-hakka",
+      "target": "josuiji-shinri",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "banzoin-hakka",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "josuiji-shinri",
+      "target": "machina-x-flayon",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -TEMPUS-"
+    },
+    {
+      "source": "jurard-t-rexford",
+      "target": "goldbullet",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "jurard-t-rexford",
+      "target": "crimzon-ruze",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "jurard-t-rexford",
+      "target": "octavio",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "goldbullet",
+      "target": "crimzon-ruze",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "goldbullet",
+      "target": "octavio",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "crimzon-ruze",
+      "target": "octavio",
+      "type": "generation",
+      "label": "同期：HOLOSTARS EN -ARMIS-"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "ookami-mio",
+      "type": "cross_gen",
+      "label": "跨期兼任：Gamers 隊長兼靈魂神柱"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "nekomata-okayu",
+      "type": "cross_gen",
+      "label": "跨期兼任：Gamers 同組夥伴"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "inugami-korone",
+      "type": "cross_gen",
+      "label": "跨期兼任：Gamers 同組夥伴"
+    },
+    {
+      "source": "usada-pekora",
+      "target": "moona-hoshinova",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ ID",
+      "label": "【JP ⟷ ID】PekoMoona 跨星系世紀兔月羈絆"
+    },
+    {
+      "source": "tokoyami-towa",
+      "target": "kobo-kanaeru",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ ID",
+      "label": "【JP ⟷ ID】Kobo & Towa 跨星系母女羈絆"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "ayunda-risu",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ ID",
+      "label": "【JP ⟷ ID】JP-ID 早期獸耳同盟先鋒"
+    },
+    {
+      "source": "kiryu-coco",
+      "target": "mori-calliope",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ EN",
+      "label": "【JP ⟷ EN】可可與死神 跨星系先驅引路人"
+    },
+    {
+      "source": "kiryu-coco",
+      "target": "gawr-gura",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ EN",
+      "label": "【JP ⟷ EN】早安新聞與跨國啟蒙"
+    },
+    {
+      "source": "hoshimachi-suisei",
+      "target": "mori-calliope",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ EN",
+      "label": "【JP ⟷ EN】SuiCalli 跨星系音樂雙天后 (Wicked)"
+    },
+    {
+      "source": "houshou-marine",
+      "target": "hakos-baelz",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ EN",
+      "label": "【JP ⟷ EN】瑪琳Bae 跨星系舞蹈與相聲搭檔"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "ninomae-inanis",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ EN",
+      "label": "【JP ⟷ EN】白狐與章魚 跨國繪師靈魂知心好友"
+    },
+    {
+      "source": "kaela-kovalskia",
+      "target": "koseki-bijou",
+      "type": "cross_cluster",
+      "branch_tag": "ID ⟷ EN",
+      "label": "【ID ⟷ EN】Kaela & Biboo 跨星系鐵匠與石頭師徒"
+    },
+    {
+      "source": "sakura-miko",
+      "target": "hiodoshi-ao",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ DEV_IS",
+      "label": "【JP ⟷ DEV_IS】本家綜藝之神 ⟷ DEV_IS 遺憾帥哥"
+    },
+    {
+      "source": "shirakami-fubuki",
+      "target": "otonose-kanade",
+      "type": "cross_cluster",
+      "branch_tag": "JP ⟷ DEV_IS",
+      "label": "【JP ⟷ DEV_IS】吹雪隊長 ⟷ 音樂天才奏 (憧憬前輩)"
+    },
+    {
+      "source": "friend-a",
+      "target": "tokino-sora",
+      "type": "cross_cluster",
+      "branch_tag": "STAFF ⟷ JP",
+      "label": "【STAFF ⟷ JP】草創歲月摯友 營運與元祖偶像紐帶"
+    }
+  ],
+  "clusters": [
+    {
+      "id": "JP",
+      "name": "Hololive JP 核心本家",
+      "color": "#27c7fe",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "id": "DEV_IS",
+      "name": "DEV_IS 音樂星系",
+      "color": "#a855f7",
+      "x": -850,
+      "y": -200
+    },
+    {
+      "id": "EN",
+      "name": "Hololive EN 海外先鋒",
+      "color": "#ec4899",
+      "x": 850,
+      "y": -350
+    },
+    {
+      "id": "ID",
+      "name": "Hololive ID 南洋星系",
+      "color": "#eab308",
+      "x": 800,
+      "y": 450
+    },
+    {
+      "id": "STARS",
+      "name": "HOLOSTARS 冒險星座",
+      "color": "#06b6d4",
+      "x": -800,
+      "y": 500
+    },
+    {
+      "id": "STAFF",
+      "name": "營運 Staff 指揮樞紐",
+      "color": "#64748b",
+      "x": 0,
+      "y": 680
+    }
+  ]
+}
