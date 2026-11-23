@@ -1,0 +1,2 @@
+# HololiveMemberIntroduction
+整理有關於hololive藝人基礎介紹的簡報，用於紀錄統整使用
